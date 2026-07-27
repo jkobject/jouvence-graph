@@ -28,6 +28,7 @@ This directory is the single home for durable project knowledge. Start at the re
 - [`source_native_expansion_policy.md`](source_native_expansion_policy.md) — source and endpoint policy.
 - [`source_measure_edge_matrix.md`](source_measure_edge_matrix.md) — source/measurement/relation decisions.
 - [`causal_edge_feature_model.md`](causal_edge_feature_model.md) — authoritative contract for GoF/LoF, pharmacological action, effect direction, response polarity, edge/evidence placement, and conflict aggregation without relation-name proliferation.
+- [`disease_causal_operands_canonical_promotion_t_aa5cd96e.md`](disease_causal_operands_canonical_promotion_t_aa5cd96e.md) — create-only canonical promotion and live readback for source-backed `disease_associated_protein` causal operands.
 - [`inferred_edges_policy.md`](inferred_edges_policy.md) — inferred and contextual assertions.
 - [`human_ensg_gene_migration_t_8b9cdabc.md`](human_ensg_gene_migration_t_8b9cdabc.md) — staged human ENSG identifier audit, migration, validation, and rollback evidence.
 
