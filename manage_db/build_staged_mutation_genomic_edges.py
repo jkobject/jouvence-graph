@@ -630,7 +630,7 @@ def _merge_frames(parts: list[pd.DataFrame], columns: list[str]) -> pd.DataFrame
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--variant-file", action="append", required=True, help="Local Parquet path or HTTP(S) URL. Repeat for multiple OpenTargets variant parts.")
-    ap.add_argument("--kg-cache-root", type=Path, default=Path("/Users/jkobject/mnt/gcs/jouvencekb-kg/v2"))
+    ap.add_argument("--kg-cache-root", type=Path, default=Path("/Users/jkobject/mnt/gcs/jouvencekb/main"))
     ap.add_argument("--stage-root", type=Path, required=True)
     ap.add_argument("--max-variants", type=int, default=None)
     ap.add_argument("--skip-enhancer-overlap", action="store_true", help="Skip enhancer overlap when running a fast gene/transcript-only policy smoke build.")

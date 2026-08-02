@@ -391,7 +391,7 @@ def main() -> None:
     inventory_bundle = {
         "task_id": TASK_ID,
         "captured_at": args.captured_at,
-        "scope": "gs://jouvencekb/kg/v2/{edges,evidence,proof,staging,metadata}/** plus accepted ReMap feature surfaces",
+        "scope": "gs://jouvencekb/main/{edges,evidence,proof,staging,metadata}/** plus accepted ReMap feature surfaces",
         "inventories": {
             area: [normalized_identity(item) for item in items]
             for area, items in raw.items()
@@ -444,7 +444,7 @@ def main() -> None:
         parquet_count = sum(x["metadata"]["name"].endswith(".parquet") for x in items)
         prefix_rows.append(
             {
-                "prefix": f"gs://jouvencekb/kg/v2/staging/{prefix}/",
+                "prefix": f"gs://jouvencekb/staging/{prefix}/",
                 "object_count": len(items),
                 "parquet_object_count": parquet_count,
                 "size_bytes": sum(int(x["metadata"].get("size", 0)) for x in items),
@@ -706,7 +706,7 @@ def main() -> None:
             "reviewer": "t_69fa9b1d",
         },
         "full_surface": {
-            "prefix": "gs://jouvencekb/kg/v2/features/remap_crm_tf_enhancer_support_full/",
+            "prefix": "gs://jouvencekb/main/features/remap_crm_tf_enhancer_support_full/",
             "object_count": len(remap_full),
             "size_bytes": sum(item["size_bytes"] for item in remap_full),
             "object_identity_sha256": sha256_bytes(
@@ -740,7 +740,7 @@ def main() -> None:
             "active_relation_count": len(RELATIONS),
         },
         "scope": {
-            "gcs": "gs://jouvencekb/kg/v2/{edges,evidence,proof,staging,metadata}/** plus accepted ReMap feature surfaces",
+            "gcs": "gs://jouvencekb/main/{edges,evidence,proof,staging,metadata}/** plus accepted ReMap feature surfaces",
             "canonical_writes": False,
             "full_table_scans": False,
             "fuse_readback": "unavailable: expected FUSE directory existed but was empty/unmounted; GCS direct readback used and discrepancy failed closed",
@@ -880,7 +880,7 @@ def main() -> None:
         "",
         "- GCS direct object inventory and Parquet footer reads succeeded.",
         f"- Freeze gate PASS: fresh start/end inventories ({args.captured_at} to {end_captured_at}) have identical names, generations, sizes, and hashes for edges, evidence, proof, staging, metadata, and accepted ReMap feature surfaces.",
-        "- `/Users/jkobject/mnt/gcs/jouvencekb-kg/v2` existed but was empty/unmounted. GCS/FUSE parity is therefore **not established**; no FUSE result is treated as confirming GCS.",
+        "- `/Users/jkobject/mnt/gcs/jouvencekb/main` existed but was empty/unmounted. GCS/FUSE parity is therefore **not established**; no FUSE result is treated as confirming GCS.",
         "- No Mac all-relation endpoint/support scan was run. Each JSON row labels checks as fresh bounded readback, report-backed, exactly absent evidence, or not rerun. The independent reviewer must run representative/high-risk scans and use an approved worker for any full scan.",
         "- ReMap: historical staged object identities remain routed/excluded, while route C is complete on the accepted bounded and full canonical feature/context surfaces. Scaling, VM review, recovery, and resume are closed; only topology conversion remains policy-deferred.",
         "",
@@ -889,9 +889,9 @@ def main() -> None:
         "```bash",
         "git fetch origin --prune",
         "git worktree add -b docs/t_8c7f0862-live-reconciliation /Users/jkobject/Documents/jouvence/.worktrees/t_8c7f0862 origin/main",
-        "for p in edges evidence proof staging metadata; do gcloud storage ls --recursive --json \"gs://jouvencekb/kg/v2/$p/**\" > \"artifacts/cache/t_8c7f0862/live_inventory/$p.json\"; done",
-        "gcloud storage ls --json gs://jouvencekb/kg/v2/features/remap_crm_tf_enhancer_support.parquet > artifacts/cache/t_8c7f0862/live_inventory/features_remap_bounded.json",
-        "gcloud storage ls --recursive --json 'gs://jouvencekb/kg/v2/features/remap_crm_tf_enhancer_support_full/**' > artifacts/cache/t_8c7f0862/live_inventory/features_remap_full.json",
+        "for p in edges evidence proof staging metadata; do gcloud storage ls --recursive --json \"gs://jouvencekb/main/$p/**\" > \"artifacts/cache/t_8c7f0862/live_inventory/$p.json\"; done",
+        "gcloud storage ls --json gs://jouvencekb/main/features/remap_crm_tf_enhancer_support.parquet > artifacts/cache/t_8c7f0862/live_inventory/features_remap_bounded.json",
+        "gcloud storage ls --recursive --json 'gs://jouvencekb/main/features/remap_crm_tf_enhancer_support_full/**' > artifacts/cache/t_8c7f0862/live_inventory/features_remap_full.json",
         "jq -s add artifacts/cache/t_8c7f0862/live_inventory/features_remap_{bounded,full}.json > artifacts/cache/t_8c7f0862/live_inventory/features_remap.json",
         "# Repeat every listing as *_end.json after the capture. The generator compares exact identity digests and fails if any name/generation/size/hash changed.",
         "# PyArrow GcsFileSystem + ParquetFile.metadata read every canonical and non-ReMap staged Parquet footer; ReMap was intentionally excluded.",

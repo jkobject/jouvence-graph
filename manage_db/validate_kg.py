@@ -3,7 +3,7 @@
 The default mode is an exact DuckDB anti-join validator. It scans Parquet files
 relation-by-relation and never materializes high-cardinality node ID sets such
 as ``enhancer`` in Python memory. This is the intended validator for the
-canonical GCS-FUSE export under ``/mnt/gcs/jouvencekb/kg/v2``.
+canonical GCS-FUSE export under ``/mnt/gcs/jouvencekb/main``.
 
 A legacy PyArrow streaming mode is kept for environments where DuckDB cannot
 read the storage URI directly, but it still loads node ID sets in memory and is
@@ -75,7 +75,7 @@ def _node_path_for_duckdb(root: kg_storage.KGRoot, node_type: str) -> str:
         # canonical KG should be validated through the GCS-FUSE mount instead.
         raise ValueError(
             "DuckDB validation requires a local filesystem path. For GCS, use "
-            "the mounted path such as /mnt/gcs/jouvencekb/kg/v2, or pass "
+            "the mounted path such as /mnt/gcs/jouvencekb/main, or pass "
             "--pyarrow-streaming for small remote KGs."
         )
     return _duckdb_path(root._node_internal(node_type))
@@ -85,7 +85,7 @@ def _edge_path_for_duckdb(root: kg_storage.KGRoot, relation: str) -> str:
     if "://" in root.uri:
         raise ValueError(
             "DuckDB validation requires a local filesystem path. For GCS, use "
-            "the mounted path such as /mnt/gcs/jouvencekb/kg/v2, or pass "
+            "the mounted path such as /mnt/gcs/jouvencekb/main, or pass "
             "--pyarrow-streaming for small remote KGs."
         )
     return _duckdb_path(root._edge_internal(relation))

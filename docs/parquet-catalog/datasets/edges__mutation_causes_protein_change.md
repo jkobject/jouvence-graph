@@ -3,8 +3,8 @@
 
 - Layer: `edges`
 - Status: **canonical present**
-- As of: `2026-06-10`
-- Canonical URI/pattern: `gs://jouvencekb/kg/v2/edges/mutation_causes_protein_change.parquet`
+- As of: `2026-07-27`
+- Canonical URI/pattern: `gs://jouvencekb/main/edges/mutation_causes_protein_change.parquet`
 - Logical rows: **177,735**
 - Physical objects: **1**
 - Bytes: **2,640,740**
@@ -55,7 +55,7 @@ The logical dataset is represented by `1` physical Parquet object(s). Physical s
 
 | Object | Rows | Bytes | Generation | CRC32C | MD5 |
 |---|---:|---:|---|---|---|
-| `gs://jouvencekb/kg/v2/edges/mutation_causes_protein_change.parquet` | 177,735 | 2,640,740 | `1781115243890755` | `9nwQNQ==` | `5TRtuQuYxgHv8QrjqzURew==` |
+| `gs://jouvencekb/main/edges/mutation_causes_protein_change.parquet` | 177,735 | 2,640,740 | `1785155488079071` | `9nwQNQ==` | `5TRtuQuYxgHv8QrjqzURew==` |
 - catalog_manifest: [../inventory.json](../inventory.json)
 - schema_doc: [../../kg_schema_overview.md](../../kg_schema_overview.md)
 
@@ -68,7 +68,7 @@ export BILLING_PROJECT='<your-gcp-billing-project>'
 LOCAL_DIR='./parquet-catalog-data/edges__mutation_causes_protein_change'
 rm -rf -- "$LOCAL_DIR"
 mkdir -p "$LOCAL_DIR"
-gcloud storage cp --billing-project="$BILLING_PROJECT" 'gs://jouvencekb/kg/v2/edges/mutation_causes_protein_change.parquet' "$LOCAL_DIR/"
+gcloud storage cp --billing-project="$BILLING_PROJECT" 'gs://jouvencekb/main/edges/mutation_causes_protein_change.parquet' "$LOCAL_DIR/"
 ```
 
 PyArrow (GCS credentials/application-default credentials must carry the billing project):
@@ -79,7 +79,7 @@ import gcsfs
 import pyarrow.dataset as ds
 billing_project = os.environ['BILLING_PROJECT']
 fs = gcsfs.GCSFileSystem(project=billing_project, requester_pays=billing_project)
-paths = sorted(fs.glob('jouvencekb/kg/v2/edges/mutation_causes_protein_change.parquet'))
+paths = sorted(fs.glob('jouvencekb/main/edges/mutation_causes_protein_change.parquet'))
 dataset = ds.dataset(paths, filesystem=fs, format='parquet')
 print(dataset.head(5, columns=['x_id']))
 ```

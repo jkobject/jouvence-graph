@@ -51,7 +51,7 @@ def test_non_txgnn_hermes_cron_prompt_does_not_trigger_vm_guard_missing() -> Non
 def test_genuine_local_txgnn_heavy_command_still_triggers_vm_guard_missing() -> None:
     ps_text = (
         "12345 1 S 00:02:00 0.0 0.1 "
-        "uv run python sync_parquet_edges_to_lamindb.py --kg-root gs://jouvencekb/kg/v2"
+        "uv run python sync_parquet_edges_to_lamindb.py --kg-root gs://jouvencekb/main"
     )
 
     findings = watchdog.check_local_processes(extra_ps_text=ps_text)
@@ -80,7 +80,7 @@ def test_non_txgnn_worker_with_jouvence_signal_still_triggers_vm_guard_missing()
         "34696 1 S 00:18:21 0.0 0.1 "
         "gcloud compute ssh pert-gym-worker-eu --zone europe-west1-b --command "
         "cd ~/work/pert-gym && uv run python resume.py "
-        "--stage gs://scperturb/pert-gym/staging --kg-root gs://jouvencekb/kg/v2 --embedding lamin"
+        "--stage gs://scperturb/pert-gym/staging --kg-root gs://jouvencekb/main --embedding lamin"
     )
 
     findings = watchdog.check_local_processes(extra_ps_text=ps_text)
@@ -93,7 +93,7 @@ def test_non_txgnn_worker_with_jouvence_signal_and_incidental_required_vm_still_
         "34696 1 S 00:18:21 0.0 0.1 "
         "gcloud compute ssh pert-gym-worker-eu --zone europe-west1-b --command "
         "cd ~/work/pert-gym && uv run python resume.py "
-        "--stage gs://scperturb/pert-gym/staging --kg-root gs://jouvencekb/kg/v2 "
+        "--stage gs://scperturb/pert-gym/staging --kg-root gs://jouvencekb/main "
         "--embedding lamin --note txgnn-worker"
     )
 
@@ -107,7 +107,7 @@ def test_txgnn_worker_with_jouvence_signal_is_visibly_guarded() -> None:
         "34696 1 S 00:18:21 0.0 0.1 "
         "gcloud compute ssh txgnn-worker --zone europe-west1-b --command "
         "cd ~/work/TxGNN && uv run python sync_parquet_edges_to_lamindb.py "
-        "--kg-root gs://jouvencekb/kg/v2"
+        "--kg-root gs://jouvencekb/main"
     )
 
     findings = watchdog.check_local_processes(extra_ps_text=ps_text)
@@ -120,7 +120,7 @@ def test_txgnn_worker_with_leading_gcloud_flags_is_visibly_guarded() -> None:
         "34696 1 S 00:18:21 0.0 0.1 "
         "gcloud compute ssh --zone europe-west1-b txgnn-worker --command "
         "cd ~/work/TxGNN && uv run python sync_parquet_edges_to_lamindb.py "
-        "--kg-root gs://jouvencekb/kg/v2"
+        "--kg-root gs://jouvencekb/main"
     )
 
     findings = watchdog.check_local_processes(extra_ps_text=ps_text)
@@ -163,7 +163,7 @@ def test_unmarked_new_unsafe_and_stale_runs_still_alert(tmp_path: Path, monkeypa
     rd = report / "lamindb" / "new_unsafe_stale"
     write_run(
         rd,
-        command='{"cmd":"uv run python sync_parquet_edges_to_lamindb.py --kg-root /Users/jkobject/mnt/gcs/jouvencekb-kg/v2"}',
+        command='{"cmd":"uv run python sync_parquet_edges_to_lamindb.py --kg-root /Users/jkobject/mnt/gcs/jouvencekb/main"}',
     )
 
     findings = watchdog.check_run_sidecars(now=9999999999)
@@ -179,7 +179,7 @@ def test_marked_unsafe_superseded_run_is_info_with_audit_trail(tmp_path: Path, m
     rd = report / "lamindb" / "legacy_stale"
     write_run(
         rd,
-        command='{"cmd":"uv run python sync_parquet_edges_to_lamindb.py --kg-root /Users/jkobject/mnt/gcs/jouvencekb-kg/v2"}',
+        command='{"cmd":"uv run python sync_parquet_edges_to_lamindb.py --kg-root /Users/jkobject/mnt/gcs/jouvencekb/main"}',
         disposition="unsafe_superseded",
     )
 
@@ -306,7 +306,7 @@ def test_vm_duplicate_writer_risk_still_fires_for_two_real_writers(monkeypatch) 
             stdout = "\n".join([
                 "txgnn-worker",
                 "123 1 S 00:12:03 bigBedToBed -bed shard.bed -udcDir /tmp/udc input.bb output.bed",
-                "124 1 S 00:10:00 uv run python sync_parquet_edges_to_lamindb.py --kg-root gs://jouvencekb/kg/v2",
+                "124 1 S 00:10:00 uv run python sync_parquet_edges_to_lamindb.py --kg-root gs://jouvencekb/main",
                 "456 455 S 00:00:00 grep -E sync_parquet_edges_to_lamindb|build_remap_motif|bigBedToBed|run_remap_fresh_udc|pyg|embedding",
             ])
             return CompletedProcess(cmd, 0, stdout, "")

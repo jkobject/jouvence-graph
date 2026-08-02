@@ -24,8 +24,8 @@ def test_catalog_covers_every_logical_dataset() -> None:
     ids = [dataset["id"] for dataset in datasets]
     pages = {path.stem for path in (REPO_ROOT / CATALOG_DIR / "datasets").glob("*.md")}
 
-    assert len(ids) == len(set(ids)) == inventory["dataset_count"] == 112
-    assert inventory["documented_count"] == 112
+    assert len(ids) == len(set(ids)) == inventory["dataset_count"] == 110
+    assert inventory["documented_count"] == 110
     assert inventory["undocumented_count"] == 0
     assert pages == set(ids)
 
@@ -39,7 +39,7 @@ def test_text_embedding_leaves_use_per_node_type_denominators() -> None:
     leaves = [
         dataset
         for dataset in _inventory()["datasets"]
-        if dataset["id"].startswith("planned_embedding__text__")
+        if dataset["id"].startswith("embedding__") and "_text_" in dataset["id"]
     ]
 
     assert len(leaves) == 9
@@ -57,15 +57,13 @@ def test_text_embedding_leaves_use_per_node_type_denominators() -> None:
     }
 
 
-def test_sharded_remap_is_two_logical_datasets_not_25_pages() -> None:
+def test_remap_is_one_compacted_logical_dataset() -> None:
     datasets = {dataset["id"]: dataset for dataset in _inventory()["datasets"]}
-    summary = datasets["feature__remap_crm_tf_enhancer_support_full_summary"]
-    global_tf = datasets["feature__remap_crm_tf_enhancer_support_full_tf_global"]
+    remap = datasets["features__remap_crm_tf_enhancer_support"]
 
-    assert len(summary["objects"]) == 24
-    assert summary["rows"] == 48_768_788
-    assert len(global_tf["objects"]) == 1
-    assert global_tf["rows"] == 1_179
+    assert len(remap["objects"]) == 1
+    assert remap["rows"] == 48_768_788
+    assert remap["uri"] == "gs://jouvencekb/main/features/remap_crm_tf_enhancer_support.parquet"
 
 
 def test_catalog_has_no_private_local_paths() -> None:
@@ -178,10 +176,10 @@ def test_live_refresh_supplies_requester_pays_billing_project(monkeypatch: pytes
 
 def test_generic_sharded_uri_pattern_preserves_gcs_scheme() -> None:
     objects = [
-        {"uri": "gs://jouvencekb/kg/v2/features/example/part-00000.parquet"},
-        {"uri": "gs://jouvencekb/kg/v2/features/example/part-00001.parquet"},
+        {"uri": "gs://jouvencekb/main/features/example/part-00000.parquet"},
+        {"uri": "gs://jouvencekb/main/features/example/part-00001.parquet"},
     ]
 
     assert parquet_catalog._uri_pattern(objects) == (
-        "gs://jouvencekb/kg/v2/features/example/part-*.parquet"
+        "gs://jouvencekb/main/features/example/part-*.parquet"
     )

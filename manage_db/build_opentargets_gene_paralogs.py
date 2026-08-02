@@ -375,7 +375,7 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--release", default="latest")
     parser.add_argument("--no-download", action="store_true")
     parser.add_argument("--workers", type=int, default=8)
-    parser.add_argument("--canonical-gene-path", default="gs://jouvencekb/kg/v2/nodes/gene.parquet")
+    parser.add_argument("--canonical-gene-path", default="gs://jouvencekb/main/nodes/gene.parquet")
     parser.add_argument("--output-dir", default="artifacts/staged/opentargets_gene_paralogs")
     parser.add_argument("--upload-uri", default="")
     parser.add_argument("--delete-local-duplicates", action="store_true")

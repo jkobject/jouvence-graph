@@ -12,11 +12,11 @@ Route C is complete as the selected support-only product outcome. The accepted s
 Accepted support-only artifacts:
 
 - `t_3b8a2c4d` — CRM support/QA first10k chr1 `pilot accepted`/`staged-only`.
-- Prefix: `gs://jouvencekb/kg/staging/source-native-expansion/remap-crm-tf-binds-enhancer-support-chr1-first10k-20260623-t_3b8a2c4d/`
+- Prefix: `gs://jouvencekb/staging/source-native-expansion/remap-crm-tf-binds-enhancer-support-chr1-first10k-20260623-t_3b8a2c4d/`
 - `t_b599d3bb` — CRM support/QA all-chromosome bounded 5k-per-chrom artifact accepted as staged-only/support-only.
-- Prefix: `gs://jouvencekb/kg/staging/source-native-expansion/remap-crm-tf-binds-enhancer-support-allchrom-5kperchrom-20260623-t_b599d3bb/all_chrom_5k_per_chrom/`
+- Prefix: `gs://jouvencekb/staging/source-native-expansion/remap-crm-tf-binds-enhancer-support-allchrom-5kperchrom-20260623-t_b599d3bb/all_chrom_5k_per_chrom/`
 - `t_f2a2952e` — full/unbounded CRM support/QA sidecar `canonical promoted full support sidecar` / `review-required` after readiness gate `t_7e356c5c` and reviewer `t_0d77b4f0`.
-- Prefix: `gs://jouvencekb/kg/v2/features/remap_crm_tf_enhancer_support_full/` with 24 chromosome summary shards, `tf_global_summary.parquet`, `manifest.json`, and `metadata.json`; see `docs/remap_crm_full_support_sidecar_canonical_promotion_t_f2a2952e.md`.
+- Prefix: `gs://jouvencekb/main/features/remap_crm_tf_enhancer_support_full/` with 24 chromosome summary shards, `tf_global_summary.parquet`, `manifest.json`, and `metadata.json`; see `docs/remap_crm_full_support_sidecar_canonical_promotion_t_f2a2952e.md`.
 - Semantics: `crm_aggregated_support` / support-QA only.
 - Not `observed_binding`; not `tf_regulates_gene`; not canonical `tf_binds_enhancer` edge/evidence.
 

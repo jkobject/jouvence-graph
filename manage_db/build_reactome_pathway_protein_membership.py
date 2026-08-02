@@ -430,7 +430,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input", default=None, help="Optional cached UniProt2Reactome_All_Levels.txt; downloads current release if omitted")
     parser.add_argument("--raw-cache-dir", default="artifacts/cache/raw/reactome/uniprot2reactome_all_levels", help="Repo-local raw cache for release-pinned Reactome mapping")
-    parser.add_argument("--node-root", default="", help="KG root containing nodes/protein.parquet and nodes/pathway.parquet, e.g. gs://jouvencekb/kg/v2")
+    parser.add_argument("--node-root", default="", help="KG root containing nodes/protein.parquet and nodes/pathway.parquet, e.g. gs://jouvencekb/main")
     parser.add_argument("--protein-nodes", default=None, help="Optional local protein.parquet for tests/offline builds")
     parser.add_argument("--pathway-nodes", default=None, help="Optional local pathway.parquet for tests/offline builds")
     parser.add_argument("--output-dir", default=None, help="Defaults to artifacts/staged/reactome-pathway-contains-protein-YYYY-MM-DD")

@@ -27,7 +27,7 @@ from . import fixture
 
 MANIFEST_NAME = "viewer-manifest.json"
 BUNDLE_SCHEMA = "jouvence-viewer-bundle-v1"
-GCS_REVIEWED_PREFIX = "gs://jouvencekb/kg/v2/viewer-bundles/"
+GCS_REVIEWED_PREFIX = "gs://jouvencekb/staging/viewer-bundles/"
 MAX_MANIFEST_BYTES = 1_000_000
 MAX_FILE_BYTES = 256 * 1024 * 1024
 MAX_BUNDLE_BYTES = 1024 * 1024 * 1024

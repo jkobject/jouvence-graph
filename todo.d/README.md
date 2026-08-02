@@ -11,7 +11,7 @@ Use these exact labels in docs/comments instead of bare "done" when scope is par
 - `staged-only`: artifact exists outside canonical KG; no canonical promotion.
 - `review-required`: producer is blocked pending independent reviewer/tester/CTO route.
 - `validated`: tester checked artifact behavior/counts/readability.
-- `canonical promoted`: written to canonical `gs://jouvencekb/kg/v2/...` and reviewed.
+- `canonical promoted`: written to canonical `gs://jouvencekb/main/...` and reviewed.
 - `production/full done`: full intended scope exists and runs, not just a pilot/tranche.
 
 Process details live in `docs/kanban_status_hygiene.md`.

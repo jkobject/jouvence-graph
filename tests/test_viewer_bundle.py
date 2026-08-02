@@ -102,7 +102,7 @@ def test_gcs_requester_pays_reads_only_manifest_declared_objects(
 ) -> None:
     local = build_fixture_bundle(tmp_path / "source")
     manifest_sha256 = hashlib.sha256((local / MANIFEST_NAME).read_bytes()).hexdigest()
-    prefix = "jouvencekb/kg/v2/viewer-bundles/reviewed-fixture"
+    prefix = "jouvencekb/staging/viewer-bundles/reviewed-fixture"
     objects = {
         f"{prefix}/{path.relative_to(local).as_posix()}": path.read_bytes()
         for path in local.rglob("*")
@@ -117,7 +117,7 @@ def test_gcs_requester_pays_reads_only_manifest_declared_objects(
 
     monkeypatch.setattr("manage_db.viewer.bundle.url_to_fs", fake_url_to_fs)
     source = open_viewer_bundle(
-        "gs://jouvencekb/kg/v2/viewer-bundles/reviewed-fixture",
+        "gs://jouvencekb/staging/viewer-bundles/reviewed-fixture",
         billing_project="consumer-project",
         cache_root=tmp_path / "cache",
         expected_manifest_sha256=manifest_sha256,
@@ -125,7 +125,7 @@ def test_gcs_requester_pays_reads_only_manifest_declared_objects(
 
     assert source.mode == "gcs-requester-pays"
     assert captured == {
-        "uri": "gs://jouvencekb/kg/v2/viewer-bundles/reviewed-fixture",
+        "uri": "gs://jouvencekb/staging/viewer-bundles/reviewed-fixture",
         "project": "consumer-project",
         "requester_pays": "consumer-project",
         "token": "google_default",
@@ -147,7 +147,7 @@ def test_gcs_requester_pays_reads_only_manifest_declared_objects(
 
     with pytest.raises(BundleError, match="does not match"):
         open_viewer_bundle(
-            "gs://jouvencekb/kg/v2/viewer-bundles/reviewed-fixture",
+            "gs://jouvencekb/staging/viewer-bundles/reviewed-fixture",
             billing_project="consumer-project",
             cache_root=tmp_path / "mismatch-cache",
             expected_manifest_sha256="0" * 64,
@@ -167,7 +167,7 @@ def test_gcs_requester_pays_reads_only_manifest_declared_objects(
     data_parent.symlink_to(outside_cache, target_is_directory=True)
     with pytest.raises(BundleError, match="cache path escapes"):
         open_viewer_bundle(
-            "gs://jouvencekb/kg/v2/viewer-bundles/reviewed-fixture",
+            "gs://jouvencekb/staging/viewer-bundles/reviewed-fixture",
             billing_project="consumer-project",
             cache_root=escape_cache,
             expected_manifest_sha256=manifest_sha256,
@@ -180,7 +180,7 @@ def test_gcs_requester_pays_reads_only_manifest_declared_objects(
     (lock_cache / ".viewer-cache.lock").symlink_to(outside_lock)
     with pytest.raises(BundleError, match="private viewer cache lock"):
         open_viewer_bundle(
-            "gs://jouvencekb/kg/v2/viewer-bundles/reviewed-fixture",
+            "gs://jouvencekb/staging/viewer-bundles/reviewed-fixture",
             billing_project="consumer-project",
             cache_root=lock_cache,
             expected_manifest_sha256=manifest_sha256,
@@ -190,7 +190,7 @@ def test_gcs_requester_pays_reads_only_manifest_declared_objects(
     monkeypatch.setattr("manage_db.viewer.bundle.MAX_CACHE_BYTES", 1)
     with pytest.raises(BundleError, match="aggregate 2 GB safety bound"):
         open_viewer_bundle(
-            "gs://jouvencekb/kg/v2/viewer-bundles/reviewed-fixture",
+            "gs://jouvencekb/staging/viewer-bundles/reviewed-fixture",
             billing_project="consumer-project",
             cache_root=tmp_path / "quota-cache",
             expected_manifest_sha256=manifest_sha256,
@@ -200,7 +200,7 @@ def test_gcs_requester_pays_reads_only_manifest_declared_objects(
     monkeypatch.setattr("manage_db.viewer.bundle.MAX_CACHE_FILES", 2)
     with pytest.raises(BundleError, match="file-count safety bound"):
         open_viewer_bundle(
-            "gs://jouvencekb/kg/v2/viewer-bundles/reviewed-fixture",
+            "gs://jouvencekb/staging/viewer-bundles/reviewed-fixture",
             billing_project="consumer-project",
             cache_root=tmp_path / "file-count-cache",
             expected_manifest_sha256=manifest_sha256,
@@ -212,7 +212,7 @@ def test_gcs_cache_lock_does_not_exceed_file_count_bound(
 ) -> None:
     local = build_fixture_bundle(tmp_path / "source")
     manifest_sha256 = hashlib.sha256((local / MANIFEST_NAME).read_bytes()).hexdigest()
-    prefix = "jouvencekb/kg/v2/viewer-bundles/reviewed-fixture"
+    prefix = "jouvencekb/staging/viewer-bundles/reviewed-fixture"
     objects = {
         f"{prefix}/{path.relative_to(local).as_posix()}": path.read_bytes()
         for path in local.rglob("*")
@@ -230,7 +230,7 @@ def test_gcs_cache_lock_does_not_exceed_file_count_bound(
 
     with pytest.raises(BundleError, match="file-count safety bound"):
         open_viewer_bundle(
-            "gs://jouvencekb/kg/v2/viewer-bundles/reviewed-fixture",
+            "gs://jouvencekb/staging/viewer-bundles/reviewed-fixture",
             billing_project="consumer-project",
             cache_root=cache_root,
             expected_manifest_sha256=manifest_sha256,
@@ -245,12 +245,12 @@ def test_gcs_cache_lock_does_not_exceed_file_count_bound(
 def test_gcs_requires_consumer_billing_project(tmp_path: Path) -> None:
     with pytest.raises(BundleError, match="--billing-project"):
         open_viewer_bundle(
-            "gs://jouvencekb/kg/v2/viewer-bundles/reviewed",
+            "gs://jouvencekb/staging/viewer-bundles/reviewed",
             cache_root=tmp_path / "cache",
         )
     for unsafe_root in (
-        "gs://jouvencekb/kg/v2",
-        "gs://jouvencekb/kg/v2/viewer-bundles/../edges",
+        "gs://jouvencekb/main",
+        "gs://jouvencekb/staging/viewer-bundles/../edges",
         "gs://other-bucket/kg/v2/viewer-bundles/reviewed",
     ):
         with pytest.raises(BundleError, match="reviewed viewer bundle"):
@@ -261,7 +261,7 @@ def test_gcs_requires_consumer_billing_project(tmp_path: Path) -> None:
             )
     with pytest.raises(BundleError, match="--manifest-sha256"):
         open_viewer_bundle(
-            "gs://jouvencekb/kg/v2/viewer-bundles/reviewed",
+            "gs://jouvencekb/staging/viewer-bundles/reviewed",
             billing_project="consumer-project",
             cache_root=tmp_path / "cache",
         )
@@ -278,7 +278,7 @@ def test_gcs_adapter_initialization_error_is_sanitized(
     monkeypatch.setattr("manage_db.viewer.bundle.url_to_fs", fail_adapter)
     with pytest.raises(BundleError) as error:
         open_viewer_bundle(
-            "gs://jouvencekb/kg/v2/viewer-bundles/reviewed",
+            "gs://jouvencekb/staging/viewer-bundles/reviewed",
             billing_project="consumer-project",
             cache_root=tmp_path / "cache",
             expected_manifest_sha256="0" * 64,

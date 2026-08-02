@@ -3,8 +3,8 @@
 
 - Layer: `edges`
 - Status: **canonical present**
-- As of: `2026-06-23`
-- Canonical URI/pattern: `gs://jouvencekb/kg/v2/edges/mutation_affects_transcript.parquet`
+- As of: `2026-07-27`
+- Canonical URI/pattern: `gs://jouvencekb/main/edges/mutation_affects_transcript.parquet`
 - Logical rows: **2,599,922**
 - Physical objects: **1**
 - Bytes: **20,266,519**
@@ -12,7 +12,7 @@
 
 ## Meaning
 
-Transcript-level consequence such as splicing/UTR/coding-transcript effect; active schema relation but not canonical until bounded source-specific evidence and endpoint policy are selected
+Transcript-level consequence such as splicing/UTR/coding-transcript effect; canonical promoted/review-accepted from OpenTargets VEP transcriptConsequences with canonical mutation/transcript endpoints and allowed transcript-local consequence policy
 
 **Does not mean:** It is not evidence multiplicity: source-specific support belongs in the matching evidence table.
 
@@ -53,7 +53,7 @@ The logical dataset is represented by `1` physical Parquet object(s). Physical s
 
 | Object | Rows | Bytes | Generation | CRC32C | MD5 |
 |---|---:|---:|---|---|---|
-| `gs://jouvencekb/kg/v2/edges/mutation_affects_transcript.parquet` | 2,599,922 | 20,266,519 | `1782244419732373` | `GuUaHw==` | `/37msg3JvBxsQucaRBrVng==` |
+| `gs://jouvencekb/main/edges/mutation_affects_transcript.parquet` | 2,599,922 | 20,266,519 | `1785155487269758` | `GuUaHw==` | `/37msg3JvBxsQucaRBrVng==` |
 - catalog_manifest: [../inventory.json](../inventory.json)
 - schema_doc: [../../kg_schema_overview.md](../../kg_schema_overview.md)
 
@@ -66,7 +66,7 @@ export BILLING_PROJECT='<your-gcp-billing-project>'
 LOCAL_DIR='./parquet-catalog-data/edges__mutation_affects_transcript'
 rm -rf -- "$LOCAL_DIR"
 mkdir -p "$LOCAL_DIR"
-gcloud storage cp --billing-project="$BILLING_PROJECT" 'gs://jouvencekb/kg/v2/edges/mutation_affects_transcript.parquet' "$LOCAL_DIR/"
+gcloud storage cp --billing-project="$BILLING_PROJECT" 'gs://jouvencekb/main/edges/mutation_affects_transcript.parquet' "$LOCAL_DIR/"
 ```
 
 PyArrow (GCS credentials/application-default credentials must carry the billing project):
@@ -77,7 +77,7 @@ import gcsfs
 import pyarrow.dataset as ds
 billing_project = os.environ['BILLING_PROJECT']
 fs = gcsfs.GCSFileSystem(project=billing_project, requester_pays=billing_project)
-paths = sorted(fs.glob('jouvencekb/kg/v2/edges/mutation_affects_transcript.parquet'))
+paths = sorted(fs.glob('jouvencekb/main/edges/mutation_affects_transcript.parquet'))
 dataset = ds.dataset(paths, filesystem=fs, format='parquet')
 print(dataset.head(5, columns=['x_id']))
 ```

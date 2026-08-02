@@ -3,8 +3,8 @@
 
 - Layer: `evidence`
 - Status: **canonical present**
-- As of: `2026-06-23`
-- Canonical URI/pattern: `gs://jouvencekb/kg/v2/evidence/mutation_affects_transcript.parquet`
+- As of: `2026-07-27`
+- Canonical URI/pattern: `gs://jouvencekb/main/evidence/mutation_affects_transcript.parquet`
 - Logical rows: **2,599,922**
 - Physical objects: **1**
 - Bytes: **199,510,540**
@@ -62,7 +62,7 @@ The logical dataset is represented by `1` physical Parquet object(s). Physical s
 
 | Object | Rows | Bytes | Generation | CRC32C | MD5 |
 |---|---:|---:|---|---|---|
-| `gs://jouvencekb/kg/v2/evidence/mutation_affects_transcript.parquet` | 2,599,922 | 199,510,540 | `1782244424766297` | `hcDMOA==` | `n/a` |
+| `gs://jouvencekb/main/evidence/mutation_affects_transcript.parquet` | 2,599,922 | 199,510,540 | `1785155493058158` | `hcDMOA==` | `n/a` |
 - catalog_manifest: [../inventory.json](../inventory.json)
 - evidence_doc: [../../evidence_and_edge_schema_plan.md](../../evidence_and_edge_schema_plan.md)
 - schema_doc: [../../kg_schema_overview.md](../../kg_schema_overview.md)
@@ -76,7 +76,7 @@ export BILLING_PROJECT='<your-gcp-billing-project>'
 LOCAL_DIR='./parquet-catalog-data/evidence__mutation_affects_transcript'
 rm -rf -- "$LOCAL_DIR"
 mkdir -p "$LOCAL_DIR"
-gcloud storage cp --billing-project="$BILLING_PROJECT" 'gs://jouvencekb/kg/v2/evidence/mutation_affects_transcript.parquet' "$LOCAL_DIR/"
+gcloud storage cp --billing-project="$BILLING_PROJECT" 'gs://jouvencekb/main/evidence/mutation_affects_transcript.parquet' "$LOCAL_DIR/"
 ```
 
 PyArrow (GCS credentials/application-default credentials must carry the billing project):
@@ -87,7 +87,7 @@ import gcsfs
 import pyarrow.dataset as ds
 billing_project = os.environ['BILLING_PROJECT']
 fs = gcsfs.GCSFileSystem(project=billing_project, requester_pays=billing_project)
-paths = sorted(fs.glob('jouvencekb/kg/v2/evidence/mutation_affects_transcript.parquet'))
+paths = sorted(fs.glob('jouvencekb/main/evidence/mutation_affects_transcript.parquet'))
 dataset = ds.dataset(paths, filesystem=fs, format='parquet')
 print(dataset.head(5, columns=['relation']))
 ```

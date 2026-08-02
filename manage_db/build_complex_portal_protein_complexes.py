@@ -731,7 +731,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input", default=None, help="Optional cached Complex Portal human complextab 9606.tsv; downloads current release if omitted")
     parser.add_argument("--raw-cache-dir", default="artifacts/cache/raw/complex_portal", help="Repo-local raw cache for release-pinned complextab")
-    parser.add_argument("--node-root", default="", help="KG root containing nodes/protein.parquet for UniProt→ENSP mapping, e.g. gs://jouvencekb/kg/v2")
+    parser.add_argument("--node-root", default="", help="KG root containing nodes/protein.parquet for UniProt→ENSP mapping, e.g. gs://jouvencekb/main")
     parser.add_argument("--protein-nodes", default=None, help="Optional local protein.parquet for tests/offline builds")
     parser.add_argument("--output-dir", default=None, help="Defaults to artifacts/staged/complex-portal-protein-complexes-YYYY-MM-DD")
     parser.add_argument("--source-url", default=COMPLEX_PORTAL_HUMAN_URL)

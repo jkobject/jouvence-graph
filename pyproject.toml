@@ -43,7 +43,11 @@ embeddings-molecule = ["transformers>=4.40", "torch>=2.12", "rdkit>=2025.9.1"]
 embeddings-protein = ["fair-esm>=2.0", "torch>=2.12"]
 # NT v2 remote-code weights load as random initialization under Transformers 5.x.
 embeddings-nucleotide = ["transformers==4.55.4", "torch>=2.12"]
-notebooks = ["nbclient>=0.10", "nbformat>=5.10"]
+notebooks = [
+    "nbclient>=0.10",
+    "nbformat>=5.10",
+    "umap-learn>=0.5.7",
+]
 
 [tool.setuptools]
 include-package-data = true

@@ -1,15 +1,15 @@
 # Jouvence KG access runbook
 
-This runbook is the default access path for workers using the Jouvence KG at `gs://jouvencekb/kg/v2`. Small bounded inspection may happen from the macOS worker environment, but heavy Jouvence work is VM-only. The filename and `txgnn-worker` VM name are retained compatibility identifiers.
+This runbook is the default access path for workers using the Jouvence KG at `gs://jouvencekb/main`. Small bounded inspection may happen from the macOS worker environment, but heavy Jouvence work is VM-only. The filename and `txgnn-worker` VM name are retained compatibility identifiers.
 
-Emergency guardrail (`t_d682b7ad`): heavy LaminDB/PyG/ReMap/embedding/full-KG jobs must run on `txgnn-worker` or another explicitly approved in-region worker. Use `gs://jouvencekb/kg/v2` as the source for those jobs. Do **not** run heavy reads/writes through `/Users/jkobject/mnt/gcs/...` / macOS GCS-FUSE. Future heavy cards must state `must_run_on=txgnn-worker`, preflight `hostname`, use `gcloud compute ssh` for worker launch/inspection, check for an existing related writer/process, and fail immediately if any heavy input/output path starts with `/Users/jkobject/mnt/gcs`.
+Emergency guardrail (`t_d682b7ad`): heavy LaminDB/PyG/ReMap/embedding/full-KG jobs must run on `txgnn-worker` or another explicitly approved in-region worker. Use `gs://jouvencekb/main` as the source for those jobs and `gs://jouvencekb/staging` for temporary outputs. Do **not** run heavy reads/writes through `/Users/jkobject/mnt/gcs/...` / macOS GCS-FUSE. Future heavy cards must state `must_run_on=txgnn-worker`, preflight `hostname`, use `gcloud compute ssh` for worker launch/inspection, check for an existing related writer/process, and fail immediately if any heavy input/output path starts with `/Users/jkobject/mnt/gcs`.
 
 Status from verification on 2026-06-23:
 
 - GCS CLI access: verified with both `gcloud storage` and `gsutil`.
 - FUSE mount: verified on macOS after macFUSE approval at `~/mnt/gcs/jouvencekb-kg`, mounted with `gcsfuse --foreground --implicit-dirs --only-dir kg jouvencekb ~/mnt/gcs/jouvencekb-kg`. This mount exposes bucket prefix `gs://jouvencekb/kg/`, so canonical KG paths appear under `~/mnt/gcs/jouvencekb-kg/v2/...`. DuckDB read of `v2/features/protein_sequence.parquet` via the mount succeeded. This is for small bounded/local inspection only; it is forbidden for heavy LaminDB/PyG/ReMap/embedding/full-KG work.
 - Repo-local `.omoc` caches are retired. For small bounded Mac inspection, use the FUSE mount or direct `gs://...` access; if a bounded local cache is unavoidable, use `artifacts/cache/<task-id>/` and preserve original GCS URIs in reports. For heavy work, use `txgnn-worker`/approved VM and bucket-local `gs://...` paths instead.
-- LaminDB instance `jkobject/jouvencekb`: verified after exporting `LAMIN_API_KEY` from `~/.laminkey` and repairing the local Lamin SQLite cache. `uv run lamin connect jkobject/jouvencekb` exits 0 and `ln.DB("jkobject/jouvencekb")` instantiates. Caveat: Lamin instance metadata still points at missing `gs://jouvencekb/.lamindb/lamin.db`; the usable DB currently comes from the local cache copied from `gs://jouvencekb/lamin/.lamindb/lamin.db`.
+- LaminDB instance `jkobject/jouvencekb`: remote SQLite and managed artifacts now live under `gs://jouvencekb/.lamin`; its repaired catalog points to `.lamin/lamin` and `main`, contains 79 artifacts, and passes SQLite `quick_check`.
 
 Do not print tokens, DB URLs, or raw Lamin/GCloud credential files in logs.
 
@@ -234,7 +234,9 @@ To push the file to the cloud, call: lamin disconnect
 exit_code 0
 ```
 
-Do **not** run `lamin disconnect` or otherwise push/reupload the SQLite DB to GCS from a worker unless the operator explicitly approves that remote write. The cleaner long-term fix is to align the Lamin instance storage root with the actual DB object path, or intentionally copy/symlink the DB to the path Lamin expects.
+The output above is retained as a historical 2026-06 transcript. The remote
+storage-root mismatch was resolved on 2026-07-27 under
+`gs://jouvencekb/.lamin`; do not use the old root paths in new commands.
 
 ### Python checks
 
@@ -277,7 +279,9 @@ Artifact count 0
 Collection count 0
 ```
 
-Interpretation: the repo-pinned LaminDB package can connect and inspect registries when the API key is exported and the repaired local SQLite cache is present. The warning about missing `gs://jouvencekb/.lamindb/lamin.db` is expected until the remote storage-root mismatch is fixed.
+Interpretation: this was the historical pre-migration probe. The missing-DB
+warning is no longer expected: current instance configuration and remote DB use
+`gs://jouvencekb/.lamin`.
 
 ### Local Lamin SQLite cache
 

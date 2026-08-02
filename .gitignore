@@ -149,6 +149,7 @@ data/lamin_txgnn_fresh/
 data/lamin_txgnn_fresh2/
 data/opentargets/
 data/kg
+/data/pyg/
 mjouvencekb/
 /artifacts/
 /.worktrees/

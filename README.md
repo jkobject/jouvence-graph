@@ -10,7 +10,7 @@ Compatibility boundary: Python imports remain `txgnn`, and public model classes 
 
 Jouvence builds a larger, source-aware biomedical knowledge graph around the TxGNN model with:
 
-- canonical Parquet nodes, edges, and source-specific evidence under `gs://jouvencekb/kg/v2`;
+- canonical Parquet nodes, edges, evidence, features, and embeddings under `gs://jouvencekb/main`;
 - source-native relation semantics and explicit provenance rather than projected or placeholder edges;
 - LaminDB cataloging through the intended instance `jkobject/jouvencekb`;
 - memory-safe PyG/GNN export and learned/foundation feature pipelines;
@@ -123,7 +123,7 @@ semantics as the fixture API and are explicitly labeled as non-live data.
 
 For a complete compatible bundle, follow the bilingual
 [local full-data viewer installation guide](docs/viewer-install.html). The
-viewer refuses raw `kg/v2` roots rather than scanning canonical 100M+ row tables
+viewer refuses raw canonical `main/` roots rather than scanning 100M+ row tables
 on a laptop.
 
 The committed static assets are reproducible from the backend fixture:

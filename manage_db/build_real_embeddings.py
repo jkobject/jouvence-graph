@@ -698,8 +698,8 @@ def run(
 
 def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description="Build staged real node/edge embeddings from official Jouvence KG features.")
-    parser.add_argument("--kg-root", type=Path, default=Path("/Users/jkobject/mnt/gcs/jouvencekb-kg/v2"))
-    parser.add_argument("--gcs-kg-root", default=None, help="Canonical GCS KG root, e.g. gs://jouvencekb/kg/v2. When set, copy required inputs to --local-cache-dir first and read from that local cache instead of FUSE.")
+    parser.add_argument("--kg-root", type=Path, default=Path("/Users/jkobject/mnt/gcs/jouvencekb/main"))
+    parser.add_argument("--gcs-kg-root", default=None, help="Canonical GCS KG root, e.g. gs://jouvencekb/main. When set, copy required inputs to --local-cache-dir first and read from that local cache instead of FUSE.")
     parser.add_argument("--local-cache-dir", type=Path, default=None, help="Local cache destination for --gcs-kg-root inputs; defaults next to --output-dir.")
     parser.add_argument("--output-dir", type=Path, default=Path("artifacts/staged/t_8892763b/text_sbiobert_smoke"))
     parser.add_argument("--text-limit-per-table", type=int, default=16)

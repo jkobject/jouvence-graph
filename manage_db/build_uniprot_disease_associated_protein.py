@@ -41,7 +41,7 @@ SOURCE_HUMSAVAR = "UniProtKB/humsavar"
 UNIPROT_DISEASE_DATASET = "reviewed_human_disease_comments"
 HUMSAVAR_DATASET = "humsavar_missense_variants"
 HUMSAVAR_URL = "https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/variants/humsavar.txt"
-CANONICAL_ROOTS = {"/mnt/gcs/jouvencekb/kg/v2", "gs://jouvencekb/kg/v2"}
+CANONICAL_ROOTS = {"/mnt/gcs/jouvencekb/main", "gs://jouvencekb/main"}
 
 EDGE_COLUMNS = ["x_id", "x_type", "y_id", "y_type", "relation", "display_relation", "source", "credibility"]
 EVIDENCE_COLUMNS = [
@@ -646,8 +646,8 @@ def build_uniprot_disease_associated_protein(
 def main(argv: Iterable[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output-root", required=True, help="Local or gs:// staging root")
-    parser.add_argument("--protein-nodes", default="gs://jouvencekb/kg/v2/nodes/protein.parquet")
-    parser.add_argument("--disease-nodes", default="gs://jouvencekb/kg/v2/nodes/disease.parquet")
+    parser.add_argument("--protein-nodes", default="gs://jouvencekb/main/nodes/protein.parquet")
+    parser.add_argument("--disease-nodes", default="gs://jouvencekb/main/nodes/disease.parquet")
     parser.add_argument("--max-pages", type=int, default=None, help="Debug limit for UniProt pagination")
     parser.add_argument("--entries-json", default=None, help="Optional UniProt JSON fixture/cache")
     parser.add_argument("--humsavar", default=None, help="Optional humsavar.txt fixture/cache")

@@ -71,7 +71,7 @@ Use:
 
 - `artifacts/staged/...` for local staged outputs;
 - `docs/...` for human-readable reports;
-- `gs://jouvencekb/kg/staging/...` or another explicit bucket prefix for large staged artifacts;
+- `gs://jouvencekb/staging/<task-id>/...` for large staged artifacts;
 - `.omoc/` only for legacy artifacts that already exist or a currently running old process that cannot safely be interrupted.
 
 If an old process is still writing `.omoc`, do not delete it mid-run. Let it finish, copy/promote the useful outputs into `artifacts/`, `docs/`, or bucket staging, then clean `.omoc` only when no active command references it.

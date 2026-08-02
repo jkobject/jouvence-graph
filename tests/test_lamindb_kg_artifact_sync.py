@@ -63,24 +63,27 @@ def test_build_manifest_covers_nodes_edges_evidence_and_features(tmp_path: Path)
     manifest = build_manifest(kg_path).to_dict()
 
     keys = {entry["key"] for entry in manifest["layers"]}
-    assert "kg/v2/nodes/gene.parquet" in keys
-    assert "kg/v2/edges/gene_interacts_gene.parquet" in keys
-    assert "kg/v2/evidence/gene_interacts_gene.parquet" in keys
-    assert "kg/v2/features/gene_textual_summary.parquet" in keys
+    assert "main/nodes/gene.parquet" in keys
+    assert "main/edges/gene_interacts_gene.parquet" in keys
+    assert "main/evidence/gene_interacts_gene.parquet" in keys
+    assert "main/features/gene_textual_summary.parquet" in keys
     assert manifest["summary"]["counts_by_layer"] == {
         "nodes": 1,
         "edges": 1,
+        "edges_inferred": 0,
         "evidence": 1,
+        "evidence_inferred": 0,
         "features": 1,
+        "embeddings": 0,
     }
 
-    gene = next(entry for entry in manifest["layers"] if entry["key"] == "kg/v2/nodes/gene.parquet")
+    gene = next(entry for entry in manifest["layers"] if entry["key"] == "main/nodes/gene.parquet")
     assert gene["rows"] == 1
     assert "id" in gene["columns"]
     assert "node_type:gene" in gene["labels"]
     assert gene["metadata_fingerprint"]
 
-    edge = next(entry for entry in manifest["layers"] if entry["key"] == "kg/v2/edges/gene_interacts_gene.parquet")
+    edge = next(entry for entry in manifest["layers"] if entry["key"] == "main/edges/gene_interacts_gene.parquet")
     assert edge["metadata"]["x_type"] == "gene"
     assert edge["metadata"]["y_type"] == "gene"
     assert "relation:gene_interacts_gene" in edge["labels"]
@@ -89,11 +92,11 @@ def test_build_manifest_covers_nodes_edges_evidence_and_features(tmp_path: Path)
 def test_build_manifest_can_record_public_bucket_uris_from_local_scan(tmp_path: Path) -> None:
     kg_path = _tiny_kg(tmp_path)
 
-    manifest = build_manifest(kg_path, public_root="gs://jouvencekb/kg/v2").to_dict()
+    manifest = build_manifest(kg_path, public_root="gs://jouvencekb/main").to_dict()
 
     assert manifest["scan_root"] == str(kg_path)
-    assert manifest["canonical_root"] == "gs://jouvencekb/kg/v2"
-    assert all(entry["uri"].startswith("gs://jouvencekb/kg/v2/") for entry in manifest["layers"])
+    assert manifest["canonical_root"] == "gs://jouvencekb/main"
+    assert all(entry["uri"].startswith("gs://jouvencekb/main/") for entry in manifest["layers"])
 
 
 def test_list_registered_metadata_smoke_view_has_all_layers(tmp_path: Path) -> None:
@@ -204,7 +207,7 @@ def test_ensure_collection_uses_lamindb_key_field() -> None:
 
 def test_sync_one_artifact_is_idempotent_with_existing_fingerprint(tmp_path: Path) -> None:
     manifest = build_manifest(_tiny_kg(tmp_path)).to_dict()
-    entry = next(item for item in manifest["layers"] if item["key"] == "kg/v2/nodes/gene.parquet")
+    entry = next(item for item in manifest["layers"] if item["key"] == "main/nodes/gene.parquet")
     existing = FakeArtifact(entry["uri"], key=entry["key"], description=f"metadata_fingerprint {entry['metadata_fingerprint']}").save()
     collection = FakeCollection(name="jouvence-kg/v2").save()
 
@@ -217,7 +220,7 @@ def test_sync_one_artifact_is_idempotent_with_existing_fingerprint(tmp_path: Pat
 
 def test_sync_one_artifact_updates_changed_metadata_and_attaches_labels(tmp_path: Path) -> None:
     manifest = build_manifest(_tiny_kg(tmp_path)).to_dict()
-    entry = next(item for item in manifest["layers"] if item["key"] == "kg/v2/features/gene_textual_summary.parquet")
+    entry = next(item for item in manifest["layers"] if item["key"] == "main/features/gene_textual_summary.parquet")
     existing = FakeArtifact(entry["uri"], key=entry["key"], description="old fingerprint").save()
     collection = FakeCollection(name="jouvence-kg/v2").save()
 

@@ -36,6 +36,22 @@ Sequences are therefore **not expected for every node type**, and are not comple
 
 ## Real embedding artifacts
 
+### 2026-07-27 coverage interpretation
+
+Do not equate missing node embeddings with an interrupted model job. For the
+current text, protein-sequence, transcript-sequence, and molecule-SMILES releases,
+embedding rows generally match their reviewed source-feature rows; remaining node
+gaps are primarily missing/ineligible source payloads. The exact human-ENSG gene
+genomic release is canonical promoted and independently accepted at **78,644 /
+81,715**, with **3,071 explicit missing**. The stale blocked continuation card is
+superseded and must not be resumed.
+
+Before more compute, produce disjoint counts per node type/modality: canonical
+target nodes, eligible source payloads, embedded rows, skipped source rows,
+source-eligible missing embeddings, no-payload nodes, and quarantined nodes. Only
+the source-eligible missing set is a candidate for finishing an embedding job.
+See `docs/guides/pyg-feature-registry.md`.
+
 ### Immutable public embeddings v2
 
 `t_2d54477b` published a corrected immutable candidate under `kg/v2/features/embeddings/`; reviewer `t_2e6b355f` independently returned `validated` PASS on 2026-07-19:
@@ -65,9 +81,13 @@ Important boundaries:
 - edge/value MLP output has executable bounded proof, but full all-relation production embedding materialization and model calibration are not complete;
 - learned fallback is a model parameter/initialization, not biological source evidence.
 
-## Gene Nucleotide Transformer stop
+## Historical Gene Nucleotide Transformer stop
 
-`t_d3b876b3` is **stopped-by-user** at 6,912 / 78,164 scratch rows. Those rows are non-canonical and have no accepted release marker. Do not auto-resume, publish, delete, or count the scratch checkpoint as accepted embedding coverage. Any future restart requires a new explicit operator decision and bounded plan.
+`t_d3b876b3` stopped at 6,912 / 78,164 scratch rows and remains historical,
+non-canonical evidence. It was superseded by the independently accepted exact-ENSG
+production lineage (`t_03bf9e27` → `t_6cf146f0` → reviewer `t_536b7016`). Do not
+resume the old scratch checkpoint or the superseded continuation card
+`t_41b61edd`.
 
 ## 16 GB implication
 

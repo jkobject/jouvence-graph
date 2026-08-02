@@ -49,7 +49,7 @@ to write canonical GCS or LaminDB data.
 
 ## 2. Authenticate for canonical Parquet
 
-Canonical root: `gs://jouvencekb/kg/v2`. Its main layers are:
+Canonical root: `gs://jouvencekb/main`. Its main layers are:
 
 ```text
 nodes/<node_type>.parquet
@@ -133,7 +133,7 @@ uv run python - <<'PY'
 import os
 from manage_db.public_notebooks import read_bounded_parquet
 
-root = 'gs://jouvencekb/kg/v2'
+root = 'gs://jouvencekb/main'
 project = os.environ['JOUVENCE_BILLING_PROJECT']
 for relative, columns in [
     ('nodes/gene.parquet', ['id', 'name', 'source']),
@@ -159,7 +159,7 @@ import os
 from manage_db.public_notebooks import bounded_edge_evidence_join
 
 rows = bounded_edge_evidence_join(
-    'gs://jouvencekb/kg/v2',
+    'gs://jouvencekb/main',
     'disease_associated_gene',
     edge_limit=100,
     evidence_limit=1000,

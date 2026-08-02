@@ -719,7 +719,7 @@ def run(
 def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description="Build staged gene genomic sequence embeddings with pinned Nucleotide Transformer and explicit length/window audit.")
     parser.add_argument("--source-root", type=Path, default=Path("/Users/jkobject/.openclaw/workspace/work/txgnn/artifacts/staged/t_720528ea/full"), help="Root containing features/gene_genomic_sequence.parquet; reviewed staged source by default.")
-    parser.add_argument("--gcs-source-root", default=None, help="GCS source root containing features/gene_genomic_sequence.parquet, e.g. gs://jouvencekb/kg/staging/gene-genomic-sequence-20260625-t_720528ea.")
+    parser.add_argument("--gcs-source-root", default=None, help="GCS source root containing features/gene_genomic_sequence.parquet, e.g. gs://jouvencekb/staging/gene-genomic-sequence-20260625-t_720528ea.")
     parser.add_argument("--local-cache-dir", type=Path, default=None)
     parser.add_argument("--output-dir", type=Path, default=Path(f"artifacts/staged/{TASK_ID}/gene_genomic_sequence_nt_bounded"))
     parser.add_argument("--limit", type=int, default=1, help="Number of source rows to embed for bounded smoke; ignored with --no-limit.")

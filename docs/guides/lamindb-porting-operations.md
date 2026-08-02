@@ -7,7 +7,7 @@ This page is the durable operating model for moving the Jouvence KG into LaminDB
 ## Target architecture
 
 ```text
-gs://jouvencekb/kg/v2
+gs://jouvencekb/main
   nodes/*.parquet
   edges/<relation>.parquet
   evidence/<relation>.parquet
@@ -26,7 +26,7 @@ LaminDB instance: jkobject/jouvencekb
   artifacts / schema / provenance
 ```
 
-The macOS GCS-FUSE path `/Users/jkobject/mnt/gcs/jouvencekb-kg/v2` is restricted to small, bounded inspection. Bulk syncs from the Mac caused repeated remote object reads and avoidable GCS egress. Heavy scans and writes must use `gs://jouvencekb/kg/v2` from an approved in-region worker.
+The macOS GCS-FUSE path `/Users/jkobject/mnt/gcs/jouvencekb/main` is restricted to small, bounded inspection. Bulk syncs from the Mac caused repeated remote object reads and avoidable GCS egress. Heavy scans and writes must use `gs://jouvencekb/main` from an approved in-region worker.
 
 ## Hard safety gates
 

@@ -16,7 +16,7 @@ from typing import Any
 import duckdb
 
 
-DEFAULT_ROOT = Path('/Users/jkobject/mnt/gcs/jouvencekb-kg/v2')
+DEFAULT_ROOT = Path('/Users/jkobject/mnt/gcs/jouvencekb/main')
 
 
 def edge(root: Path, relation: str) -> str:

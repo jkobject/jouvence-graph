@@ -1,0 +1,4830 @@
+{
+  "aggregates": {
+    ".lamindb/": {
+      "bytes": 7830147082,
+      "newest": "2026-07-14T09:04:33.902000+00:00",
+      "objects": 4,
+      "oldest": "2026-06-25T00:32:04.944000+00:00"
+    },
+    ".lamindb/_exclusion/": {
+      "bytes": 10,
+      "newest": "2026-07-14T09:04:33.902000+00:00",
+      "objects": 3,
+      "oldest": "2026-06-25T00:32:04.944000+00:00"
+    },
+    ".lamindb/_exclusion/9f042ad826235b11a89a5b2267e53928/": {
+      "bytes": 10,
+      "newest": "2026-07-14T09:04:33.902000+00:00",
+      "objects": 3,
+      "oldest": "2026-06-25T00:32:04.944000+00:00"
+    },
+    ".lamindb/_exclusion/9f042ad826235b11a89a5b2267e53928/entering/": {
+      "bytes": 1,
+      "newest": "2026-07-14T09:04:33.902000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-14T09:04:33.902000+00:00"
+    },
+    ".lamindb/_exclusion/9f042ad826235b11a89a5b2267e53928/entering/a3keNAVX": {
+      "bytes": 1,
+      "newest": "2026-07-14T09:04:33.902000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-14T09:04:33.902000+00:00"
+    },
+    ".lamindb/_exclusion/9f042ad826235b11a89a5b2267e53928/numbers/": {
+      "bytes": 1,
+      "newest": "2026-07-14T09:04:33.817000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-14T09:04:33.817000+00:00"
+    },
+    ".lamindb/_exclusion/9f042ad826235b11a89a5b2267e53928/numbers/a3keNAVX": {
+      "bytes": 1,
+      "newest": "2026-07-14T09:04:33.817000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-14T09:04:33.817000+00:00"
+    },
+    ".lamindb/_exclusion/9f042ad826235b11a89a5b2267e53928/priorities": {
+      "bytes": 8,
+      "newest": "2026-06-25T00:32:04.944000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-25T00:32:04.944000+00:00"
+    },
+    ".lamindb/lamin.db": {
+      "bytes": 7830147072,
+      "newest": "2026-07-13T14:14:10.343000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-13T14:14:10.343000+00:00"
+    },
+    "/": {
+      "bytes": 168588371174,
+      "newest": "2026-07-23T00:22:58.476000+00:00",
+      "objects": 15538,
+      "oldest": "2026-06-03T16:49:00.963000+00:00"
+    },
+    "_clawd_probe.txt": {
+      "bytes": 67,
+      "newest": "2026-06-03T16:49:00.963000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-03T16:49:00.963000+00:00"
+    },
+    "kg/": {
+      "bytes": 146429257416,
+      "newest": "2026-07-23T00:22:58.476000+00:00",
+      "objects": 15468,
+      "oldest": "2026-06-07T13:09:58.221000+00:00"
+    },
+    "kg/local-archive/": {
+      "bytes": 24261942878,
+      "newest": "2026-06-23T09:48:28.715000+00:00",
+      "objects": 622,
+      "oldest": "2026-06-11T09:11:56.453000+00:00"
+    },
+    "kg/local-archive/canonical-v2-pre-ontology-id-normalization-20260611T113134Z/": {
+      "bytes": 137811114,
+      "newest": "2026-06-11T11:34:19.243000+00:00",
+      "objects": 12,
+      "oldest": "2026-06-11T11:34:14.358000+00:00"
+    },
+    "kg/local-archive/canonical-v2-pre-ontology-id-normalization-20260611T113134Z/edges/": {
+      "bytes": 133622466,
+      "newest": "2026-06-11T11:34:19.243000+00:00",
+      "objects": 10,
+      "oldest": "2026-06-11T11:34:15.174000+00:00"
+    },
+    "kg/local-archive/canonical-v2-pre-ontology-id-normalization-20260611T113134Z/edges/cell_type_expresses_gene.parquet": {
+      "bytes": 6295008,
+      "newest": "2026-06-11T11:34:15.174000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:34:15.174000+00:00"
+    },
+    "kg/local-archive/canonical-v2-pre-ontology-id-normalization-20260611T113134Z/edges/disease_associated_gene.parquet": {
+      "bytes": 22545,
+      "newest": "2026-06-11T11:34:15.449000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:34:15.449000+00:00"
+    },
+    "kg/local-archive/canonical-v2-pre-ontology-id-normalization-20260611T113134Z/edges/disease_associated_protein.parquet": {
+      "bytes": 246610,
+      "newest": "2026-06-11T11:34:15.709000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:34:15.709000+00:00"
+    },
+    "kg/local-archive/canonical-v2-pre-ontology-id-normalization-20260611T113134Z/edges/disease_has_phenotype.parquet": {
+      "bytes": 666676,
+      "newest": "2026-06-11T11:34:15.973000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:34:15.973000+00:00"
+    },
+    "kg/local-archive/canonical-v2-pre-ontology-id-normalization-20260611T113134Z/edges/disease_involves_pathway.parquet": {
+      "bytes": 69324,
+      "newest": "2026-06-11T11:34:16.206000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:34:16.206000+00:00"
+    },
+    "kg/local-archive/canonical-v2-pre-ontology-id-normalization-20260611T113134Z/edges/disease_subtype_of_disease.parquet": {
+      "bytes": 704579,
+      "newest": "2026-06-11T11:34:16.444000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:34:16.444000+00:00"
+    },
+    "kg/local-archive/canonical-v2-pre-ontology-id-normalization-20260611T113134Z/edges/molecule_contraindicates_disease.parquet": {
+      "bytes": 67065,
+      "newest": "2026-06-11T11:34:16.693000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:34:16.693000+00:00"
+    },
+    "kg/local-archive/canonical-v2-pre-ontology-id-normalization-20260611T113134Z/edges/molecule_treats_disease.parquet": {
+      "bytes": 57319,
+      "newest": "2026-06-11T11:34:16.929000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:34:16.929000+00:00"
+    },
+    "kg/local-archive/canonical-v2-pre-ontology-id-normalization-20260611T113134Z/edges/mutation_associated_disease.parquet": {
+      "bytes": 94507984,
+      "newest": "2026-06-11T11:34:18.371000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:34:18.371000+00:00"
+    },
+    "kg/local-archive/canonical-v2-pre-ontology-id-normalization-20260611T113134Z/edges/paper_mentions_disease.parquet": {
+      "bytes": 30985356,
+      "newest": "2026-06-11T11:34:19.243000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:34:19.243000+00:00"
+    },
+    "kg/local-archive/canonical-v2-pre-ontology-id-normalization-20260611T113134Z/nodes/": {
+      "bytes": 4188648,
+      "newest": "2026-06-11T11:34:14.721000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-11T11:34:14.358000+00:00"
+    },
+    "kg/local-archive/canonical-v2-pre-ontology-id-normalization-20260611T113134Z/nodes/cell_type.parquet": {
+      "bytes": 82710,
+      "newest": "2026-06-11T11:34:14.358000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:34:14.358000+00:00"
+    },
+    "kg/local-archive/canonical-v2-pre-ontology-id-normalization-20260611T113134Z/nodes/disease.parquet": {
+      "bytes": 4105938,
+      "newest": "2026-06-11T11:34:14.721000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:34:14.721000+00:00"
+    },
+    "kg/local-archive/home-ubuntu-data-txgnn-20260611T0907Z/": {
+      "bytes": 5312721977,
+      "newest": "2026-06-11T09:30:42.757000+00:00",
+      "objects": 585,
+      "oldest": "2026-06-11T09:11:56.453000+00:00"
+    },
+    "kg/local-archive/home-ubuntu-data-txgnn-20260611T0907Z/txgnn-bounded-promotion-staging/": {
+      "bytes": 107297906,
+      "newest": "2026-06-11T09:11:59.547000+00:00",
+      "objects": 5,
+      "oldest": "2026-06-11T09:11:56.453000+00:00"
+    },
+    "kg/local-archive/home-ubuntu-data-txgnn-20260611T0907Z/txgnn-bounded-promotion-staging/kg/": {
+      "bytes": 107297906,
+      "newest": "2026-06-11T09:11:59.547000+00:00",
+      "objects": 5,
+      "oldest": "2026-06-11T09:11:56.453000+00:00"
+    },
+    "kg/local-archive/home-ubuntu-data-txgnn-20260611T0907Z/txgnn-drug-molecule-scratch/": {
+      "bytes": 191405954,
+      "newest": "2026-06-11T09:12:24.014000+00:00",
+      "objects": 56,
+      "oldest": "2026-06-11T09:12:03.842000+00:00"
+    },
+    "kg/local-archive/home-ubuntu-data-txgnn-20260611T0907Z/txgnn-drug-molecule-scratch/kg/": {
+      "bytes": 136721200,
+      "newest": "2026-06-11T09:12:16.510000+00:00",
+      "objects": 35,
+      "oldest": "2026-06-11T09:12:03.842000+00:00"
+    },
+    "kg/local-archive/home-ubuntu-data-txgnn-20260611T0907Z/txgnn-drug-molecule-scratch/opentargets/": {
+      "bytes": 54684754,
+      "newest": "2026-06-11T09:12:24.014000+00:00",
+      "objects": 21,
+      "oldest": "2026-06-11T09:12:16.810000+00:00"
+    },
+    "kg/local-archive/home-ubuntu-data-txgnn-20260611T0907Z/txgnn-gwas-join-scratch/": {
+      "bytes": 3982439656,
+      "newest": "2026-06-11T09:30:42.757000+00:00",
+      "objects": 415,
+      "oldest": "2026-06-11T09:12:39.901000+00:00"
+    },
+    "kg/local-archive/home-ubuntu-data-txgnn-20260611T0907Z/txgnn-gwas-join-scratch/failed-runs/": {
+      "bytes": 75301976,
+      "newest": "2026-06-11T09:12:42.179000+00:00",
+      "objects": 5,
+      "oldest": "2026-06-11T09:12:39.901000+00:00"
+    },
+    "kg/local-archive/home-ubuntu-data-txgnn-20260611T0907Z/txgnn-gwas-join-scratch/kg/": {
+      "bytes": 73847737,
+      "newest": "2026-06-11T09:12:45.225000+00:00",
+      "objects": 5,
+      "oldest": "2026-06-11T09:12:43.375000+00:00"
+    },
+    "kg/local-archive/home-ubuntu-data-txgnn-20260611T0907Z/txgnn-gwas-join-scratch/opentargets/": {
+      "bytes": 3833289943,
+      "newest": "2026-06-11T09:30:42.757000+00:00",
+      "objects": 405,
+      "oldest": "2026-06-11T09:12:45.510000+00:00"
+    },
+    "kg/local-archive/home-ubuntu-data-txgnn-20260611T0907Z/txgnn-known-variants-scratch/": {
+      "bytes": 1031578461,
+      "newest": "2026-06-11T09:17:06.843000+00:00",
+      "objects": 109,
+      "oldest": "2026-06-11T09:16:15.058000+00:00"
+    },
+    "kg/local-archive/home-ubuntu-data-txgnn-20260611T0907Z/txgnn-known-variants-scratch/failed-runs/": {
+      "bytes": 141981029,
+      "newest": "2026-06-11T09:16:33.724000+00:00",
+      "objects": 54,
+      "oldest": "2026-06-11T09:16:15.058000+00:00"
+    },
+    "kg/local-archive/home-ubuntu-data-txgnn-20260611T0907Z/txgnn-known-variants-scratch/kg/": {
+      "bytes": 138052601,
+      "newest": "2026-06-11T09:16:36.551000+00:00",
+      "objects": 3,
+      "oldest": "2026-06-11T09:16:34.878000+00:00"
+    },
+    "kg/local-archive/home-ubuntu-data-txgnn-20260611T0907Z/txgnn-known-variants-scratch/opentargets/": {
+      "bytes": 751544831,
+      "newest": "2026-06-11T09:17:06.843000+00:00",
+      "objects": 52,
+      "oldest": "2026-06-11T09:16:36.817000+00:00"
+    },
+    "kg/local-archive/home-ubuntu-data-txgnn-20260611T0940Z/": {
+      "bytes": 11893474440,
+      "newest": "2026-06-11T09:43:17.952000+00:00",
+      "objects": 9,
+      "oldest": "2026-06-11T09:37:35.889000+00:00"
+    },
+    "kg/local-archive/home-ubuntu-data-txgnn-20260611T0940Z/manifest.tsv": {
+      "bytes": 1078,
+      "newest": "2026-06-11T09:43:17.952000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T09:43:17.952000+00:00"
+    },
+    "kg/local-archive/home-ubuntu-data-txgnn-20260611T0940Z/txgnn-literature.tar.zst": {
+      "bytes": 8044615141,
+      "newest": "2026-06-11T09:41:47.662000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T09:41:47.662000+00:00"
+    },
+    "kg/local-archive/home-ubuntu-data-txgnn-20260611T0940Z/txgnn-opentargets-phase5.tar.zst": {
+      "bytes": 50977656,
+      "newest": "2026-06-11T09:37:35.889000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T09:37:35.889000+00:00"
+    },
+    "kg/local-archive/home-ubuntu-data-txgnn-20260611T0940Z/txgnn-ot-phase45.tar.zst": {
+      "bytes": 448553551,
+      "newest": "2026-06-11T09:38:09.065000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T09:38:09.065000+00:00"
+    },
+    "kg/local-archive/home-ubuntu-data-txgnn-20260611T0940Z/txgnn-phase4-audit.tar.zst": {
+      "bytes": 335475526,
+      "newest": "2026-06-11T09:37:57.183000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T09:37:57.183000+00:00"
+    },
+    "kg/local-archive/home-ubuntu-data-txgnn-20260611T0940Z/txgnn-target-go-scratch.tar.zst": {
+      "bytes": 179321997,
+      "newest": "2026-06-11T09:37:45.194000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T09:37:45.194000+00:00"
+    },
+    "kg/local-archive/home-ubuntu-data-txgnn-20260611T0940Z/txgnn-variant-combined-scratch.tar.zst": {
+      "bytes": 195547401,
+      "newest": "2026-06-11T09:37:39.784000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T09:37:39.784000+00:00"
+    },
+    "kg/local-archive/home-ubuntu-data-txgnn-20260611T0940Z/txgnn-variant-gwas-promotion-scratch.tar.zst": {
+      "bytes": 186642167,
+      "newest": "2026-06-11T09:37:50.884000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T09:37:50.884000+00:00"
+    },
+    "kg/local-archive/home-ubuntu-data-txgnn-20260611T0940Z/txgnn-variants-scratch.tar.zst": {
+      "bytes": 2452339923,
+      "newest": "2026-06-11T09:39:41.569000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T09:39:41.569000+00:00"
+    },
+    "kg/local-archive/mac-mini-txgnn-20260623T1148CEST/": {
+      "bytes": 6914011188,
+      "newest": "2026-06-23T09:48:28.715000+00:00",
+      "objects": 15,
+      "oldest": "2026-06-23T09:46:09.701000+00:00"
+    },
+    "kg/local-archive/mac-mini-txgnn-20260623T1148CEST/.omoc/": {
+      "bytes": 6914004271,
+      "newest": "2026-06-23T09:48:25.676000+00:00",
+      "objects": 14,
+      "oldest": "2026-06-23T09:46:09.701000+00:00"
+    },
+    "kg/local-archive/mac-mini-txgnn-20260623T1148CEST/.omoc/biogrid_audit/": {
+      "bytes": 184352676,
+      "newest": "2026-06-23T09:48:03.686000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T09:48:03.686000+00:00"
+    },
+    "kg/local-archive/mac-mini-txgnn-20260623T1148CEST/.omoc/gcs-cache/": {
+      "bytes": 3006345216,
+      "newest": "2026-06-23T09:46:09.701000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T09:46:09.701000+00:00"
+    },
+    "kg/local-archive/mac-mini-txgnn-20260623T1148CEST/.omoc/raw/": {
+      "bytes": 785754631,
+      "newest": "2026-06-23T09:48:25.676000+00:00",
+      "objects": 4,
+      "oldest": "2026-06-23T09:46:19.715000+00:00"
+    },
+    "kg/local-archive/mac-mini-txgnn-20260623T1148CEST/.omoc/staging/": {
+      "bytes": 2937551748,
+      "newest": "2026-06-23T09:48:09.428000+00:00",
+      "objects": 8,
+      "oldest": "2026-06-23T09:46:31.347000+00:00"
+    },
+    "kg/local-archive/mac-mini-txgnn-20260623T1148CEST/_manifests/": {
+      "bytes": 6917,
+      "newest": "2026-06-23T09:48:28.715000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T09:48:28.715000+00:00"
+    },
+    "kg/local-archive/mac-mini-txgnn-20260623T1148CEST/_manifests/large_local_archive_20260623.tsv": {
+      "bytes": 6917,
+      "newest": "2026-06-23T09:48:28.715000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T09:48:28.715000+00:00"
+    },
+    "kg/local-archive/task22-pre-promotion-backup/": {
+      "bytes": 3924159,
+      "newest": "2026-06-11T10:56:59.800000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T10:56:59.800000+00:00"
+    },
+    "kg/local-archive/task22-pre-promotion-backup/20260611T105659Z/": {
+      "bytes": 3924159,
+      "newest": "2026-06-11T10:56:59.800000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T10:56:59.800000+00:00"
+    },
+    "kg/local-archive/task22-pre-promotion-backup/20260611T105659Z/disease.parquet": {
+      "bytes": 3924159,
+      "newest": "2026-06-11T10:56:59.800000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T10:56:59.800000+00:00"
+    },
+    "kg/scratch/": {
+      "bytes": 10266218195,
+      "newest": "2026-06-18T17:36:24.107000+00:00",
+      "objects": 81,
+      "oldest": "2026-06-11T11:31:36.817000+00:00"
+    },
+    "kg/scratch/hermes-backups/": {
+      "bytes": 4094390,
+      "newest": "2026-06-16T13:37:10.805000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-16T13:37:10.805000+00:00"
+    },
+    "kg/scratch/hermes-backups/20260616T133709Z-pre-orthology/": {
+      "bytes": 4094390,
+      "newest": "2026-06-16T13:37:10.805000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-16T13:37:10.805000+00:00"
+    },
+    "kg/scratch/hermes-backups/20260616T133709Z-pre-orthology/nodes/": {
+      "bytes": 4094390,
+      "newest": "2026-06-16T13:37:10.805000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-16T13:37:10.805000+00:00"
+    },
+    "kg/scratch/hpa-25.1/": {
+      "bytes": 37065913,
+      "newest": "2026-06-18T17:36:24.107000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-18T17:34:40.187000+00:00"
+    },
+    "kg/scratch/hpa-25.1/hpa_tissue_protein_rows.tsv": {
+      "bytes": 29605778,
+      "newest": "2026-06-18T17:36:24.107000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T17:36:24.107000+00:00"
+    },
+    "kg/scratch/hpa-25.1/proteinatlas.tsv.zip": {
+      "bytes": 7460135,
+      "newest": "2026-06-18T17:34:40.187000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T17:34:40.187000+00:00"
+    },
+    "kg/scratch/human-organism-slice-20260611T114409Z/": {
+      "bytes": 768971,
+      "newest": "2026-06-11T11:44:12.405000+00:00",
+      "objects": 3,
+      "oldest": "2026-06-11T11:44:11.263000+00:00"
+    },
+    "kg/scratch/human-organism-slice-20260611T114409Z/edges/": {
+      "bytes": 765174,
+      "newest": "2026-06-11T11:44:12.405000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-11T11:44:11.999000+00:00"
+    },
+    "kg/scratch/human-organism-slice-20260611T114409Z/edges/organism_has_gene.parquet": {
+      "bytes": 653414,
+      "newest": "2026-06-11T11:44:11.999000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:44:11.999000+00:00"
+    },
+    "kg/scratch/human-organism-slice-20260611T114409Z/edges/organism_has_tissue.parquet": {
+      "bytes": 111760,
+      "newest": "2026-06-11T11:44:12.405000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:44:12.405000+00:00"
+    },
+    "kg/scratch/human-organism-slice-20260611T114409Z/nodes/": {
+      "bytes": 3797,
+      "newest": "2026-06-11T11:44:11.263000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:44:11.263000+00:00"
+    },
+    "kg/scratch/human-organism-slice-20260611T114409Z/nodes/organism.parquet": {
+      "bytes": 3797,
+      "newest": "2026-06-11T11:44:11.263000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:44:11.263000+00:00"
+    },
+    "kg/scratch/ontology-id-normalization-20260611T113134Z/": {
+      "bytes": 132334155,
+      "newest": "2026-06-11T11:33:59.184000+00:00",
+      "objects": 14,
+      "oldest": "2026-06-11T11:31:36.817000+00:00"
+    },
+    "kg/scratch/ontology-id-normalization-20260611T113134Z/edges/": {
+      "bytes": 128675789,
+      "newest": "2026-06-11T11:32:42.216000+00:00",
+      "objects": 10,
+      "oldest": "2026-06-11T11:31:44.601000+00:00"
+    },
+    "kg/scratch/ontology-id-normalization-20260611T113134Z/edges/cell_type_expresses_gene.parquet": {
+      "bytes": 6532333,
+      "newest": "2026-06-11T11:31:44.601000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:31:44.601000+00:00"
+    },
+    "kg/scratch/ontology-id-normalization-20260611T113134Z/edges/disease_associated_gene.parquet": {
+      "bytes": 22546,
+      "newest": "2026-06-11T11:31:44.929000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:31:44.929000+00:00"
+    },
+    "kg/scratch/ontology-id-normalization-20260611T113134Z/edges/disease_associated_protein.parquet": {
+      "bytes": 246610,
+      "newest": "2026-06-11T11:31:45.480000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:31:45.480000+00:00"
+    },
+    "kg/scratch/ontology-id-normalization-20260611T113134Z/edges/disease_has_phenotype.parquet": {
+      "bytes": 666676,
+      "newest": "2026-06-11T11:31:46.571000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:31:46.571000+00:00"
+    },
+    "kg/scratch/ontology-id-normalization-20260611T113134Z/edges/disease_involves_pathway.parquet": {
+      "bytes": 69325,
+      "newest": "2026-06-11T11:31:46.804000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:31:46.804000+00:00"
+    },
+    "kg/scratch/ontology-id-normalization-20260611T113134Z/edges/disease_subtype_of_disease.parquet": {
+      "bytes": 648897,
+      "newest": "2026-06-11T11:31:47.699000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:31:47.699000+00:00"
+    },
+    "kg/scratch/ontology-id-normalization-20260611T113134Z/edges/molecule_contraindicates_disease.parquet": {
+      "bytes": 67065,
+      "newest": "2026-06-11T11:31:48.192000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:31:48.192000+00:00"
+    },
+    "kg/scratch/ontology-id-normalization-20260611T113134Z/edges/molecule_treats_disease.parquet": {
+      "bytes": 57319,
+      "newest": "2026-06-11T11:31:48.979000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:31:48.979000+00:00"
+    },
+    "kg/scratch/ontology-id-normalization-20260611T113134Z/edges/mutation_associated_disease.parquet": {
+      "bytes": 89034605,
+      "newest": "2026-06-11T11:32:14.122000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:32:14.122000+00:00"
+    },
+    "kg/scratch/ontology-id-normalization-20260611T113134Z/edges/paper_mentions_disease.parquet": {
+      "bytes": 31330413,
+      "newest": "2026-06-11T11:32:42.216000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:32:42.216000+00:00"
+    },
+    "kg/scratch/ontology-id-normalization-20260611T113134Z/nodes/": {
+      "bytes": 3652176,
+      "newest": "2026-06-11T11:31:37.084000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-11T11:31:36.817000+00:00"
+    },
+    "kg/scratch/ontology-id-normalization-20260611T113134Z/nodes/cell_type.parquet": {
+      "bytes": 82710,
+      "newest": "2026-06-11T11:31:37.084000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:31:37.084000+00:00"
+    },
+    "kg/scratch/ontology-id-normalization-20260611T113134Z/nodes/disease.parquet": {
+      "bytes": 3569466,
+      "newest": "2026-06-11T11:31:36.817000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:31:36.817000+00:00"
+    },
+    "kg/scratch/ontology-id-normalization-20260611T113134Z/report.json": {
+      "bytes": 4142,
+      "newest": "2026-06-11T11:32:46.725000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:32:46.725000+00:00"
+    },
+    "kg/scratch/ontology-id-normalization-20260611T113134Z/targeted_validation.json": {
+      "bytes": 2048,
+      "newest": "2026-06-11T11:33:59.184000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:33:59.184000+00:00"
+    },
+    "kg/scratch/opentargets-26.03/": {
+      "bytes": 91031424,
+      "newest": "2026-06-18T17:21:18.007000+00:00",
+      "objects": 8,
+      "oldest": "2026-06-18T17:21:07.934000+00:00"
+    },
+    "kg/scratch/opentargets-26.03/interaction/": {
+      "bytes": 91031424,
+      "newest": "2026-06-18T17:21:18.007000+00:00",
+      "objects": 8,
+      "oldest": "2026-06-18T17:21:07.934000+00:00"
+    },
+    "kg/scratch/opentargets-26.03/interaction/part-00000-c62b84e8-6b84-441a-8e1b-176803ee8b69-c000.snappy.parquet": {
+      "bytes": 12365409,
+      "newest": "2026-06-18T17:21:07.934000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T17:21:07.934000+00:00"
+    },
+    "kg/scratch/opentargets-26.03/interaction/part-00001-c62b84e8-6b84-441a-8e1b-176803ee8b69-c000.snappy.parquet": {
+      "bytes": 11768439,
+      "newest": "2026-06-18T17:21:09.208000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T17:21:09.208000+00:00"
+    },
+    "kg/scratch/opentargets-26.03/interaction/part-00002-c62b84e8-6b84-441a-8e1b-176803ee8b69-c000.snappy.parquet": {
+      "bytes": 11763726,
+      "newest": "2026-06-18T17:21:10.438000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T17:21:10.438000+00:00"
+    },
+    "kg/scratch/opentargets-26.03/interaction/part-00003-c62b84e8-6b84-441a-8e1b-176803ee8b69-c000.snappy.parquet": {
+      "bytes": 11790679,
+      "newest": "2026-06-18T17:21:11.708000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T17:21:11.708000+00:00"
+    },
+    "kg/scratch/opentargets-26.03/interaction/part-00004-c62b84e8-6b84-441a-8e1b-176803ee8b69-c000.snappy.parquet": {
+      "bytes": 11771271,
+      "newest": "2026-06-18T17:21:13.051000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T17:21:13.051000+00:00"
+    },
+    "kg/scratch/opentargets-26.03/interaction/part-00005-c62b84e8-6b84-441a-8e1b-176803ee8b69-c000.snappy.parquet": {
+      "bytes": 11773184,
+      "newest": "2026-06-18T17:21:14.843000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T17:21:14.843000+00:00"
+    },
+    "kg/scratch/opentargets-26.03/interaction/part-00006-c62b84e8-6b84-441a-8e1b-176803ee8b69-c000.snappy.parquet": {
+      "bytes": 11780644,
+      "newest": "2026-06-18T17:21:17.026000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T17:21:17.026000+00:00"
+    },
+    "kg/scratch/opentargets-26.03/interaction/part-00007-c62b84e8-6b84-441a-8e1b-176803ee8b69-c000.snappy.parquet": {
+      "bytes": 8018072,
+      "newest": "2026-06-18T17:21:18.007000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T17:21:18.007000+00:00"
+    },
+    "kg/scratch/remaining-slices-20260614T220351Z/": {
+      "bytes": 10000923342,
+      "newest": "2026-06-14T23:42:46.758000+00:00",
+      "objects": 53,
+      "oldest": "2026-06-14T22:03:54.956000+00:00"
+    },
+    "kg/scratch/remaining-slices-20260614T220351Z/kg/": {
+      "bytes": 7099967588,
+      "newest": "2026-06-14T23:42:46.758000+00:00",
+      "objects": 11,
+      "oldest": "2026-06-14T22:51:29.466000+00:00"
+    },
+    "kg/scratch/remaining-slices-20260614T220351Z/kg/edges/": {
+      "bytes": 3694940111,
+      "newest": "2026-06-14T23:42:46.758000+00:00",
+      "objects": 8,
+      "oldest": "2026-06-14T22:57:52.054000+00:00"
+    },
+    "kg/scratch/remaining-slices-20260614T220351Z/kg/nodes/": {
+      "bytes": 3405027477,
+      "newest": "2026-06-14T23:40:31.774000+00:00",
+      "objects": 3,
+      "oldest": "2026-06-14T22:51:29.466000+00:00"
+    },
+    "kg/scratch/remaining-slices-20260614T220351Z/opentargets/": {
+      "bytes": 2900955754,
+      "newest": "2026-06-14T22:04:20.937000+00:00",
+      "objects": 42,
+      "oldest": "2026-06-14T22:03:54.956000+00:00"
+    },
+    "kg/scratch/remaining-slices-20260614T220351Z/opentargets/enhancer_to_gene/": {
+      "bytes": 2647632761,
+      "newest": "2026-06-14T22:04:20.937000+00:00",
+      "objects": 31,
+      "oldest": "2026-06-14T22:04:01.373000+00:00"
+    },
+    "kg/scratch/remaining-slices-20260614T220351Z/opentargets/target_essentiality/": {
+      "bytes": 253322993,
+      "newest": "2026-06-14T22:03:57.148000+00:00",
+      "objects": 11,
+      "oldest": "2026-06-14T22:03:54.956000+00:00"
+    },
+    "kg/staging/": {
+      "bytes": 32241206307,
+      "newest": "2026-07-23T00:22:58.476000+00:00",
+      "objects": 3496,
+      "oldest": "2026-06-22T07:22:29.281000+00:00"
+    },
+    "kg/staging/canonical-molecule-synergizes-evidence/": {
+      "bytes": 7207,
+      "newest": "2026-07-23T00:22:58.476000+00:00",
+      "objects": 7,
+      "oldest": "2026-07-22T20:56:26.255000+00:00"
+    },
+    "kg/staging/canonical-molecule-synergizes-evidence/t_fd06ff53/": {
+      "bytes": 7207,
+      "newest": "2026-07-23T00:22:58.476000+00:00",
+      "objects": 7,
+      "oldest": "2026-07-22T20:56:26.255000+00:00"
+    },
+    "kg/staging/canonical-molecule-synergizes-evidence/t_fd06ff53/attempt-1/": {
+      "bytes": 5331,
+      "newest": "2026-07-22T20:56:32.359000+00:00",
+      "objects": 5,
+      "oldest": "2026-07-22T20:56:26.255000+00:00"
+    },
+    "kg/staging/canonical-molecule-synergizes-evidence/t_fd06ff53/control/": {
+      "bytes": 1876,
+      "newest": "2026-07-23T00:22:58.476000+00:00",
+      "objects": 2,
+      "oldest": "2026-07-23T00:22:57.769000+00:00"
+    },
+    "kg/staging/cell_type_molecule_candidate_context_sciplex2_20260622_t_63ca49a0/": {
+      "bytes": 65189,
+      "newest": "2026-06-22T15:03:28.109000+00:00",
+      "objects": 8,
+      "oldest": "2026-06-22T15:03:27.966000+00:00"
+    },
+    "kg/staging/cell_type_molecule_candidate_context_sciplex2_20260622_t_63ca49a0/candidates/": {
+      "bytes": 37267,
+      "newest": "2026-06-22T15:03:27.989000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T15:03:27.966000+00:00"
+    },
+    "kg/staging/cell_type_molecule_candidate_context_sciplex2_20260622_t_63ca49a0/candidates/cell_type_responds_to_molecule_sciplex2_candidates.parquet": {
+      "bytes": 18275,
+      "newest": "2026-06-22T15:03:27.966000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T15:03:27.966000+00:00"
+    },
+    "kg/staging/cell_type_molecule_candidate_context_sciplex2_20260622_t_63ca49a0/candidates/cell_type_responds_to_molecule_sciplex2_rejected.parquet": {
+      "bytes": 18992,
+      "newest": "2026-06-22T15:03:27.989000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T15:03:27.989000+00:00"
+    },
+    "kg/staging/cell_type_molecule_candidate_context_sciplex2_20260622_t_63ca49a0/edges/": {
+      "bytes": 3908,
+      "newest": "2026-06-22T15:03:28.041000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T15:03:28.041000+00:00"
+    },
+    "kg/staging/cell_type_molecule_candidate_context_sciplex2_20260622_t_63ca49a0/edges/cell_type_responds_to_molecule.parquet": {
+      "bytes": 3908,
+      "newest": "2026-06-22T15:03:28.041000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T15:03:28.041000+00:00"
+    },
+    "kg/staging/cell_type_molecule_candidate_context_sciplex2_20260622_t_63ca49a0/evidence/": {
+      "bytes": 11182,
+      "newest": "2026-06-22T15:03:28.092000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T15:03:28.092000+00:00"
+    },
+    "kg/staging/cell_type_molecule_candidate_context_sciplex2_20260622_t_63ca49a0/evidence/cell_type_responds_to_molecule.parquet": {
+      "bytes": 11182,
+      "newest": "2026-06-22T15:03:28.092000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T15:03:28.092000+00:00"
+    },
+    "kg/staging/cell_type_molecule_candidate_context_sciplex2_20260622_t_63ca49a0/nodes/": {
+      "bytes": 3406,
+      "newest": "2026-06-22T15:03:28.109000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T15:03:28.089000+00:00"
+    },
+    "kg/staging/cell_type_molecule_candidate_context_sciplex2_20260622_t_63ca49a0/nodes/cell_type.parquet": {
+      "bytes": 1756,
+      "newest": "2026-06-22T15:03:28.089000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T15:03:28.089000+00:00"
+    },
+    "kg/staging/cell_type_molecule_candidate_context_sciplex2_20260622_t_63ca49a0/nodes/molecule.parquet": {
+      "bytes": 1650,
+      "newest": "2026-06-22T15:03:28.109000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T15:03:28.109000+00:00"
+    },
+    "kg/staging/cell_type_molecule_candidate_context_sciplex2_20260622_t_63ca49a0/reports/": {
+      "bytes": 9426,
+      "newest": "2026-06-22T15:03:28.095000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T15:03:28.071000+00:00"
+    },
+    "kg/staging/cell_type_molecule_candidate_context_sciplex2_20260622_t_63ca49a0/reports/cell_type_responds_to_molecule_sciplex2_pilot_report.json": {
+      "bytes": 7439,
+      "newest": "2026-06-22T15:03:28.095000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T15:03:28.095000+00:00"
+    },
+    "kg/staging/cell_type_molecule_candidate_context_sciplex2_20260622_t_63ca49a0/reports/cell_type_responds_to_molecule_sciplex2_pilot_report.md": {
+      "bytes": 1987,
+      "newest": "2026-06-22T15:03:28.071000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T15:03:28.071000+00:00"
+    },
+    "kg/staging/complex-portal-protein-complexes-2026-06-22/": {
+      "bytes": 5172886,
+      "newest": "2026-06-22T13:52:37.034000+00:00",
+      "objects": 7,
+      "oldest": "2026-06-22T13:52:35.906000+00:00"
+    },
+    "kg/staging/complex-portal-protein-complexes-2026-06-22/edges/": {
+      "bytes": 17878,
+      "newest": "2026-06-22T13:52:36.861000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T13:52:36.703000+00:00"
+    },
+    "kg/staging/complex-portal-protein-complexes-2026-06-22/edges/protein_complex_part_of_protein_complex.parquet": {
+      "bytes": 6333,
+      "newest": "2026-06-22T13:52:36.861000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:52:36.861000+00:00"
+    },
+    "kg/staging/complex-portal-protein-complexes-2026-06-22/edges/protein_part_of_protein_complex.parquet": {
+      "bytes": 11545,
+      "newest": "2026-06-22T13:52:36.703000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:52:36.703000+00:00"
+    },
+    "kg/staging/complex-portal-protein-complexes-2026-06-22/evidence/": {
+      "bytes": 669754,
+      "newest": "2026-06-22T13:52:36.077000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T13:52:35.906000+00:00"
+    },
+    "kg/staging/complex-portal-protein-complexes-2026-06-22/evidence/protein_complex_part_of_protein_complex.parquet": {
+      "bytes": 123221,
+      "newest": "2026-06-22T13:52:36.077000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:52:36.077000+00:00"
+    },
+    "kg/staging/complex-portal-protein-complexes-2026-06-22/evidence/protein_part_of_protein_complex.parquet": {
+      "bytes": 546533,
+      "newest": "2026-06-22T13:52:35.906000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:52:35.906000+00:00"
+    },
+    "kg/staging/complex-portal-protein-complexes-2026-06-22/mappings/": {
+      "bytes": 3403122,
+      "newest": "2026-06-22T13:52:36.531000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:52:36.531000+00:00"
+    },
+    "kg/staging/complex-portal-protein-complexes-2026-06-22/mappings/complex_portal_participants_rejected.parquet": {
+      "bytes": 3403122,
+      "newest": "2026-06-22T13:52:36.531000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:52:36.531000+00:00"
+    },
+    "kg/staging/complex-portal-protein-complexes-2026-06-22/nodes/": {
+      "bytes": 1076654,
+      "newest": "2026-06-22T13:52:36.295000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:52:36.295000+00:00"
+    },
+    "kg/staging/complex-portal-protein-complexes-2026-06-22/nodes/protein_complex.parquet": {
+      "bytes": 1076654,
+      "newest": "2026-06-22T13:52:36.295000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:52:36.295000+00:00"
+    },
+    "kg/staging/complex-portal-protein-complexes-2026-06-22/validation/": {
+      "bytes": 5478,
+      "newest": "2026-06-22T13:52:37.034000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:52:37.034000+00:00"
+    },
+    "kg/staging/complex-portal-protein-complexes-2026-06-22/validation/complex_portal_build_report.json": {
+      "bytes": 5478,
+      "newest": "2026-06-22T13:52:37.034000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:52:37.034000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-20260625-t_720528ea/": {
+      "bytes": 606915753,
+      "newest": "2026-06-25T13:02:54.630000+00:00",
+      "objects": 4,
+      "oldest": "2026-06-25T13:02:46.708000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-20260625-t_720528ea/features/": {
+      "bytes": 606911114,
+      "newest": "2026-06-25T13:02:54.630000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-25T13:02:50.080000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-20260625-t_720528ea/features/gene_genomic_interval.parquet": {
+      "bytes": 6860923,
+      "newest": "2026-06-25T13:02:50.080000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-25T13:02:50.080000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-20260625-t_720528ea/features/gene_genomic_sequence.parquet": {
+      "bytes": 600050191,
+      "newest": "2026-06-25T13:02:54.630000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-25T13:02:54.630000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-20260625-t_720528ea/reports/": {
+      "bytes": 4639,
+      "newest": "2026-06-25T13:02:46.745000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-25T13:02:46.708000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-20260625-t_720528ea/reports/full_build_stdout.json": {
+      "bytes": 2320,
+      "newest": "2026-06-25T13:02:46.708000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-25T13:02:46.708000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-20260625-t_720528ea/reports/gene_genomic_sequence_feature_report.json": {
+      "bytes": 2319,
+      "newest": "2026-06-25T13:02:46.745000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-25T13:02:46.745000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260721-t_03bf9e27/": {
+      "bytes": 863574864,
+      "newest": "2026-07-22T08:28:17.086000+00:00",
+      "objects": 13,
+      "oldest": "2026-07-22T08:26:47.189000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260721-t_03bf9e27/README.md": {
+      "bytes": 413,
+      "newest": "2026-07-22T08:26:47.189000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T08:26:47.189000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260721-t_03bf9e27/_STAGED_CANDIDATE.json": {
+      "bytes": 326,
+      "newest": "2026-07-22T08:28:17.086000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T08:28:17.086000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260721-t_03bf9e27/checksums.sha256": {
+      "bytes": 956,
+      "newest": "2026-07-22T08:26:52.234000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T08:26:52.234000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260721-t_03bf9e27/coverage/": {
+      "bytes": 588202,
+      "newest": "2026-07-22T08:27:02.156000+00:00",
+      "objects": 2,
+      "oldest": "2026-07-22T08:26:57.189000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260721-t_03bf9e27/coverage/missing_eligible_ensg.parquet": {
+      "bytes": 17733,
+      "newest": "2026-07-22T08:26:57.189000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T08:26:57.189000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260721-t_03bf9e27/coverage/quarantined_non_ensg.parquet": {
+      "bytes": 570469,
+      "newest": "2026-07-22T08:27:02.156000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T08:27:02.156000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260721-t_03bf9e27/embeddings/": {
+      "bytes": 256052854,
+      "newest": "2026-07-22T08:27:08.191000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T08:27:08.191000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260721-t_03bf9e27/embeddings/gene_genomic_sequence_nt.parquet": {
+      "bytes": 256052854,
+      "newest": "2026-07-22T08:27:08.191000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T08:27:08.191000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260721-t_03bf9e27/manifest.json": {
+      "bytes": 12646,
+      "newest": "2026-07-22T08:27:12.915000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T08:27:12.915000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260721-t_03bf9e27/object_inventory.json": {
+      "bytes": 1897,
+      "newest": "2026-07-22T08:27:17.535000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T08:27:17.535000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260721-t_03bf9e27/schema.json": {
+      "bytes": 3344,
+      "newest": "2026-07-22T08:27:22.141000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T08:27:22.141000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260721-t_03bf9e27/source/": {
+      "bytes": 606913433,
+      "newest": "2026-07-22T08:27:38.855000+00:00",
+      "objects": 3,
+      "oldest": "2026-07-22T08:27:27.124000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260721-t_03bf9e27/source/gene_genomic_interval.parquet": {
+      "bytes": 6860923,
+      "newest": "2026-07-22T08:27:27.124000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T08:27:27.124000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260721-t_03bf9e27/source/gene_genomic_sequence.parquet": {
+      "bytes": 600050191,
+      "newest": "2026-07-22T08:27:34.131000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T08:27:34.131000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260721-t_03bf9e27/source/gene_genomic_sequence_feature_report.json": {
+      "bytes": 2319,
+      "newest": "2026-07-22T08:27:38.855000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T08:27:38.855000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260721-t_03bf9e27/validation.json": {
+      "bytes": 793,
+      "newest": "2026-07-22T08:27:43.468000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T08:27:43.468000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260722-t_03bf9e27-v2/": {
+      "bytes": 856951869,
+      "newest": "2026-07-22T09:52:36.550000+00:00",
+      "objects": 14,
+      "oldest": "2026-07-22T09:51:07.575000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260722-t_03bf9e27-v2/README.md": {
+      "bytes": 413,
+      "newest": "2026-07-22T09:51:07.575000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T09:51:07.575000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260722-t_03bf9e27-v2/_STAGED_CANDIDATE.json": {
+      "bytes": 329,
+      "newest": "2026-07-22T09:52:36.550000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T09:52:36.550000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260722-t_03bf9e27-v2/checksums.sha256": {
+      "bytes": 1148,
+      "newest": "2026-07-22T09:51:10.157000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T09:51:10.157000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260722-t_03bf9e27-v2/coverage/": {
+      "bytes": 585413,
+      "newest": "2026-07-22T09:51:15.402000+00:00",
+      "objects": 2,
+      "oldest": "2026-07-22T09:51:12.866000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260722-t_03bf9e27-v2/coverage/missing_eligible_ensg.parquet": {
+      "bytes": 14944,
+      "newest": "2026-07-22T09:51:12.866000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T09:51:12.866000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260722-t_03bf9e27-v2/coverage/quarantined_non_ensg.parquet": {
+      "bytes": 570469,
+      "newest": "2026-07-22T09:51:15.402000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T09:51:15.402000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260722-t_03bf9e27-v2/embeddings/": {
+      "bytes": 257636628,
+      "newest": "2026-07-22T09:51:25.246000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T09:51:25.246000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260722-t_03bf9e27-v2/embeddings/gene_genomic_sequence_nt.parquet": {
+      "bytes": 257636628,
+      "newest": "2026-07-22T09:51:25.246000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T09:51:25.246000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260722-t_03bf9e27-v2/manifest.json": {
+      "bytes": 8046,
+      "newest": "2026-07-22T09:51:28.408000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T09:51:28.408000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260722-t_03bf9e27-v2/object_inventory.json": {
+      "bytes": 1920,
+      "newest": "2026-07-22T09:51:36.502000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T09:51:36.502000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260722-t_03bf9e27-v2/schema.json": {
+      "bytes": 3344,
+      "newest": "2026-07-22T09:51:39.564000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T09:51:39.564000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260722-t_03bf9e27-v2/source/": {
+      "bytes": 598713626,
+      "newest": "2026-07-22T09:52:01.014000+00:00",
+      "objects": 4,
+      "oldest": "2026-07-22T09:51:42.461000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260722-t_03bf9e27-v2/source/gene_genomic_interval.parquet": {
+      "bytes": 6860923,
+      "newest": "2026-07-22T09:51:42.461000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T09:51:42.461000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260722-t_03bf9e27-v2/source/gene_genomic_sequence.parquet": {
+      "bytes": 591838862,
+      "newest": "2026-07-22T09:51:55.171000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T09:51:55.171000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260722-t_03bf9e27-v2/source/gene_genomic_sequence_feature_report.json": {
+      "bytes": 2319,
+      "newest": "2026-07-22T09:51:58.386000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T09:51:58.386000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260722-t_03bf9e27-v2/source/v2-recovery-source-report.json": {
+      "bytes": 11522,
+      "newest": "2026-07-22T09:52:01.014000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T09:52:01.014000+00:00"
+    },
+    "kg/staging/gene-genomic-sequence-embeddings-20260722-t_03bf9e27-v2/validation.json": {
+      "bytes": 1002,
+      "newest": "2026-07-22T09:52:03.211000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T09:52:03.211000+00:00"
+    },
+    "kg/staging/hpa-cellular-components-2026-06-22-rebuild-t_51714eaf/": {
+      "bytes": 12942667,
+      "newest": "2026-06-22T14:30:08.723000+00:00",
+      "objects": 8,
+      "oldest": "2026-06-22T14:30:08.487000+00:00"
+    },
+    "kg/staging/hpa-cellular-components-2026-06-22-rebuild-t_51714eaf/edges/": {
+      "bytes": 1155708,
+      "newest": "2026-06-22T14:30:08.508000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T14:30:08.487000+00:00"
+    },
+    "kg/staging/hpa-cellular-components-2026-06-22-rebuild-t_51714eaf/edges/cellular_component_subtype_of_cellular_component.parquet": {
+      "bytes": 5416,
+      "newest": "2026-06-22T14:30:08.487000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:30:08.487000+00:00"
+    },
+    "kg/staging/hpa-cellular-components-2026-06-22-rebuild-t_51714eaf/edges/protein_located_in_cellular_component.parquet": {
+      "bytes": 1150292,
+      "newest": "2026-06-22T14:30:08.508000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:30:08.508000+00:00"
+    },
+    "kg/staging/hpa-cellular-components-2026-06-22-rebuild-t_51714eaf/evidence/": {
+      "bytes": 11757376,
+      "newest": "2026-06-22T14:30:08.723000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T14:30:08.505000+00:00"
+    },
+    "kg/staging/hpa-cellular-components-2026-06-22-rebuild-t_51714eaf/evidence/cellular_component_subtype_of_cellular_component.parquet": {
+      "bytes": 13394,
+      "newest": "2026-06-22T14:30:08.505000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:30:08.505000+00:00"
+    },
+    "kg/staging/hpa-cellular-components-2026-06-22-rebuild-t_51714eaf/evidence/protein_located_in_cellular_component.parquet": {
+      "bytes": 11743982,
+      "newest": "2026-06-22T14:30:08.723000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:30:08.723000+00:00"
+    },
+    "kg/staging/hpa-cellular-components-2026-06-22-rebuild-t_51714eaf/independent_validation_t_51714eaf.json": {
+      "bytes": 4620,
+      "newest": "2026-06-22T14:30:08.528000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:30:08.528000+00:00"
+    },
+    "kg/staging/hpa-cellular-components-2026-06-22-rebuild-t_51714eaf/manifest.json": {
+      "bytes": 6391,
+      "newest": "2026-06-22T14:30:08.511000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:30:08.511000+00:00"
+    },
+    "kg/staging/hpa-cellular-components-2026-06-22-rebuild-t_51714eaf/nodes/": {
+      "bytes": 13449,
+      "newest": "2026-06-22T14:30:08.504000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:30:08.504000+00:00"
+    },
+    "kg/staging/hpa-cellular-components-2026-06-22-rebuild-t_51714eaf/nodes/cellular_component.parquet": {
+      "bytes": 13449,
+      "newest": "2026-06-22T14:30:08.504000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:30:08.504000+00:00"
+    },
+    "kg/staging/hpa-cellular-components-2026-06-22-rebuild-t_51714eaf/validation.json": {
+      "bytes": 5123,
+      "newest": "2026-06-22T14:30:08.528000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:30:08.528000+00:00"
+    },
+    "kg/staging/hpa-cellular-components-2026-06-22/": {
+      "bytes": 12852351,
+      "newest": "2026-06-22T13:51:38.752000+00:00",
+      "objects": 7,
+      "oldest": "2026-06-22T13:51:38.307000+00:00"
+    },
+    "kg/staging/hpa-cellular-components-2026-06-22/edges/": {
+      "bytes": 1155989,
+      "newest": "2026-06-22T13:51:38.612000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T13:51:38.502000+00:00"
+    },
+    "kg/staging/hpa-cellular-components-2026-06-22/edges/cellular_component_subtype_of_cellular_component.parquet": {
+      "bytes": 5382,
+      "newest": "2026-06-22T13:51:38.502000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:51:38.502000+00:00"
+    },
+    "kg/staging/hpa-cellular-components-2026-06-22/edges/protein_located_in_cellular_component.parquet": {
+      "bytes": 1150607,
+      "newest": "2026-06-22T13:51:38.612000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:51:38.612000+00:00"
+    },
+    "kg/staging/hpa-cellular-components-2026-06-22/evidence/": {
+      "bytes": 11675369,
+      "newest": "2026-06-22T13:51:38.752000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T13:51:38.515000+00:00"
+    },
+    "kg/staging/hpa-cellular-components-2026-06-22/evidence/cellular_component_subtype_of_cellular_component.parquet": {
+      "bytes": 13514,
+      "newest": "2026-06-22T13:51:38.515000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:51:38.515000+00:00"
+    },
+    "kg/staging/hpa-cellular-components-2026-06-22/evidence/protein_located_in_cellular_component.parquet": {
+      "bytes": 11661855,
+      "newest": "2026-06-22T13:51:38.752000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:51:38.752000+00:00"
+    },
+    "kg/staging/hpa-cellular-components-2026-06-22/manifest.json": {
+      "bytes": 4268,
+      "newest": "2026-06-22T13:51:38.319000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:51:38.319000+00:00"
+    },
+    "kg/staging/hpa-cellular-components-2026-06-22/nodes/": {
+      "bytes": 13512,
+      "newest": "2026-06-22T13:51:38.600000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:51:38.600000+00:00"
+    },
+    "kg/staging/hpa-cellular-components-2026-06-22/nodes/cellular_component.parquet": {
+      "bytes": 13512,
+      "newest": "2026-06-22T13:51:38.600000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:51:38.600000+00:00"
+    },
+    "kg/staging/hpa-cellular-components-2026-06-22/validation.json": {
+      "bytes": 3213,
+      "newest": "2026-06-22T13:51:38.307000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:51:38.307000+00:00"
+    },
+    "kg/staging/human-ensg-gene-migration/": {
+      "bytes": 12586014560,
+      "newest": "2026-07-19T12:51:12.061000+00:00",
+      "objects": 90,
+      "oldest": "2026-07-19T12:47:11.249000+00:00"
+    },
+    "kg/staging/human-ensg-gene-migration/t_8b9cdabc/": {
+      "bytes": 12586014560,
+      "newest": "2026-07-19T12:51:12.061000+00:00",
+      "objects": 90,
+      "oldest": "2026-07-19T12:47:11.249000+00:00"
+    },
+    "kg/staging/human-ensg-gene-migration/t_8b9cdabc/ncbi-2e5f37c-genehist-ab8a3a8/": {
+      "bytes": 12586014560,
+      "newest": "2026-07-19T12:51:12.061000+00:00",
+      "objects": 90,
+      "oldest": "2026-07-19T12:47:11.249000+00:00"
+    },
+    "kg/staging/node-missing-features-20260623-t_d6c55414/": {
+      "bytes": 4721513,
+      "newest": "2026-06-23T08:08:29.959000+00:00",
+      "objects": 5,
+      "oldest": "2026-06-23T08:08:07.819000+00:00"
+    },
+    "kg/staging/node-missing-features-20260623-t_d6c55414/features/": {
+      "bytes": 4719133,
+      "newest": "2026-06-23T08:08:07.819000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T08:08:07.819000+00:00"
+    },
+    "kg/staging/node-missing-features-20260623-t_d6c55414/features/molecule_fingerprint.parquet": {
+      "bytes": 4719133,
+      "newest": "2026-06-23T08:08:07.819000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T08:08:07.819000+00:00"
+    },
+    "kg/staging/node-missing-features-20260623-t_d6c55414/reports/": {
+      "bytes": 2380,
+      "newest": "2026-06-23T08:08:29.959000+00:00",
+      "objects": 4,
+      "oldest": "2026-06-23T08:08:07.977000+00:00"
+    },
+    "kg/staging/node-missing-features-20260623-t_d6c55414/reports/molecule_fingerprint_invalid_smiles.csv": {
+      "bytes": 1,
+      "newest": "2026-06-23T08:08:08.485000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T08:08:08.485000+00:00"
+    },
+    "kg/staging/node-missing-features-20260623-t_d6c55414/reports/molecule_fingerprint_source_policy.csv": {
+      "bytes": 382,
+      "newest": "2026-06-23T08:08:08.343000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T08:08:08.343000+00:00"
+    },
+    "kg/staging/node-missing-features-20260623-t_d6c55414/reports/molecule_fingerprint_validation.json": {
+      "bytes": 387,
+      "newest": "2026-06-23T08:08:07.977000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T08:08:07.977000+00:00"
+    },
+    "kg/staging/node-missing-features-20260623-t_d6c55414/reports/node_missing_features_summary.json": {
+      "bytes": 1610,
+      "newest": "2026-06-23T08:08:29.959000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T08:08:29.959000+00:00"
+    },
+    "kg/staging/node-sequence-features-20260622-t_f9ef6389/": {
+      "bytes": 264573570,
+      "newest": "2026-06-22T21:08:56.656000+00:00",
+      "objects": 10,
+      "oldest": "2026-06-22T21:08:52.082000+00:00"
+    },
+    "kg/staging/node-sequence-features-20260622-t_f9ef6389/_logs/": {
+      "bytes": 2311,
+      "newest": "2026-06-22T21:08:52.138000+00:00",
+      "objects": 3,
+      "oldest": "2026-06-22T21:08:52.100000+00:00"
+    },
+    "kg/staging/node-sequence-features-20260622-t_f9ef6389/_logs/build_sequence_features.log": {
+      "bytes": 1598,
+      "newest": "2026-06-22T21:08:52.121000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T21:08:52.121000+00:00"
+    },
+    "kg/staging/node-sequence-features-20260622-t_f9ef6389/_logs/download_cdna.log": {
+      "bytes": 396,
+      "newest": "2026-06-22T21:08:52.138000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T21:08:52.138000+00:00"
+    },
+    "kg/staging/node-sequence-features-20260622-t_f9ef6389/_logs/download_pep.log": {
+      "bytes": 317,
+      "newest": "2026-06-22T21:08:52.100000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T21:08:52.100000+00:00"
+    },
+    "kg/staging/node-sequence-features-20260622-t_f9ef6389/features/": {
+      "bytes": 169866418,
+      "newest": "2026-06-22T21:08:56.656000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T21:08:55.165000+00:00"
+    },
+    "kg/staging/node-sequence-features-20260622-t_f9ef6389/features/protein_sequence.parquet": {
+      "bytes": 32214242,
+      "newest": "2026-06-22T21:08:55.165000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T21:08:55.165000+00:00"
+    },
+    "kg/staging/node-sequence-features-20260622-t_f9ef6389/features/transcript_sequence.parquet": {
+      "bytes": 137652176,
+      "newest": "2026-06-22T21:08:56.656000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T21:08:56.656000+00:00"
+    },
+    "kg/staging/node-sequence-features-20260622-t_f9ef6389/reports/": {
+      "bytes": 2136,
+      "newest": "2026-06-22T21:08:52.133000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T21:08:52.101000+00:00"
+    },
+    "kg/staging/node-sequence-features-20260622-t_f9ef6389/reports/sequence_feature_report.json": {
+      "bytes": 1403,
+      "newest": "2026-06-22T21:08:52.133000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T21:08:52.133000+00:00"
+    },
+    "kg/staging/node-sequence-features-20260622-t_f9ef6389/reports/sequence_source_policy.csv": {
+      "bytes": 733,
+      "newest": "2026-06-22T21:08:52.101000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T21:08:52.101000+00:00"
+    },
+    "kg/staging/node-sequence-features-20260622-t_f9ef6389/source_cache/": {
+      "bytes": 94702705,
+      "newest": "2026-06-22T21:08:54.806000+00:00",
+      "objects": 3,
+      "oldest": "2026-06-22T21:08:52.082000+00:00"
+    },
+    "kg/staging/node-sequence-features-20260622-t_f9ef6389/source_cache/Homo_sapiens.GRCh38.cdna.all.release-114.fa.gz": {
+      "bytes": 79736055,
+      "newest": "2026-06-22T21:08:54.806000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T21:08:54.806000+00:00"
+    },
+    "kg/staging/node-sequence-features-20260622-t_f9ef6389/source_cache/Homo_sapiens.GRCh38.pep.all.release-114.fa.gz": {
+      "bytes": 14966285,
+      "newest": "2026-06-22T21:08:52.797000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T21:08:52.797000+00:00"
+    },
+    "kg/staging/node-sequence-features-20260622-t_f9ef6389/source_cache/SHA256SUMS.txt": {
+      "bytes": 365,
+      "newest": "2026-06-22T21:08:52.082000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T21:08:52.082000+00:00"
+    },
+    "kg/staging/promotions/": {
+      "bytes": 100028726,
+      "newest": "2026-07-22T15:43:44.141000+00:00",
+      "objects": 3,
+      "oldest": "2026-07-22T15:28:08.024000+00:00"
+    },
+    "kg/staging/promotions/cell-line-gene-essentiality/": {
+      "bytes": 100028726,
+      "newest": "2026-07-22T15:43:44.141000+00:00",
+      "objects": 3,
+      "oldest": "2026-07-22T15:28:08.024000+00:00"
+    },
+    "kg/staging/promotions/cell-line-gene-essentiality/t_9de0b6d5/": {
+      "bytes": 100028726,
+      "newest": "2026-07-22T15:43:44.141000+00:00",
+      "objects": 3,
+      "oldest": "2026-07-22T15:28:08.024000+00:00"
+    },
+    "kg/staging/pyg-sampled-train-eval/": {
+      "bytes": 310558207,
+      "newest": "2026-07-22T14:05:58.658000+00:00",
+      "objects": 13,
+      "oldest": "2026-07-22T14:05:33.137000+00:00"
+    },
+    "kg/staging/pyg-sampled-train-eval/t_3a585bf1/": {
+      "bytes": 310558207,
+      "newest": "2026-07-22T14:05:58.658000+00:00",
+      "objects": 13,
+      "oldest": "2026-07-22T14:05:33.137000+00:00"
+    },
+    "kg/staging/pyg-sampled-train-eval/t_3a585bf1/v1/": {
+      "bytes": 310558207,
+      "newest": "2026-07-22T14:05:58.658000+00:00",
+      "objects": 13,
+      "oldest": "2026-07-22T14:05:33.137000+00:00"
+    },
+    "kg/staging/rel-wave-a/": {
+      "bytes": 248476012,
+      "newest": "2026-06-23T15:40:53.152000+00:00",
+      "objects": 17,
+      "oldest": "2026-06-23T15:38:21.519000+00:00"
+    },
+    "kg/staging/rel-wave-a/mutation-genomic-direct/": {
+      "bytes": 248476012,
+      "newest": "2026-06-23T15:40:53.152000+00:00",
+      "objects": 17,
+      "oldest": "2026-06-23T15:38:21.519000+00:00"
+    },
+    "kg/staging/rel-wave-a/mutation-genomic-direct/t_cd9d5107/": {
+      "bytes": 248476012,
+      "newest": "2026-06-23T15:40:53.152000+00:00",
+      "objects": 17,
+      "oldest": "2026-06-23T15:38:21.519000+00:00"
+    },
+    "kg/staging/remap-crm-full-support-sidecar-readiness-t_7e356c5c/": {
+      "bytes": 19849,
+      "newest": "2026-06-24T18:19:14.698000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-24T18:19:14.685000+00:00"
+    },
+    "kg/staging/remap-crm-full-support-sidecar-readiness-t_7e356c5c/reports/": {
+      "bytes": 19849,
+      "newest": "2026-06-24T18:19:14.698000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-24T18:19:14.685000+00:00"
+    },
+    "kg/staging/remap-crm-full-support-sidecar-readiness-t_7e356c5c/reports/remap_crm_full_sidecar_promotion_readiness_manifest.json": {
+      "bytes": 14433,
+      "newest": "2026-06-24T18:19:14.685000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T18:19:14.685000+00:00"
+    },
+    "kg/staging/remap-crm-full-support-sidecar-readiness-t_7e356c5c/reports/t_7e356c5c_remap_crm_full_sidecar_promotion_readiness_validation.json": {
+      "bytes": 5416,
+      "newest": "2026-06-24T18:19:14.698000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T18:19:14.698000+00:00"
+    },
+    "kg/staging/source-native-expansion/": {
+      "bytes": 7784661193,
+      "newest": "2026-07-19T15:31:21.576000+00:00",
+      "objects": 3222,
+      "oldest": "2026-06-22T07:22:29.281000+00:00"
+    },
+    "kg/staging/source-native-expansion/biogrid-ptm-xref/": {
+      "bytes": 18510623,
+      "newest": "2026-06-22T09:18:05.358000+00:00",
+      "objects": 13,
+      "oldest": "2026-06-22T09:17:39.662000+00:00"
+    },
+    "kg/staging/source-native-expansion/biogrid-ptm-xref/biogrid-categorized-20260622/": {
+      "bytes": 18484993,
+      "newest": "2026-06-22T09:17:40.003000+00:00",
+      "objects": 9,
+      "oldest": "2026-06-22T09:17:39.662000+00:00"
+    },
+    "kg/staging/source-native-expansion/biogrid-ptm-xref/reports/": {
+      "bytes": 25630,
+      "newest": "2026-06-22T09:18:05.358000+00:00",
+      "objects": 4,
+      "oldest": "2026-06-22T09:17:43.159000+00:00"
+    },
+    "kg/staging/source-native-expansion/disease-tissue-phenotype-context/": {
+      "bytes": 83092,
+      "newest": "2026-06-22T14:42:15.930000+00:00",
+      "objects": 12,
+      "oldest": "2026-06-22T14:40:17.463000+00:00"
+    },
+    "kg/staging/source-native-expansion/disease-tissue-phenotype-context/t_3ff983e0/": {
+      "bytes": 83092,
+      "newest": "2026-06-22T14:42:15.930000+00:00",
+      "objects": 12,
+      "oldest": "2026-06-22T14:40:17.463000+00:00"
+    },
+    "kg/staging/source-native-expansion/gene_paralog_gene/": {
+      "bytes": 253277718,
+      "newest": "2026-06-22T13:53:25.030000+00:00",
+      "objects": 3,
+      "oldest": "2026-06-22T13:53:20.633000+00:00"
+    },
+    "kg/staging/source-native-expansion/gene_paralog_gene/opentargets-target-homologues-20260622/": {
+      "bytes": 253277718,
+      "newest": "2026-06-22T13:53:25.030000+00:00",
+      "objects": 3,
+      "oldest": "2026-06-22T13:53:20.633000+00:00"
+    },
+    "kg/staging/source-native-expansion/intact-protein-interactions-policy-fixed/": {
+      "bytes": 291143217,
+      "newest": "2026-06-22T12:26:46.971000+00:00",
+      "objects": 9,
+      "oldest": "2026-06-22T12:26:42.551000+00:00"
+    },
+    "kg/staging/source-native-expansion/intact-protein-interactions-policy-fixed/runs/": {
+      "bytes": 291143217,
+      "newest": "2026-06-22T12:26:46.971000+00:00",
+      "objects": 9,
+      "oldest": "2026-06-22T12:26:42.551000+00:00"
+    },
+    "kg/staging/source-native-expansion/lncrna-l2f-gencode-lncrnadisease-20260622/": {
+      "bytes": 15510246,
+      "newest": "2026-06-22T13:52:16.721000+00:00",
+      "objects": 9,
+      "oldest": "2026-06-22T13:51:46.293000+00:00"
+    },
+    "kg/staging/source-native-expansion/lncrna-l2f-gencode-lncrnadisease-20260622/README.md": {
+      "bytes": 436,
+      "newest": "2026-06-22T13:51:46.293000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:51:46.293000+00:00"
+    },
+    "kg/staging/source-native-expansion/lncrna-l2f-gencode-lncrnadisease-20260622/candidates/": {
+      "bytes": 2439870,
+      "newest": "2026-06-22T13:51:46.451000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:51:46.451000+00:00"
+    },
+    "kg/staging/source-native-expansion/lncrna-l2f-gencode-lncrnadisease-20260622/edges/": {
+      "bytes": 4355,
+      "newest": "2026-06-22T13:51:46.514000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:51:46.514000+00:00"
+    },
+    "kg/staging/source-native-expansion/lncrna-l2f-gencode-lncrnadisease-20260622/nodes/": {
+      "bytes": 9445429,
+      "newest": "2026-06-22T13:51:46.687000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:51:46.687000+00:00"
+    },
+    "kg/staging/source-native-expansion/lncrna-l2f-gencode-lncrnadisease-20260622/reports/": {
+      "bytes": 3614070,
+      "newest": "2026-06-22T13:52:16.721000+00:00",
+      "objects": 4,
+      "oldest": "2026-06-22T13:51:46.321000+00:00"
+    },
+    "kg/staging/source-native-expansion/lncrna-l2f-gencode-lncrnadisease-20260622/source_audit.json": {
+      "bytes": 6086,
+      "newest": "2026-06-22T13:51:46.423000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:51:46.423000+00:00"
+    },
+    "kg/staging/source-native-expansion/mirna-targets-real/": {
+      "bytes": 100649833,
+      "newest": "2026-06-22T10:24:39.808000+00:00",
+      "objects": 15,
+      "oldest": "2026-06-22T09:41:41.643000+00:00"
+    },
+    "kg/staging/source-native-expansion/mirna-targets-real/edges/": {
+      "bytes": 916748,
+      "newest": "2026-06-22T10:23:07.865000+00:00",
+      "objects": 3,
+      "oldest": "2026-06-22T10:23:07.683000+00:00"
+    },
+    "kg/staging/source-native-expansion/mirna-targets-real/evidence/": {
+      "bytes": 98977056,
+      "newest": "2026-06-22T10:23:09.190000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T10:23:07.691000+00:00"
+    },
+    "kg/staging/source-native-expansion/mirna-targets-real/mappings/": {
+      "bytes": 97986,
+      "newest": "2026-06-22T10:23:07.725000+00:00",
+      "objects": 3,
+      "oldest": "2026-06-22T09:41:41.643000+00:00"
+    },
+    "kg/staging/source-native-expansion/mirna-targets-real/nodes/": {
+      "bytes": 130955,
+      "newest": "2026-06-22T10:23:07.740000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T10:23:07.740000+00:00"
+    },
+    "kg/staging/source-native-expansion/mirna-targets-real/reports/": {
+      "bytes": 527088,
+      "newest": "2026-06-22T10:24:39.808000+00:00",
+      "objects": 6,
+      "oldest": "2026-06-22T10:23:07.708000+00:00"
+    },
+    "kg/staging/source-native-expansion/prism-20q2-secondary-20260719-t_1cdcf211-v2/": {
+      "bytes": 329554530,
+      "newest": "2026-07-19T15:31:21.576000+00:00",
+      "objects": 15,
+      "oldest": "2026-07-19T15:30:23.790000+00:00"
+    },
+    "kg/staging/source-native-expansion/prism-20q2-secondary-20260719-t_1cdcf211-v2/edges/": {
+      "bytes": 40061,
+      "newest": "2026-07-19T15:30:24.191000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-19T15:30:24.191000+00:00"
+    },
+    "kg/staging/source-native-expansion/prism-20q2-secondary-20260719-t_1cdcf211-v2/evidence/": {
+      "bytes": 5863282,
+      "newest": "2026-07-19T15:30:24.520000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-19T15:30:24.520000+00:00"
+    },
+    "kg/staging/source-native-expansion/prism-20q2-secondary-20260719-t_1cdcf211-v2/features/": {
+      "bytes": 322824841,
+      "newest": "2026-07-19T15:30:26.108000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-19T15:30:26.108000+00:00"
+    },
+    "kg/staging/source-native-expansion/prism-20q2-secondary-20260719-t_1cdcf211-v2/manifest.json": {
+      "bytes": 4845,
+      "newest": "2026-07-19T15:30:23.790000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-19T15:30:23.790000+00:00"
+    },
+    "kg/staging/source-native-expansion/prism-20q2-secondary-20260719-t_1cdcf211-v2/mapping/": {
+      "bytes": 135404,
+      "newest": "2026-07-19T15:30:24.208000+00:00",
+      "objects": 2,
+      "oldest": "2026-07-19T15:30:24.182000+00:00"
+    },
+    "kg/staging/source-native-expansion/prism-20q2-secondary-20260719-t_1cdcf211-v2/reports/": {
+      "bytes": 673199,
+      "newest": "2026-07-19T15:31:21.576000+00:00",
+      "objects": 5,
+      "oldest": "2026-07-19T15:30:23.936000+00:00"
+    },
+    "kg/staging/source-native-expansion/prism-20q2-secondary-20260719-t_1cdcf211-v2/source/": {
+      "bytes": 12546,
+      "newest": "2026-07-19T15:30:24.202000+00:00",
+      "objects": 3,
+      "oldest": "2026-07-19T15:30:24.177000+00:00"
+    },
+    "kg/staging/source-native-expansion/prism-20q2-secondary-20260719-t_1cdcf211-v2/validation.json": {
+      "bytes": 352,
+      "newest": "2026-07-19T15:30:23.804000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-19T15:30:23.804000+00:00"
+    },
+    "kg/staging/source-native-expansion/prism-20q2-secondary-20260719-t_1cdcf211/": {
+      "bytes": 329287078,
+      "newest": "2026-07-19T15:12:44.802000+00:00",
+      "objects": 14,
+      "oldest": "2026-07-19T15:12:42.519000+00:00"
+    },
+    "kg/staging/source-native-expansion/prism-20q2-secondary-20260719-t_1cdcf211/edges/": {
+      "bytes": 40061,
+      "newest": "2026-07-19T15:12:42.640000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-19T15:12:42.640000+00:00"
+    },
+    "kg/staging/source-native-expansion/prism-20q2-secondary-20260719-t_1cdcf211/evidence/": {
+      "bytes": 5857721,
+      "newest": "2026-07-19T15:12:43.328000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-19T15:12:43.328000+00:00"
+    },
+    "kg/staging/source-native-expansion/prism-20q2-secondary-20260719-t_1cdcf211/features/": {
+      "bytes": 322564568,
+      "newest": "2026-07-19T15:12:44.802000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-19T15:12:44.802000+00:00"
+    },
+    "kg/staging/source-native-expansion/prism-20q2-secondary-20260719-t_1cdcf211/manifest.json": {
+      "bytes": 4804,
+      "newest": "2026-07-19T15:12:42.519000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-19T15:12:42.519000+00:00"
+    },
+    "kg/staging/source-native-expansion/prism-20q2-secondary-20260719-t_1cdcf211/mapping/": {
+      "bytes": 135404,
+      "newest": "2026-07-19T15:12:42.854000+00:00",
+      "objects": 2,
+      "oldest": "2026-07-19T15:12:42.840000+00:00"
+    },
+    "kg/staging/source-native-expansion/prism-20q2-secondary-20260719-t_1cdcf211/reports/": {
+      "bytes": 671661,
+      "newest": "2026-07-19T15:12:43.241000+00:00",
+      "objects": 4,
+      "oldest": "2026-07-19T15:12:42.764000+00:00"
+    },
+    "kg/staging/source-native-expansion/prism-20q2-secondary-20260719-t_1cdcf211/source/": {
+      "bytes": 12546,
+      "newest": "2026-07-19T15:12:42.811000+00:00",
+      "objects": 3,
+      "oldest": "2026-07-19T15:12:42.622000+00:00"
+    },
+    "kg/staging/source-native-expansion/prism-20q2-secondary-20260719-t_1cdcf211/validation.json": {
+      "bytes": 313,
+      "newest": "2026-07-19T15:12:42.536000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-19T15:12:42.536000+00:00"
+    },
+    "kg/staging/source-native-expansion/remap-crm-tf-binds-enhancer-support-allchrom-5kperchrom-20260623-t_b599d3bb/": {
+      "bytes": 664807414,
+      "newest": "2026-06-23T17:11:04.936000+00:00",
+      "objects": 57,
+      "oldest": "2026-06-23T16:21:36.897000+00:00"
+    },
+    "kg/staging/source-native-expansion/remap-crm-tf-binds-enhancer-support-allchrom-5kperchrom-20260623-t_b599d3bb/all_chrom_5k_per_chrom/": {
+      "bytes": 664807414,
+      "newest": "2026-06-23T17:11:04.936000+00:00",
+      "objects": 57,
+      "oldest": "2026-06-23T16:21:36.897000+00:00"
+    },
+    "kg/staging/source-native-expansion/remap-crm-tf-binds-enhancer-support-chr1-first10k-20260623-t_3b8a2c4d/": {
+      "bytes": 68259102,
+      "newest": "2026-06-23T12:09:32.411000+00:00",
+      "objects": 8,
+      "oldest": "2026-06-23T12:09:27.790000+00:00"
+    },
+    "kg/staging/source-native-expansion/remap-crm-tf-binds-enhancer-support-chr1-first10k-20260623-t_3b8a2c4d/parsed/": {
+      "bytes": 14279712,
+      "newest": "2026-06-23T12:09:32.411000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-23T12:09:27.868000+00:00"
+    },
+    "kg/staging/source-native-expansion/remap-crm-tf-binds-enhancer-support-chr1-first10k-20260623-t_3b8a2c4d/reports/": {
+      "bytes": 25232,
+      "newest": "2026-06-23T12:09:27.817000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-23T12:09:27.790000+00:00"
+    },
+    "kg/staging/source-native-expansion/remap-crm-tf-binds-enhancer-support-chr1-first10k-20260623-t_3b8a2c4d/source_cache/": {
+      "bytes": 2458099,
+      "newest": "2026-06-23T12:09:27.962000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T12:09:27.962000+00:00"
+    },
+    "kg/staging/source-native-expansion/remap-crm-tf-binds-enhancer-support-chr1-first10k-20260623-t_3b8a2c4d/support_candidates/": {
+      "bytes": 51496059,
+      "newest": "2026-06-23T12:09:28.503000+00:00",
+      "objects": 3,
+      "oldest": "2026-06-23T12:09:27.887000+00:00"
+    },
+    "kg/staging/source-native-expansion/remap-crm-tf-binds-enhancer-support-smoke-t_3b8a2c4d/": {
+      "bytes": 1475230987,
+      "newest": "2026-06-23T12:10:22.538000+00:00",
+      "objects": 8,
+      "oldest": "2026-06-23T12:10:06.206000+00:00"
+    },
+    "kg/staging/source-native-expansion/remap-crm-tf-binds-enhancer-support-smoke-t_3b8a2c4d/parsed/": {
+      "bytes": 1680205,
+      "newest": "2026-06-23T12:10:06.463000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-23T12:10:06.446000+00:00"
+    },
+    "kg/staging/source-native-expansion/remap-crm-tf-binds-enhancer-support-smoke-t_3b8a2c4d/reports/": {
+      "bytes": 23794,
+      "newest": "2026-06-23T12:10:06.284000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-23T12:10:06.206000+00:00"
+    },
+    "kg/staging/source-native-expansion/remap-crm-tf-binds-enhancer-support-smoke-t_3b8a2c4d/source_cache/": {
+      "bytes": 825164,
+      "newest": "2026-06-23T12:10:06.270000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T12:10:06.270000+00:00"
+    },
+    "kg/staging/source-native-expansion/remap-crm-tf-binds-enhancer-support-smoke-t_3b8a2c4d/support_candidates/": {
+      "bytes": 1472701824,
+      "newest": "2026-06-23T12:10:22.538000+00:00",
+      "objects": 3,
+      "oldest": "2026-06-23T12:10:06.366000+00:00"
+    },
+    "kg/staging/source-native-expansion/remap-tf-binds-enhancer-chunked/": {
+      "bytes": 440744194,
+      "newest": "2026-06-22T09:20:20.682000+00:00",
+      "objects": 5,
+      "oldest": "2026-06-22T09:20:08.067000+00:00"
+    },
+    "kg/staging/source-native-expansion/remap-tf-binds-enhancer-chunked/chr22-20k-streaming-10kb/": {
+      "bytes": 440744194,
+      "newest": "2026-06-22T09:20:20.682000+00:00",
+      "objects": 5,
+      "oldest": "2026-06-22T09:20:08.067000+00:00"
+    },
+    "kg/staging/source-native-expansion/remap-tf-binds-enhancer-compact/": {
+      "bytes": 3542682355,
+      "newest": "2026-06-22T22:06:51.632000+00:00",
+      "objects": 3023,
+      "oldest": "2026-06-22T13:44:01.794000+00:00"
+    },
+    "kg/staging/source-native-expansion/remap-tf-binds-enhancer-compact/chr22-20k-compact-t_4f108a31/": {
+      "bytes": 221220677,
+      "newest": "2026-06-22T13:44:41.465000+00:00",
+      "objects": 6,
+      "oldest": "2026-06-22T13:44:01.794000+00:00"
+    },
+    "kg/staging/source-native-expansion/remap-tf-binds-enhancer-compact/full-all-chromosomes-compact-20260622-t_5738004a/": {
+      "bytes": 25757,
+      "newest": "2026-06-22T14:31:58.593000+00:00",
+      "objects": 5,
+      "oldest": "2026-06-22T14:31:35.637000+00:00"
+    },
+    "kg/staging/source-native-expansion/remap-tf-binds-enhancer-compact/full-all-chromosomes-compact-edge-bucketed-20260622-t_8fff8356/": {
+      "bytes": 4304,
+      "newest": "2026-06-22T19:36:21.446000+00:00",
+      "objects": 3,
+      "oldest": "2026-06-22T19:36:21.396000+00:00"
+    },
+    "kg/staging/source-native-expansion/remap-tf-binds-enhancer-compact/full-all-chromosomes-compact-streaming-20260622-t_6d8e46c8/": {
+      "bytes": 32628,
+      "newest": "2026-06-22T17:56:17.766000+00:00",
+      "objects": 7,
+      "oldest": "2026-06-22T17:56:13.065000+00:00"
+    },
+    "kg/staging/source-native-expansion/remap-tf-binds-enhancer-compact/remote-first-pruned-20260622-t_3479936e-v2-window100k/": {
+      "bytes": 1993768228,
+      "newest": "2026-06-22T22:06:51.632000+00:00",
+      "objects": 928,
+      "oldest": "2026-06-22T21:29:45.221000+00:00"
+    },
+    "kg/staging/source-native-expansion/remap-tf-binds-enhancer-compact/remote-first-pruned-20260622-t_3479936e/": {
+      "bytes": 1327630761,
+      "newest": "2026-06-22T21:24:57.132000+00:00",
+      "objects": 2074,
+      "oldest": "2026-06-22T20:26:35.609000+00:00"
+    },
+    "kg/staging/source-native-expansion/t_28f83a7b-biogrid/": {
+      "bytes": 638285,
+      "newest": "2026-06-22T07:22:33.911000+00:00",
+      "objects": 6,
+      "oldest": "2026-06-22T07:22:33.650000+00:00"
+    },
+    "kg/staging/source-native-expansion/t_28f83a7b-biogrid/complexes/": {
+      "bytes": 179,
+      "newest": "2026-06-22T07:22:33.650000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T07:22:33.650000+00:00"
+    },
+    "kg/staging/source-native-expansion/t_28f83a7b-biogrid/edges/": {
+      "bytes": 26042,
+      "newest": "2026-06-22T07:22:33.719000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T07:22:33.669000+00:00"
+    },
+    "kg/staging/source-native-expansion/t_28f83a7b-biogrid/evidence/": {
+      "bytes": 605734,
+      "newest": "2026-06-22T07:22:33.737000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T07:22:33.666000+00:00"
+    },
+    "kg/staging/source-native-expansion/t_28f83a7b-biogrid/nodes/": {
+      "bytes": 6330,
+      "newest": "2026-06-22T07:22:33.911000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T07:22:33.911000+00:00"
+    },
+    "kg/staging/source-native-expansion/t_5cb68c7b-remap/": {
+      "bytes": 252458422,
+      "newest": "2026-06-22T07:22:41.743000+00:00",
+      "objects": 4,
+      "oldest": "2026-06-22T07:22:38.187000+00:00"
+    },
+    "kg/staging/source-native-expansion/t_5cb68c7b-remap/edges/": {
+      "bytes": 803561,
+      "newest": "2026-06-22T07:22:38.285000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T07:22:38.285000+00:00"
+    },
+    "kg/staging/source-native-expansion/t_5cb68c7b-remap/evidence/": {
+      "bytes": 251257011,
+      "newest": "2026-06-22T07:22:41.743000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T07:22:41.743000+00:00"
+    },
+    "kg/staging/source-native-expansion/t_5cb68c7b-remap/source_cache/": {
+      "bytes": 395385,
+      "newest": "2026-06-22T07:22:38.201000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T07:22:38.201000+00:00"
+    },
+    "kg/staging/source-native-expansion/t_5cb68c7b-remap/validation_report.json": {
+      "bytes": 2465,
+      "newest": "2026-06-22T07:22:38.187000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T07:22:38.187000+00:00"
+    },
+    "kg/staging/source-native-expansion/t_6ca72196-intact/": {
+      "bytes": 1687033,
+      "newest": "2026-06-22T07:22:29.365000+00:00",
+      "objects": 8,
+      "oldest": "2026-06-22T07:22:29.281000+00:00"
+    },
+    "kg/staging/source-native-expansion/t_6ca72196-intact/MANIFEST.json": {
+      "bytes": 3187,
+      "newest": "2026-06-22T07:22:29.320000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T07:22:29.320000+00:00"
+    },
+    "kg/staging/source-native-expansion/t_6ca72196-intact/build_stdout.json": {
+      "bytes": 2539,
+      "newest": "2026-06-22T07:22:29.281000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T07:22:29.281000+00:00"
+    },
+    "kg/staging/source-native-expansion/t_6ca72196-intact/edges/": {
+      "bytes": 5311,
+      "newest": "2026-06-22T07:22:29.364000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T07:22:29.364000+00:00"
+    },
+    "kg/staging/source-native-expansion/t_6ca72196-intact/evidence/": {
+      "bytes": 71483,
+      "newest": "2026-06-22T07:22:29.365000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T07:22:29.315000+00:00"
+    },
+    "kg/staging/source-native-expansion/t_6ca72196-intact/raw/": {
+      "bytes": 457598,
+      "newest": "2026-06-22T07:22:29.326000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T07:22:29.326000+00:00"
+    },
+    "kg/staging/source-native-expansion/t_6ca72196-intact/reports/": {
+      "bytes": 1146915,
+      "newest": "2026-06-22T07:22:29.340000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T07:22:29.321000+00:00"
+    },
+    "kg/staging/source-native-expansion/t_f1b51a59-mirna/": {
+      "bytes": 137064,
+      "newest": "2026-06-22T07:22:46.197000+00:00",
+      "objects": 13,
+      "oldest": "2026-06-22T07:22:46.100000+00:00"
+    },
+    "kg/staging/source-native-expansion/t_f1b51a59-mirna/edges/": {
+      "bytes": 15498,
+      "newest": "2026-06-22T07:22:46.131000+00:00",
+      "objects": 3,
+      "oldest": "2026-06-22T07:22:46.100000+00:00"
+    },
+    "kg/staging/source-native-expansion/t_f1b51a59-mirna/evidence/": {
+      "bytes": 63087,
+      "newest": "2026-06-22T07:22:46.150000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T07:22:46.140000+00:00"
+    },
+    "kg/staging/source-native-expansion/t_f1b51a59-mirna/mappings/": {
+      "bytes": 20344,
+      "newest": "2026-06-22T07:22:46.173000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T07:22:46.129000+00:00"
+    },
+    "kg/staging/source-native-expansion/t_f1b51a59-mirna/nodes/": {
+      "bytes": 10772,
+      "newest": "2026-06-22T07:22:46.129000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T07:22:46.129000+00:00"
+    },
+    "kg/staging/source-native-expansion/t_f1b51a59-mirna/reports/": {
+      "bytes": 1120,
+      "newest": "2026-06-22T07:22:46.197000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T07:22:46.197000+00:00"
+    },
+    "kg/staging/source-native-expansion/t_f1b51a59-mirna/smoke_inputs/": {
+      "bytes": 26243,
+      "newest": "2026-06-22T07:22:46.177000+00:00",
+      "objects": 4,
+      "oldest": "2026-06-22T07:22:46.138000+00:00"
+    },
+    "kg/staging/t_d74574d4-input/": {
+      "bytes": 6466641920,
+      "newest": "2026-07-17T18:32:53.296000+00:00",
+      "objects": 4,
+      "oldest": "2026-07-17T18:27:26.241000+00:00"
+    },
+    "kg/staging/t_d74574d4-input/molecule.tar": {
+      "bytes": 41400320,
+      "newest": "2026-07-17T18:27:26.241000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-17T18:27:26.241000+00:00"
+    },
+    "kg/staging/t_d74574d4-input/protein.tar": {
+      "bytes": 3900416000,
+      "newest": "2026-07-17T18:32:53.296000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-17T18:32:53.296000+00:00"
+    },
+    "kg/staging/t_d74574d4-input/text.tar": {
+      "bytes": 1949265920,
+      "newest": "2026-07-17T18:28:09.994000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-17T18:28:09.994000+00:00"
+    },
+    "kg/staging/t_d74574d4-input/transcript.tar": {
+      "bytes": 575559680,
+      "newest": "2026-07-17T18:27:43.679000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-17T18:27:43.679000+00:00"
+    },
+    "kg/staging/t_f420d30a/": {
+      "bytes": 1866958321,
+      "newest": "2026-07-18T15:31:48.272000+00:00",
+      "objects": 5,
+      "oldest": "2026-07-18T15:19:47.651000+00:00"
+    },
+    "kg/staging/t_f420d30a/depmap-repair-g1781481609338666-4b93a88/": {
+      "bytes": 1866958321,
+      "newest": "2026-07-18T15:31:48.272000+00:00",
+      "objects": 5,
+      "oldest": "2026-07-18T15:19:47.651000+00:00"
+    },
+    "kg/staging/t_f420d30a/depmap-repair-g1781481609338666-4b93a88/edges/": {
+      "bytes": 103838259,
+      "newest": "2026-07-18T15:19:51.358000+00:00",
+      "objects": 2,
+      "oldest": "2026-07-18T15:19:47.651000+00:00"
+    },
+    "kg/staging/t_f420d30a/depmap-repair-g1781481609338666-4b93a88/evidence/": {
+      "bytes": 1763103613,
+      "newest": "2026-07-18T15:20:26.551000+00:00",
+      "objects": 2,
+      "oldest": "2026-07-18T15:20:08.162000+00:00"
+    },
+    "kg/staging/t_f420d30a/depmap-repair-g1781481609338666-4b93a88/promotion_candidate_manifest.json": {
+      "bytes": 16449,
+      "newest": "2026-07-18T15:31:48.272000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-18T15:31:48.272000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_1646af09/": {
+      "bytes": 18232050,
+      "newest": "2026-06-22T21:46:21.632000+00:00",
+      "objects": 11,
+      "oldest": "2026-06-22T21:46:21.213000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_1646af09/features/": {
+      "bytes": 18225302,
+      "newest": "2026-06-22T21:46:21.632000+00:00",
+      "objects": 9,
+      "oldest": "2026-06-22T21:46:21.262000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_1646af09/features/cell_line_textual_summary.parquet": {
+      "bytes": 403088,
+      "newest": "2026-06-22T21:46:21.284000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T21:46:21.284000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_1646af09/features/cell_type_textual_summary.parquet": {
+      "bytes": 352433,
+      "newest": "2026-06-22T21:46:21.262000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T21:46:21.262000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_1646af09/features/disease_textual_summary.parquet": {
+      "bytes": 2964350,
+      "newest": "2026-06-22T21:46:21.361000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T21:46:21.361000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_1646af09/features/gene_textual_summary.parquet": {
+      "bytes": 7588830,
+      "newest": "2026-06-22T21:46:21.632000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T21:46:21.632000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_1646af09/features/molecule_textual_summary.parquet": {
+      "bytes": 730115,
+      "newest": "2026-06-22T21:46:21.411000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T21:46:21.411000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_1646af09/features/pathway_textual_summary.parquet": {
+      "bytes": 3578312,
+      "newest": "2026-06-22T21:46:21.550000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T21:46:21.550000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_1646af09/features/phenotype_textual_summary.parquet": {
+      "bytes": 1296148,
+      "newest": "2026-06-22T21:46:21.280000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T21:46:21.280000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_1646af09/features/protein_textual_summary.parquet": {
+      "bytes": 21223,
+      "newest": "2026-06-22T21:46:21.284000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T21:46:21.284000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_1646af09/features/tissue_textual_summary.parquet": {
+      "bytes": 1290803,
+      "newest": "2026-06-22T21:46:21.404000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T21:46:21.404000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_1646af09/reports/": {
+      "bytes": 6748,
+      "newest": "2026-06-22T21:46:21.240000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T21:46:21.213000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_1646af09/reports/textual_summary_features_summary.json": {
+      "bytes": 3713,
+      "newest": "2026-06-22T21:46:21.240000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T21:46:21.240000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_1646af09/reports/textual_summary_source_audit.csv": {
+      "bytes": 3035,
+      "newest": "2026-06-22T21:46:21.213000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T21:46:21.213000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_1b89d078/": {
+      "bytes": 18248250,
+      "newest": "2026-06-22T22:01:07.732000+00:00",
+      "objects": 11,
+      "oldest": "2026-06-22T22:01:07.340000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_1b89d078/features/": {
+      "bytes": 18241372,
+      "newest": "2026-06-22T22:01:07.732000+00:00",
+      "objects": 9,
+      "oldest": "2026-06-22T22:01:07.411000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_1b89d078/features/cell_line_textual_summary.parquet": {
+      "bytes": 419158,
+      "newest": "2026-06-22T22:01:07.437000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T22:01:07.437000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_1b89d078/features/cell_type_textual_summary.parquet": {
+      "bytes": 352433,
+      "newest": "2026-06-22T22:01:07.435000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T22:01:07.435000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_1b89d078/features/disease_textual_summary.parquet": {
+      "bytes": 2964350,
+      "newest": "2026-06-22T22:01:07.496000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T22:01:07.496000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_1b89d078/features/gene_textual_summary.parquet": {
+      "bytes": 7588830,
+      "newest": "2026-06-22T22:01:07.732000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T22:01:07.732000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_1b89d078/features/molecule_textual_summary.parquet": {
+      "bytes": 730115,
+      "newest": "2026-06-22T22:01:07.411000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T22:01:07.411000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_1b89d078/features/pathway_textual_summary.parquet": {
+      "bytes": 3578312,
+      "newest": "2026-06-22T22:01:07.692000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T22:01:07.692000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_1b89d078/features/phenotype_textual_summary.parquet": {
+      "bytes": 1296148,
+      "newest": "2026-06-22T22:01:07.458000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T22:01:07.458000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_1b89d078/features/protein_textual_summary.parquet": {
+      "bytes": 21223,
+      "newest": "2026-06-22T22:01:07.425000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T22:01:07.425000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_1b89d078/features/tissue_textual_summary.parquet": {
+      "bytes": 1290803,
+      "newest": "2026-06-22T22:01:07.496000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T22:01:07.496000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_1b89d078/reports/": {
+      "bytes": 6878,
+      "newest": "2026-06-22T22:01:07.384000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T22:01:07.340000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_1b89d078/reports/textual_summary_features_summary.json": {
+      "bytes": 3713,
+      "newest": "2026-06-22T22:01:07.340000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T22:01:07.340000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_1b89d078/reports/textual_summary_source_audit.csv": {
+      "bytes": 3165,
+      "newest": "2026-06-22T22:01:07.384000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T22:01:07.384000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_3834a45b/": {
+      "bytes": 16181113,
+      "newest": "2026-06-22T14:42:24.044000+00:00",
+      "objects": 9,
+      "oldest": "2026-06-22T14:42:23.745000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_3834a45b/build.log": {
+      "bytes": 2589,
+      "newest": "2026-06-22T14:42:23.823000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:42:23.823000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_3834a45b/features/": {
+      "bytes": 16173480,
+      "newest": "2026-06-22T14:42:24.044000+00:00",
+      "objects": 6,
+      "oldest": "2026-06-22T14:42:23.745000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_3834a45b/features/disease_textual_summary.parquet": {
+      "bytes": 2964329,
+      "newest": "2026-06-22T14:42:24.044000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:42:24.044000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_3834a45b/features/gene_textual_summary.parquet": {
+      "bytes": 7588755,
+      "newest": "2026-06-22T14:42:24.027000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:42:24.027000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_3834a45b/features/molecule_textual_summary.parquet": {
+      "bytes": 730094,
+      "newest": "2026-06-22T14:42:23.775000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:42:23.775000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_3834a45b/features/pathway_textual_summary.parquet": {
+      "bytes": 3578291,
+      "newest": "2026-06-22T14:42:23.848000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:42:23.848000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_3834a45b/features/protein_textual_summary.parquet": {
+      "bytes": 21223,
+      "newest": "2026-06-22T14:42:23.745000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:42:23.745000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_3834a45b/features/tissue_textual_summary.parquet": {
+      "bytes": 1290788,
+      "newest": "2026-06-22T14:42:23.886000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:42:23.886000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_3834a45b/reports/": {
+      "bytes": 5044,
+      "newest": "2026-06-22T14:42:23.788000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T14:42:23.768000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_3834a45b/reports/textual_summary_features_summary.json": {
+      "bytes": 2588,
+      "newest": "2026-06-22T14:42:23.768000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:42:23.768000+00:00"
+    },
+    "kg/staging/textual-summary-features-20260622-t_3834a45b/reports/textual_summary_source_audit.csv": {
+      "bytes": 2456,
+      "newest": "2026-06-22T14:42:23.788000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:42:23.788000+00:00"
+    },
+    "kg/staging/textual-summary-full-uniprot-20260623-t_0b0ca3cb/": {
+      "bytes": 184926781,
+      "newest": "2026-06-22T23:11:06.056000+00:00",
+      "objects": 20,
+      "oldest": "2026-06-22T23:09:59.973000+00:00"
+    },
+    "kg/staging/textual-summary-full-uniprot-20260623-t_0b0ca3cb/features/": {
+      "bytes": 36261121,
+      "newest": "2026-06-22T23:10:00.674000+00:00",
+      "objects": 9,
+      "oldest": "2026-06-22T23:09:59.973000+00:00"
+    },
+    "kg/staging/textual-summary-full-uniprot-20260623-t_0b0ca3cb/features/cell_line_textual_summary.parquet": {
+      "bytes": 419158,
+      "newest": "2026-06-22T23:10:00.009000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:00.009000+00:00"
+    },
+    "kg/staging/textual-summary-full-uniprot-20260623-t_0b0ca3cb/features/cell_type_textual_summary.parquet": {
+      "bytes": 352453,
+      "newest": "2026-06-22T23:10:00.127000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:00.127000+00:00"
+    },
+    "kg/staging/textual-summary-full-uniprot-20260623-t_0b0ca3cb/features/disease_textual_summary.parquet": {
+      "bytes": 2964378,
+      "newest": "2026-06-22T23:10:00.258000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:00.258000+00:00"
+    },
+    "kg/staging/textual-summary-full-uniprot-20260623-t_0b0ca3cb/features/gene_textual_summary.parquet": {
+      "bytes": 7588930,
+      "newest": "2026-06-22T23:10:00.483000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:00.483000+00:00"
+    },
+    "kg/staging/textual-summary-full-uniprot-20260623-t_0b0ca3cb/features/molecule_textual_summary.parquet": {
+      "bytes": 730143,
+      "newest": "2026-06-22T23:10:00.102000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:00.102000+00:00"
+    },
+    "kg/staging/textual-summary-full-uniprot-20260623-t_0b0ca3cb/features/pathway_textual_summary.parquet": {
+      "bytes": 3578340,
+      "newest": "2026-06-22T23:10:00.215000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:00.215000+00:00"
+    },
+    "kg/staging/textual-summary-full-uniprot-20260623-t_0b0ca3cb/features/phenotype_textual_summary.parquet": {
+      "bytes": 1296168,
+      "newest": "2026-06-22T23:10:00.132000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:00.132000+00:00"
+    },
+    "kg/staging/textual-summary-full-uniprot-20260623-t_0b0ca3cb/features/protein_textual_summary.parquet": {
+      "bytes": 18040728,
+      "newest": "2026-06-22T23:10:00.674000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:00.674000+00:00"
+    },
+    "kg/staging/textual-summary-full-uniprot-20260623-t_0b0ca3cb/features/tissue_textual_summary.parquet": {
+      "bytes": 1290823,
+      "newest": "2026-06-22T23:09:59.973000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:09:59.973000+00:00"
+    },
+    "kg/staging/textual-summary-full-uniprot-20260623-t_0b0ca3cb/raw/": {
+      "bytes": 148629419,
+      "newest": "2026-06-22T23:10:11.984000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:11.984000+00:00"
+    },
+    "kg/staging/textual-summary-full-uniprot-20260623-t_0b0ca3cb/raw/uniprot/": {
+      "bytes": 148629419,
+      "newest": "2026-06-22T23:10:11.984000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:11.984000+00:00"
+    },
+    "kg/staging/textual-summary-full-uniprot-20260623-t_0b0ca3cb/reports/": {
+      "bytes": 32732,
+      "newest": "2026-06-22T23:11:06.056000+00:00",
+      "objects": 9,
+      "oldest": "2026-06-22T23:10:04.633000+00:00"
+    },
+    "kg/staging/textual-summary-full-uniprot-20260623-t_0b0ca3cb/reports/batched_uniprot_fetch.log": {
+      "bytes": 2320,
+      "newest": "2026-06-22T23:10:04.633000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:04.633000+00:00"
+    },
+    "kg/staging/textual-summary-full-uniprot-20260623-t_0b0ca3cb/reports/batched_uniprot_fetch_resume.log": {
+      "bytes": 2426,
+      "newest": "2026-06-22T23:10:04.644000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:04.644000+00:00"
+    },
+    "kg/staging/textual-summary-full-uniprot-20260623-t_0b0ca3cb/reports/full_uniprot_build.log": {
+      "bytes": 300,
+      "newest": "2026-06-22T23:10:04.677000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:04.677000+00:00"
+    },
+    "kg/staging/textual-summary-full-uniprot-20260623-t_0b0ca3cb/reports/full_uniprot_textual_summary_expansion_20260623_t_0b0ca3cb.md": {
+      "bytes": 5999,
+      "newest": "2026-06-22T23:11:06.056000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:11:06.056000+00:00"
+    },
+    "kg/staging/textual-summary-full-uniprot-20260623-t_0b0ca3cb/reports/full_uniprot_textual_summary_independent_validation.json": {
+      "bytes": 9215,
+      "newest": "2026-06-22T23:10:04.644000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:04.644000+00:00"
+    },
+    "kg/staging/textual-summary-full-uniprot-20260623-t_0b0ca3cb/reports/stage_textual_summary_features.log": {
+      "bytes": 1563,
+      "newest": "2026-06-22T23:10:04.651000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:04.651000+00:00"
+    },
+    "kg/staging/textual-summary-full-uniprot-20260623-t_0b0ca3cb/reports/stage_textual_summary_features_rerun.log": {
+      "bytes": 4007,
+      "newest": "2026-06-22T23:10:04.651000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:04.651000+00:00"
+    },
+    "kg/staging/textual-summary-full-uniprot-20260623-t_0b0ca3cb/reports/textual_summary_features_summary.json": {
+      "bytes": 3737,
+      "newest": "2026-06-22T23:10:04.665000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:04.665000+00:00"
+    },
+    "kg/staging/textual-summary-full-uniprot-20260623-t_0b0ca3cb/reports/textual_summary_source_audit.csv": {
+      "bytes": 3165,
+      "newest": "2026-06-22T23:10:04.657000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:04.657000+00:00"
+    },
+    "kg/staging/textual-summary-full-uniprot-20260623-t_0b0ca3cb/scripts/": {
+      "bytes": 3509,
+      "newest": "2026-06-22T23:10:07.551000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:07.551000+00:00"
+    },
+    "kg/staging/textual-summary-full-uniprot-20260623-t_0b0ca3cb/scripts/fetch_uniprot_batch.py": {
+      "bytes": 3509,
+      "newest": "2026-06-22T23:10:07.551000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:07.551000+00:00"
+    },
+    "kg/staging/uniprot-ptm-sites-2026-06-22/": {
+      "bytes": 12481456,
+      "newest": "2026-06-22T13:53:25.453000+00:00",
+      "objects": 6,
+      "oldest": "2026-06-22T13:52:23.875000+00:00"
+    },
+    "kg/staging/uniprot-ptm-sites-2026-06-22/diagnostics/": {
+      "bytes": 10671,
+      "newest": "2026-06-22T13:52:27.423000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:52:27.423000+00:00"
+    },
+    "kg/staging/uniprot-ptm-sites-2026-06-22/diagnostics/ptm_site_disease_link_candidates.parquet": {
+      "bytes": 10671,
+      "newest": "2026-06-22T13:52:27.423000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:52:27.423000+00:00"
+    },
+    "kg/staging/uniprot-ptm-sites-2026-06-22/edges/": {
+      "bytes": 1215681,
+      "newest": "2026-06-22T13:52:24.640000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:52:24.640000+00:00"
+    },
+    "kg/staging/uniprot-ptm-sites-2026-06-22/edges/protein_has_ptm_site.parquet": {
+      "bytes": 1215681,
+      "newest": "2026-06-22T13:52:24.640000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:52:24.640000+00:00"
+    },
+    "kg/staging/uniprot-ptm-sites-2026-06-22/evidence/": {
+      "bytes": 7780373,
+      "newest": "2026-06-22T13:52:27.024000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:52:27.024000+00:00"
+    },
+    "kg/staging/uniprot-ptm-sites-2026-06-22/evidence/protein_has_ptm_site.parquet": {
+      "bytes": 7780373,
+      "newest": "2026-06-22T13:52:27.024000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:52:27.024000+00:00"
+    },
+    "kg/staging/uniprot-ptm-sites-2026-06-22/nodes/": {
+      "bytes": 3472200,
+      "newest": "2026-06-22T13:52:23.875000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:52:23.875000+00:00"
+    },
+    "kg/staging/uniprot-ptm-sites-2026-06-22/nodes/ptm_site.parquet": {
+      "bytes": 3472200,
+      "newest": "2026-06-22T13:52:23.875000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:52:23.875000+00:00"
+    },
+    "kg/staging/uniprot-ptm-sites-2026-06-22/reports/": {
+      "bytes": 2531,
+      "newest": "2026-06-22T13:53:25.453000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T13:52:27.721000+00:00"
+    },
+    "kg/staging/uniprot-ptm-sites-2026-06-22/reports/uniprot_ptm_sites_summary.json": {
+      "bytes": 1508,
+      "newest": "2026-06-22T13:52:27.721000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:52:27.721000+00:00"
+    },
+    "kg/staging/uniprot-ptm-sites-2026-06-22/reports/uniprot_ptm_sites_validation.json": {
+      "bytes": 1023,
+      "newest": "2026-06-22T13:53:25.453000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:53:25.453000+00:00"
+    },
+    "kg/task22-mutation-associated-disease-staging/": {
+      "bytes": 98613922,
+      "newest": "2026-06-11T10:56:40.631000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-11T10:56:24.243000+00:00"
+    },
+    "kg/task22-mutation-associated-disease-staging/edges/": {
+      "bytes": 94507984,
+      "newest": "2026-06-11T10:56:40.631000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T10:56:40.631000+00:00"
+    },
+    "kg/task22-mutation-associated-disease-staging/edges/mutation_associated_disease.parquet": {
+      "bytes": 94507984,
+      "newest": "2026-06-11T10:56:40.631000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T10:56:40.631000+00:00"
+    },
+    "kg/task22-mutation-associated-disease-staging/nodes/": {
+      "bytes": 4105938,
+      "newest": "2026-06-11T10:56:24.243000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T10:56:24.243000+00:00"
+    },
+    "kg/task22-mutation-associated-disease-staging/nodes/disease.parquet": {
+      "bytes": 4105938,
+      "newest": "2026-06-11T10:56:24.243000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T10:56:24.243000+00:00"
+    },
+    "kg/v2/": {
+      "bytes": 79561276114,
+      "newest": "2026-07-22T18:43:20.887000+00:00",
+      "objects": 11267,
+      "oldest": "2026-06-07T13:09:58.221000+00:00"
+    },
+    "kg/v2/_backups/": {
+      "bytes": 884056,
+      "newest": "2026-06-21T22:04:41.535000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-21T22:04:41.535000+00:00"
+    },
+    "kg/v2/_backups/accepted-block1-20260621T220440Z/": {
+      "bytes": 884056,
+      "newest": "2026-06-21T22:04:41.535000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-21T22:04:41.535000+00:00"
+    },
+    "kg/v2/_backups/accepted-block1-20260621T220440Z/evidence/": {
+      "bytes": 884056,
+      "newest": "2026-06-21T22:04:41.535000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-21T22:04:41.535000+00:00"
+    },
+    "kg/v2/_promotion_staging/": {
+      "bytes": 189012983,
+      "newest": "2026-06-22T22:53:56.574000+00:00",
+      "objects": 12,
+      "oldest": "2026-06-22T21:44:12.434000+00:00"
+    },
+    "kg/v2/_promotion_staging/node-feature-layer-20260623-t_e6227487/": {
+      "bytes": 188086567,
+      "newest": "2026-06-22T22:53:56.574000+00:00",
+      "objects": 10,
+      "oldest": "2026-06-22T22:53:29.791000+00:00"
+    },
+    "kg/v2/_promotion_staging/node-feature-layer-20260623-t_e6227487/features/": {
+      "bytes": 188086567,
+      "newest": "2026-06-22T22:53:56.574000+00:00",
+      "objects": 10,
+      "oldest": "2026-06-22T22:53:29.791000+00:00"
+    },
+    "kg/v2/_promotion_staging/part2_biogrid_ppi_promotion_20260622_234233/": {
+      "bytes": 926416,
+      "newest": "2026-06-22T21:44:13.284000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T21:44:12.434000+00:00"
+    },
+    "kg/v2/_promotion_staging/part2_biogrid_ppi_promotion_20260622_234233/edges/": {
+      "bytes": 30420,
+      "newest": "2026-06-22T21:44:12.434000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T21:44:12.434000+00:00"
+    },
+    "kg/v2/_promotion_staging/part2_biogrid_ppi_promotion_20260622_234233/evidence/": {
+      "bytes": 895996,
+      "newest": "2026-06-22T21:44:13.284000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T21:44:13.284000+00:00"
+    },
+    "kg/v2/_removed_relations_20260618/": {
+      "bytes": 1760777498,
+      "newest": "2026-06-18T15:36:15.377000+00:00",
+      "objects": 21,
+      "oldest": "2026-06-18T15:35:29.785000+00:00"
+    },
+    "kg/v2/_removed_relations_20260618/edges/": {
+      "bytes": 1581408363,
+      "newest": "2026-06-18T15:36:15.377000+00:00",
+      "objects": 18,
+      "oldest": "2026-06-18T15:35:29.785000+00:00"
+    },
+    "kg/v2/_removed_relations_20260618/edges/cell_line_expresses_protein.parquet": {
+      "bytes": 1316255,
+      "newest": "2026-06-18T15:35:43.664000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T15:35:43.664000+00:00"
+    },
+    "kg/v2/_removed_relations_20260618/edges/cell_type_expresses_protein.parquet": {
+      "bytes": 61585766,
+      "newest": "2026-06-18T15:35:43.241000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T15:35:43.241000+00:00"
+    },
+    "kg/v2/_removed_relations_20260618/edges/dataset_contains_gene.parquet": {
+      "bytes": 155985,
+      "newest": "2026-06-18T15:36:15.377000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T15:36:15.377000+00:00"
+    },
+    "kg/v2/_removed_relations_20260618/edges/disease_associated_gene.pre_cleanup.parquet": {
+      "bytes": 22546,
+      "newest": "2026-06-18T15:35:34.341000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T15:35:34.341000+00:00"
+    },
+    "kg/v2/_removed_relations_20260618/edges/disease_associated_protein.parquet": {
+      "bytes": 246610,
+      "newest": "2026-06-18T15:35:34.570000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T15:35:34.570000+00:00"
+    },
+    "kg/v2/_removed_relations_20260618/edges/enhancer_active_in_cell_type.parquet": {
+      "bytes": 659754365,
+      "newest": "2026-06-18T15:36:14.554000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T15:36:14.554000+00:00"
+    },
+    "kg/v2/_removed_relations_20260618/edges/enhancer_active_in_tissue.parquet": {
+      "bytes": 766117286,
+      "newest": "2026-06-18T15:36:14.829000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T15:36:14.829000+00:00"
+    },
+    "kg/v2/_removed_relations_20260618/edges/molecule_interacts_molecule.parquet": {
+      "bytes": 4325537,
+      "newest": "2026-06-18T15:35:43.048000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T15:35:43.048000+00:00"
+    },
+    "kg/v2/_removed_relations_20260618/edges/molecule_targets_protein.parquet": {
+      "bytes": 250138,
+      "newest": "2026-06-18T15:35:32.636000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T15:35:32.636000+00:00"
+    },
+    "kg/v2/_removed_relations_20260618/edges/paper_mentions_disease.parquet": {
+      "bytes": 31330413,
+      "newest": "2026-06-18T15:36:15.178000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T15:36:15.178000+00:00"
+    },
+    "kg/v2/_removed_relations_20260618/edges/paper_mentions_gene.parquet": {
+      "bytes": 33890497,
+      "newest": "2026-06-18T15:36:15.016000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T15:36:15.016000+00:00"
+    },
+    "kg/v2/_removed_relations_20260618/edges/pathway_contains_gene.pre_cleanup.parquet": {
+      "bytes": 2016494,
+      "newest": "2026-06-18T15:35:31.642000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T15:35:31.642000+00:00"
+    },
+    "kg/v2/_removed_relations_20260618/edges/pathway_contains_protein.parquet": {
+      "bytes": 156575,
+      "newest": "2026-06-18T15:35:31.911000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T15:35:31.911000+00:00"
+    },
+    "kg/v2/_removed_relations_20260618/edges/phenotype_associated_molecule.parquet": {
+      "bytes": 111038,
+      "newest": "2026-06-18T15:35:35.261000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T15:35:35.261000+00:00"
+    },
+    "kg/v2/_removed_relations_20260618/edges/phenotype_associated_protein.parquet": {
+      "bytes": 21999,
+      "newest": "2026-06-18T15:35:35.719000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T15:35:35.719000+00:00"
+    },
+    "kg/v2/_removed_relations_20260618/edges/protein_interacts_protein.parquet": {
+      "bytes": 1492719,
+      "newest": "2026-06-18T15:35:29.785000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T15:35:29.785000+00:00"
+    },
+    "kg/v2/_removed_relations_20260618/edges/tissue_expresses_gene.pre_cleanup.parquet": {
+      "bytes": 15521326,
+      "newest": "2026-06-18T15:35:40.782000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T15:35:40.782000+00:00"
+    },
+    "kg/v2/_removed_relations_20260618/edges/tissue_expresses_protein.parquet": {
+      "bytes": 3092814,
+      "newest": "2026-06-18T15:35:41.006000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T15:35:41.006000+00:00"
+    },
+    "kg/v2/_removed_relations_20260618/evidence/": {
+      "bytes": 179369135,
+      "newest": "2026-06-18T15:35:43.817000+00:00",
+      "objects": 3,
+      "oldest": "2026-06-18T15:35:33.646000+00:00"
+    },
+    "kg/v2/_removed_relations_20260618/evidence/cell_line_expresses_protein.parquet": {
+      "bytes": 5800952,
+      "newest": "2026-06-18T15:35:43.817000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T15:35:43.817000+00:00"
+    },
+    "kg/v2/_removed_relations_20260618/evidence/cell_type_expresses_protein.parquet": {
+      "bytes": 172610325,
+      "newest": "2026-06-18T15:35:43.409000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T15:35:43.409000+00:00"
+    },
+    "kg/v2/_removed_relations_20260618/evidence/molecule_targets_protein.parquet": {
+      "bytes": 957858,
+      "newest": "2026-06-18T15:35:33.646000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T15:35:33.646000+00:00"
+    },
+    "kg/v2/archive/": {
+      "bytes": 4964452,
+      "newest": "2026-06-19T09:40:38.927000+00:00",
+      "objects": 7,
+      "oldest": "2026-06-19T09:38:16+00:00"
+    },
+    "kg/v2/archive/schema-direction-update-20260619/": {
+      "bytes": 4964452,
+      "newest": "2026-06-19T09:40:38.927000+00:00",
+      "objects": 7,
+      "oldest": "2026-06-19T09:38:16+00:00"
+    },
+    "kg/v2/archive/schema-direction-update-20260619/edges/": {
+      "bytes": 2548972,
+      "newest": "2026-06-19T09:40:38.319000+00:00",
+      "objects": 4,
+      "oldest": "2026-06-19T09:38:16+00:00"
+    },
+    "kg/v2/archive/schema-direction-update-20260619/evidence/": {
+      "bytes": 2415480,
+      "newest": "2026-06-19T09:40:38.927000+00:00",
+      "objects": 3,
+      "oldest": "2026-06-19T09:40:15.937000+00:00"
+    },
+    "kg/v2/edges/": {
+      "bytes": 2540773783,
+      "newest": "2026-07-22T15:28:16.216000+00:00",
+      "objects": 44,
+      "oldest": "2026-06-07T13:09:58.221000+00:00"
+    },
+    "kg/v2/edges/cell_line_derived_from_tissue.parquet": {
+      "bytes": 13643,
+      "newest": "2026-06-15T00:00:04.688000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-15T00:00:04.688000+00:00"
+    },
+    "kg/v2/edges/cell_line_expresses_gene.parquet": {
+      "bytes": 271722507,
+      "newest": "2026-06-15T00:00:09.348000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-15T00:00:09.348000+00:00"
+    },
+    "kg/v2/edges/cell_line_from_organism.parquet": {
+      "bytes": 12929,
+      "newest": "2026-06-16T13:49:07.472000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-16T13:49:07.472000+00:00"
+    },
+    "kg/v2/edges/cell_line_gene_essentiality.parquet": {
+      "bytes": 1172674,
+      "newest": "2026-07-22T15:28:16.216000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T15:28:16.216000+00:00"
+    },
+    "kg/v2/edges/cell_type_expresses_gene.parquet": {
+      "bytes": 6532333,
+      "newest": "2026-06-11T11:34:21.165000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:34:21.165000+00:00"
+    },
+    "kg/v2/edges/dataset_contains_cell_line.parquet": {
+      "bytes": 13007,
+      "newest": "2026-06-15T00:00:09.689000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-15T00:00:09.689000+00:00"
+    },
+    "kg/v2/edges/dataset_contains_tissue.parquet": {
+      "bytes": 5447,
+      "newest": "2026-06-15T00:00:10.297000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-15T00:00:10.297000+00:00"
+    },
+    "kg/v2/edges/disease_associated_gene.parquet": {
+      "bytes": 314067,
+      "newest": "2026-06-19T09:40:37.362000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-19T09:40:37.362000+00:00"
+    },
+    "kg/v2/edges/disease_associated_protein.parquet": {
+      "bytes": 59222,
+      "newest": "2026-07-22T13:24:16.618000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T13:24:16.618000+00:00"
+    },
+    "kg/v2/edges/disease_has_phenotype.parquet": {
+      "bytes": 666676,
+      "newest": "2026-06-11T11:34:22.273000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:34:22.273000+00:00"
+    },
+    "kg/v2/edges/disease_involves_pathway.parquet": {
+      "bytes": 69329,
+      "newest": "2026-06-19T09:40:38.626000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-19T09:40:38.626000+00:00"
+    },
+    "kg/v2/edges/disease_manifests_in_tissue.parquet": {
+      "bytes": 5416,
+      "newest": "2026-06-24T18:24:29.195000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T18:24:29.195000+00:00"
+    },
+    "kg/v2/edges/disease_subtype_of_disease.parquet": {
+      "bytes": 648897,
+      "newest": "2026-06-11T11:34:22.881000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:34:22.881000+00:00"
+    },
+    "kg/v2/edges/enhancer_regulates_gene.parquet": {
+      "bytes": 1997157871,
+      "newest": "2026-06-15T00:00:54.911000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-15T00:00:54.911000+00:00"
+    },
+    "kg/v2/edges/gene_associated_phenotype.parquet": {
+      "bytes": 19819,
+      "newest": "2026-06-18T15:35:35.610000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T15:35:35.610000+00:00"
+    },
+    "kg/v2/edges/gene_has_transcript.parquet": {
+      "bytes": 3889581,
+      "newest": "2026-06-09T15:40:24.880000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-09T15:40:24.880000+00:00"
+    },
+    "kg/v2/edges/gene_interacts_gene.parquet": {
+      "bytes": 36907950,
+      "newest": "2026-06-18T17:26:39.237000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T17:26:39.237000+00:00"
+    },
+    "kg/v2/edges/gene_interacts_gene.parquet.bak_20260618_ot": {
+      "bytes": 2032160,
+      "newest": "2026-06-18T17:26:39.107000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T17:26:39.107000+00:00"
+    },
+    "kg/v2/edges/gene_ortholog_gene.parquet": {
+      "bytes": 3076768,
+      "newest": "2026-06-16T13:37:13.929000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-16T13:37:13.929000+00:00"
+    },
+    "kg/v2/edges/molecule_associated_phenotype.parquet": {
+      "bytes": 111612,
+      "newest": "2026-06-18T15:35:35.128000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T15:35:35.128000+00:00"
+    },
+    "kg/v2/edges/molecule_contraindicates_disease.parquet": {
+      "bytes": 67065,
+      "newest": "2026-06-11T11:34:23.196000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:34:23.196000+00:00"
+    },
+    "kg/v2/edges/molecule_in_pathway.parquet": {
+      "bytes": 12794,
+      "newest": "2026-06-07T13:09:58.221000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-07T13:09:58.221000+00:00"
+    },
+    "kg/v2/edges/molecule_parent_of_molecule.parquet": {
+      "bytes": 19797,
+      "newest": "2026-06-18T15:35:42.935000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T15:35:42.935000+00:00"
+    },
+    "kg/v2/edges/molecule_synergizes_molecule.parquet": {
+      "bytes": 4284625,
+      "newest": "2026-06-18T15:35:42.806000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T15:35:42.806000+00:00"
+    },
+    "kg/v2/edges/molecule_targets_gene.parquet": {
+      "bytes": 238792,
+      "newest": "2026-06-18T15:35:32.487000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T15:35:32.487000+00:00"
+    },
+    "kg/v2/edges/molecule_treats_disease.parquet": {
+      "bytes": 57319,
+      "newest": "2026-06-11T11:34:23.472000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:34:23.472000+00:00"
+    },
+    "kg/v2/edges/mutation_affects_molecule_response.parquet": {
+      "bytes": 45989,
+      "newest": "2026-06-09T13:23:59.761000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-09T13:23:59.761000+00:00"
+    },
+    "kg/v2/edges/mutation_affects_transcript.parquet": {
+      "bytes": 20266519,
+      "newest": "2026-06-23T19:53:39.735000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T19:53:39.735000+00:00"
+    },
+    "kg/v2/edges/mutation_associated_disease.parquet": {
+      "bytes": 89034605,
+      "newest": "2026-06-11T11:34:29.111000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:34:29.111000+00:00"
+    },
+    "kg/v2/edges/mutation_associated_gene.parquet": {
+      "bytes": 22829668,
+      "newest": "2026-06-10T18:14:06.452000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-10T18:14:06.452000+00:00"
+    },
+    "kg/v2/edges/mutation_associated_phenotype.parquet": {
+      "bytes": 1262716,
+      "newest": "2026-06-19T09:40:15.596000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-19T09:40:15.596000+00:00"
+    },
+    "kg/v2/edges/mutation_causes_protein_change.parquet": {
+      "bytes": 2640740,
+      "newest": "2026-06-10T18:14:03.931000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-10T18:14:03.931000+00:00"
+    },
+    "kg/v2/edges/mutation_in_gene.parquet": {
+      "bytes": 19913850,
+      "newest": "2026-06-24T17:36:25.158000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T17:36:25.158000+00:00"
+    },
+    "kg/v2/edges/mutation_overlaps_enhancer.parquet": {
+      "bytes": 3122917,
+      "newest": "2026-06-24T23:10:24.552000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T23:10:24.552000+00:00"
+    },
+    "kg/v2/edges/organism_has_gene.parquet": {
+      "bytes": 653414,
+      "newest": "2026-06-11T11:44:35.379000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:44:35.379000+00:00"
+    },
+    "kg/v2/edges/organism_has_tissue.parquet": {
+      "bytes": 111760,
+      "newest": "2026-06-11T11:44:35.672000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:44:35.672000+00:00"
+    },
+    "kg/v2/edges/pathway_child_of_pathway.parquet": {
+      "bytes": 941024,
+      "newest": "2026-06-07T13:10:03.711000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-07T13:10:03.711000+00:00"
+    },
+    "kg/v2/edges/pathway_contains_gene.parquet": {
+      "bytes": 5891672,
+      "newest": "2026-06-18T15:35:31.772000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T15:35:31.772000+00:00"
+    },
+    "kg/v2/edges/phenotype_subtype_of_phenotype.parquet": {
+      "bytes": 266843,
+      "newest": "2026-06-07T13:10:07.129000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-07T13:10:07.129000+00:00"
+    },
+    "kg/v2/edges/protein_interacts_protein.parquet": {
+      "bytes": 30420,
+      "newest": "2026-06-22T21:44:17.308000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T21:44:17.308000+00:00"
+    },
+    "kg/v2/edges/tissue_expresses_gene.parquet": {
+      "bytes": 41362747,
+      "newest": "2026-06-18T15:35:40.877000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T15:35:40.877000+00:00"
+    },
+    "kg/v2/edges/tissue_expresses_protein.parquet": {
+      "bytes": 466218,
+      "newest": "2026-06-18T17:36:30.077000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T17:36:30.077000+00:00"
+    },
+    "kg/v2/edges/tissue_subtype_of_tissue.parquet": {
+      "bytes": 238663,
+      "newest": "2026-06-07T13:10:11.089000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-07T13:10:11.089000+00:00"
+    },
+    "kg/v2/edges/transcript_encodes_protein.parquet": {
+      "bytes": 2581718,
+      "newest": "2026-06-09T15:40:27.144000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-09T15:40:27.144000+00:00"
+    },
+    "kg/v2/edges_inferred/": {
+      "bytes": 388678,
+      "newest": "2026-07-22T09:32:00.327000+00:00",
+      "objects": 6,
+      "oldest": "2026-07-22T09:31:56.850000+00:00"
+    },
+    "kg/v2/edges_inferred/formal-relation-inference-v2/": {
+      "bytes": 388678,
+      "newest": "2026-07-22T09:32:00.327000+00:00",
+      "objects": 6,
+      "oldest": "2026-07-22T09:31:56.850000+00:00"
+    },
+    "kg/v2/edges_inferred/formal-relation-inference-v2/releases/": {
+      "bytes": 388678,
+      "newest": "2026-07-22T09:32:00.327000+00:00",
+      "objects": 6,
+      "oldest": "2026-07-22T09:31:56.850000+00:00"
+    },
+    "kg/v2/evidence/": {
+      "bytes": 6262575600,
+      "newest": "2026-07-22T18:43:18.558000+00:00",
+      "objects": 22,
+      "oldest": "2026-06-15T11:02:34.869000+00:00"
+    },
+    "kg/v2/evidence/cell_line_from_organism.parquet": {
+      "bytes": 41376,
+      "newest": "2026-06-16T13:50:51.640000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-16T13:50:51.640000+00:00"
+    },
+    "kg/v2/evidence/cell_line_gene_essentiality.parquet": {
+      "bytes": 98834636,
+      "newest": "2026-07-22T15:28:20.278000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T15:28:20.278000+00:00"
+    },
+    "kg/v2/evidence/disease_associated_gene.parquet": {
+      "bytes": 90231,
+      "newest": "2026-06-19T09:40:38.004000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-19T09:40:38.004000+00:00"
+    },
+    "kg/v2/evidence/disease_associated_protein.parquet": {
+      "bytes": 4093409,
+      "newest": "2026-07-22T13:24:14.663000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T13:24:14.663000+00:00"
+    },
+    "kg/v2/evidence/disease_involves_pathway.parquet": {
+      "bytes": 76231,
+      "newest": "2026-06-19T09:40:39.235000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-19T09:40:39.235000+00:00"
+    },
+    "kg/v2/evidence/disease_manifests_in_tissue.parquet": {
+      "bytes": 22231,
+      "newest": "2026-06-24T18:24:30.553000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T18:24:30.553000+00:00"
+    },
+    "kg/v2/evidence/enhancer_regulates_gene.parquet": {
+      "bytes": 4788517448,
+      "newest": "2026-06-18T16:53:48.978000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T16:53:48.978000+00:00"
+    },
+    "kg/v2/evidence/gene_interacts_gene.parquet": {
+      "bytes": 483161330,
+      "newest": "2026-06-18T17:26:39.395000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T17:26:39.395000+00:00"
+    },
+    "kg/v2/evidence/gene_ortholog_gene.parquet": {
+      "bytes": 5533441,
+      "newest": "2026-06-16T13:37:51.710000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-16T13:37:51.710000+00:00"
+    },
+    "kg/v2/evidence/molecule_targets_gene.parquet": {
+      "bytes": 1028430,
+      "newest": "2026-06-21T22:04:55.611000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-21T22:04:55.611000+00:00"
+    },
+    "kg/v2/evidence/molecule_treats_disease.parquet": {
+      "bytes": 891126,
+      "newest": "2026-07-22T18:43:18.558000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T18:43:18.558000+00:00"
+    },
+    "kg/v2/evidence/mutation_affects_molecule_response.parquet": {
+      "bytes": 864665,
+      "newest": "2026-06-15T11:02:34.869000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-15T11:02:34.869000+00:00"
+    },
+    "kg/v2/evidence/mutation_affects_transcript.parquet": {
+      "bytes": 199510540,
+      "newest": "2026-06-23T19:53:44.782000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T19:53:44.782000+00:00"
+    },
+    "kg/v2/evidence/mutation_associated_disease.parquet": {
+      "bytes": 331005888,
+      "newest": "2026-06-16T15:25:46+00:00",
+      "objects": 1,
+      "oldest": "2026-06-16T15:25:46+00:00"
+    },
+    "kg/v2/evidence/mutation_associated_gene.parquet": {
+      "bytes": 52033340,
+      "newest": "2026-06-15T11:32:46.247000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-15T11:32:46.247000+00:00"
+    },
+    "kg/v2/evidence/mutation_associated_phenotype.parquet": {
+      "bytes": 13186402,
+      "newest": "2026-06-19T09:40:16.279000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-19T09:40:16.279000+00:00"
+    },
+    "kg/v2/evidence/mutation_causes_protein_change.parquet": {
+      "bytes": 5872369,
+      "newest": "2026-06-15T11:33:04.484000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-15T11:33:04.484000+00:00"
+    },
+    "kg/v2/evidence/mutation_in_gene.parquet": {
+      "bytes": 231527887,
+      "newest": "2026-06-24T17:36:30.645000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T17:36:30.645000+00:00"
+    },
+    "kg/v2/evidence/mutation_overlaps_enhancer.parquet": {
+      "bytes": 12608882,
+      "newest": "2026-06-24T23:10:25.194000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T23:10:25.194000+00:00"
+    },
+    "kg/v2/evidence/pathway_contains_gene.parquet": {
+      "bytes": 30877933,
+      "newest": "2026-06-21T22:04:53.569000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-21T22:04:53.569000+00:00"
+    },
+    "kg/v2/evidence/protein_interacts_protein.parquet": {
+      "bytes": 895996,
+      "newest": "2026-06-22T21:44:18.657000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T21:44:18.657000+00:00"
+    },
+    "kg/v2/evidence/tissue_expresses_protein.parquet": {
+      "bytes": 1901809,
+      "newest": "2026-06-18T17:36:30.256000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-18T17:36:30.256000+00:00"
+    },
+    "kg/v2/evidence_inferred/": {
+      "bytes": 385305,
+      "newest": "2026-07-22T09:31:59.820000+00:00",
+      "objects": 5,
+      "oldest": "2026-07-22T09:31:57.502000+00:00"
+    },
+    "kg/v2/evidence_inferred/formal-relation-inference-v2/": {
+      "bytes": 385305,
+      "newest": "2026-07-22T09:31:59.820000+00:00",
+      "objects": 5,
+      "oldest": "2026-07-22T09:31:57.502000+00:00"
+    },
+    "kg/v2/evidence_inferred/formal-relation-inference-v2/releases/": {
+      "bytes": 385305,
+      "newest": "2026-07-22T09:31:59.820000+00:00",
+      "objects": 5,
+      "oldest": "2026-07-22T09:31:57.502000+00:00"
+    },
+    "kg/v2/features/": {
+      "bytes": 10953546899,
+      "newest": "2026-07-22T12:47:17.248000+00:00",
+      "objects": 153,
+      "oldest": "2026-06-22T23:10:08.357000+00:00"
+    },
+    "kg/v2/features/cell_line_textual_summary.parquet": {
+      "bytes": 419158,
+      "newest": "2026-06-22T23:10:08.357000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:08.357000+00:00"
+    },
+    "kg/v2/features/cell_type_textual_summary.parquet": {
+      "bytes": 352433,
+      "newest": "2026-06-22T23:10:10.457000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:10.457000+00:00"
+    },
+    "kg/v2/features/clinical_trials_gov_trial_text_features.parquet": {
+      "bytes": 38038096,
+      "newest": "2026-06-24T20:44:46.060000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T20:44:46.060000+00:00"
+    },
+    "kg/v2/features/disease_textual_summary.parquet": {
+      "bytes": 2964350,
+      "newest": "2026-06-22T23:10:12.054000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:12.054000+00:00"
+    },
+    "kg/v2/features/embeddings/": {
+      "bytes": 5385121426,
+      "newest": "2026-07-22T12:47:17.248000+00:00",
+      "objects": 112,
+      "oldest": "2026-06-24T20:44:46.797000+00:00"
+    },
+    "kg/v2/features/embeddings/clinical_trials_gov_trial_text/": {
+      "bytes": 11580285,
+      "newest": "2026-06-25T09:39:29.452000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-24T20:44:46.797000+00:00"
+    },
+    "kg/v2/features/embeddings/manifests/": {
+      "bytes": 119022,
+      "newest": "2026-07-19T11:34:49.454000+00:00",
+      "objects": 4,
+      "oldest": "2026-07-18T16:12:51.917000+00:00"
+    },
+    "kg/v2/features/embeddings/molecule_smiles/": {
+      "bytes": 69677684,
+      "newest": "2026-07-19T11:33:43.309000+00:00",
+      "objects": 8,
+      "oldest": "2026-07-18T16:12:51.300000+00:00"
+    },
+    "kg/v2/features/embeddings/nucleotide_sequence/": {
+      "bytes": 1098760187,
+      "newest": "2026-07-22T12:47:17.248000+00:00",
+      "objects": 16,
+      "oldest": "2026-07-18T16:10:42.311000+00:00"
+    },
+    "kg/v2/features/embeddings/protein_sequence/": {
+      "bytes": 1133680324,
+      "newest": "2026-07-19T11:31:51.059000+00:00",
+      "objects": 10,
+      "oldest": "2026-07-18T16:10:10.628000+00:00"
+    },
+    "kg/v2/features/embeddings/text/": {
+      "bytes": 3071303924,
+      "newest": "2026-07-19T11:33:40.681000+00:00",
+      "objects": 72,
+      "oldest": "2026-07-18T16:10:43.125000+00:00"
+    },
+    "kg/v2/features/gene_textual_summary.parquet": {
+      "bytes": 7588830,
+      "newest": "2026-06-22T23:10:13.903000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:13.903000+00:00"
+    },
+    "kg/v2/features/molecule_fingerprint.parquet": {
+      "bytes": 4719133,
+      "newest": "2026-06-23T08:51:43.158000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T08:51:43.158000+00:00"
+    },
+    "kg/v2/features/molecule_textual_summary.parquet": {
+      "bytes": 730115,
+      "newest": "2026-06-22T23:10:15.732000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:15.732000+00:00"
+    },
+    "kg/v2/features/pathway_textual_summary.parquet": {
+      "bytes": 3578312,
+      "newest": "2026-06-22T23:10:17.306000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:17.306000+00:00"
+    },
+    "kg/v2/features/phenotype_textual_summary.parquet": {
+      "bytes": 1296148,
+      "newest": "2026-06-22T23:10:19.883000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:19.883000+00:00"
+    },
+    "kg/v2/features/protein_sequence.parquet": {
+      "bytes": 32214242,
+      "newest": "2026-06-22T23:10:22.704000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:22.704000+00:00"
+    },
+    "kg/v2/features/protein_textual_summary.parquet": {
+      "bytes": 18040728,
+      "newest": "2026-06-23T09:12:15.055000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T09:12:15.055000+00:00"
+    },
+    "kg/v2/features/remap_crm_tf_enhancer_support.parquet": {
+      "bytes": 175361142,
+      "newest": "2026-06-24T13:38:28.691000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T13:38:28.691000+00:00"
+    },
+    "kg/v2/features/remap_crm_tf_enhancer_support_full/": {
+      "bytes": 5144179807,
+      "newest": "2026-06-24T19:03:23.376000+00:00",
+      "objects": 27,
+      "oldest": "2026-06-24T18:58:22.305000+00:00"
+    },
+    "kg/v2/features/remap_crm_tf_enhancer_support_full/manifest.json": {
+      "bytes": 57066,
+      "newest": "2026-06-24T19:03:22.670000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T19:03:22.670000+00:00"
+    },
+    "kg/v2/features/remap_crm_tf_enhancer_support_full/metadata.json": {
+      "bytes": 1206,
+      "newest": "2026-06-24T19:03:23.376000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T19:03:23.376000+00:00"
+    },
+    "kg/v2/features/remap_crm_tf_enhancer_support_full/summary_chr1.parquet": {
+      "bytes": 534732181,
+      "newest": "2026-06-24T18:58:22.305000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T18:58:22.305000+00:00"
+    },
+    "kg/v2/features/remap_crm_tf_enhancer_support_full/summary_chr10.parquet": {
+      "bytes": 214315808,
+      "newest": "2026-06-24T18:58:56.411000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T18:58:56.411000+00:00"
+    },
+    "kg/v2/features/remap_crm_tf_enhancer_support_full/summary_chr11.parquet": {
+      "bytes": 293834335,
+      "newest": "2026-06-24T18:59:00.659000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T18:59:00.659000+00:00"
+    },
+    "kg/v2/features/remap_crm_tf_enhancer_support_full/summary_chr12.parquet": {
+      "bytes": 255049926,
+      "newest": "2026-06-24T18:59:04.766000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T18:59:04.766000+00:00"
+    },
+    "kg/v2/features/remap_crm_tf_enhancer_support_full/summary_chr13.parquet": {
+      "bytes": 99146080,
+      "newest": "2026-06-24T18:59:06.679000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T18:59:06.679000+00:00"
+    },
+    "kg/v2/features/remap_crm_tf_enhancer_support_full/summary_chr14.parquet": {
+      "bytes": 162458924,
+      "newest": "2026-06-24T18:59:09.641000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T18:59:09.641000+00:00"
+    },
+    "kg/v2/features/remap_crm_tf_enhancer_support_full/summary_chr15.parquet": {
+      "bytes": 170081675,
+      "newest": "2026-06-24T19:01:16.031000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T19:01:16.031000+00:00"
+    },
+    "kg/v2/features/remap_crm_tf_enhancer_support_full/summary_chr16.parquet": {
+      "bytes": 219997309,
+      "newest": "2026-06-24T19:01:19.535000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T19:01:19.535000+00:00"
+    },
+    "kg/v2/features/remap_crm_tf_enhancer_support_full/summary_chr17.parquet": {
+      "bytes": 320606985,
+      "newest": "2026-06-24T19:01:24.378000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T19:01:24.378000+00:00"
+    },
+    "kg/v2/features/remap_crm_tf_enhancer_support_full/summary_chr18.parquet": {
+      "bytes": 71807573,
+      "newest": "2026-06-24T19:01:26.020000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T19:01:26.020000+00:00"
+    },
+    "kg/v2/features/remap_crm_tf_enhancer_support_full/summary_chr19.parquet": {
+      "bytes": 319726115,
+      "newest": "2026-06-24T19:01:30.472000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T19:01:30.472000+00:00"
+    },
+    "kg/v2/features/remap_crm_tf_enhancer_support_full/summary_chr2.parquet": {
+      "bytes": 355873994,
+      "newest": "2026-06-24T18:58:27.614000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T18:58:27.614000+00:00"
+    },
+    "kg/v2/features/remap_crm_tf_enhancer_support_full/summary_chr20.parquet": {
+      "bytes": 155052886,
+      "newest": "2026-06-24T19:01:32.925000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T19:01:32.925000+00:00"
+    },
+    "kg/v2/features/remap_crm_tf_enhancer_support_full/summary_chr21.parquet": {
+      "bytes": 51458585,
+      "newest": "2026-06-24T19:01:34.297000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T19:01:34.297000+00:00"
+    },
+    "kg/v2/features/remap_crm_tf_enhancer_support_full/summary_chr22.parquet": {
+      "bytes": 138000981,
+      "newest": "2026-06-24T19:01:36.610000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T19:01:36.610000+00:00"
+    },
+    "kg/v2/features/remap_crm_tf_enhancer_support_full/summary_chr3.parquet": {
+      "bytes": 280211930,
+      "newest": "2026-06-24T18:58:31.400000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T18:58:31.400000+00:00"
+    },
+    "kg/v2/features/remap_crm_tf_enhancer_support_full/summary_chr4.parquet": {
+      "bytes": 181751191,
+      "newest": "2026-06-24T18:58:34.680000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T18:58:34.680000+00:00"
+    },
+    "kg/v2/features/remap_crm_tf_enhancer_support_full/summary_chr5.parquet": {
+      "bytes": 234595803,
+      "newest": "2026-06-24T18:58:38.849000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T18:58:38.849000+00:00"
+    },
+    "kg/v2/features/remap_crm_tf_enhancer_support_full/summary_chr6.parquet": {
+      "bytes": 263437015,
+      "newest": "2026-06-24T18:58:42.860000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T18:58:42.860000+00:00"
+    },
+    "kg/v2/features/remap_crm_tf_enhancer_support_full/summary_chr7.parquet": {
+      "bytes": 231942098,
+      "newest": "2026-06-24T18:58:46.528000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T18:58:46.528000+00:00"
+    },
+    "kg/v2/features/remap_crm_tf_enhancer_support_full/summary_chr8.parquet": {
+      "bytes": 187349200,
+      "newest": "2026-06-24T18:58:49.930000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T18:58:49.930000+00:00"
+    },
+    "kg/v2/features/remap_crm_tf_enhancer_support_full/summary_chr9.parquet": {
+      "bytes": 203611983,
+      "newest": "2026-06-24T18:58:53.054000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T18:58:53.054000+00:00"
+    },
+    "kg/v2/features/remap_crm_tf_enhancer_support_full/summary_chrX.parquet": {
+      "bytes": 199029281,
+      "newest": "2026-06-24T19:01:39.915000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T19:01:39.915000+00:00"
+    },
+    "kg/v2/features/remap_crm_tf_enhancer_support_full/summary_chrY.parquet": {
+      "bytes": 819,
+      "newest": "2026-06-24T19:01:40.652000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T19:01:40.652000+00:00"
+    },
+    "kg/v2/features/remap_crm_tf_enhancer_support_full/tf_global_summary.parquet": {
+      "bytes": 48858,
+      "newest": "2026-06-24T19:01:41.368000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T19:01:41.368000+00:00"
+    },
+    "kg/v2/features/tissue_textual_summary.parquet": {
+      "bytes": 1290803,
+      "newest": "2026-06-22T23:10:25.683000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:25.683000+00:00"
+    },
+    "kg/v2/features/transcript_sequence.parquet": {
+      "bytes": 137652176,
+      "newest": "2026-06-22T23:10:28.170000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T23:10:28.170000+00:00"
+    },
+    "kg/v2/metadata/": {
+      "bytes": 25835983,
+      "newest": "2026-07-22T15:43:47.435000+00:00",
+      "objects": 19,
+      "oldest": "2026-06-07T13:10:13.568000+00:00"
+    },
+    "kg/v2/metadata/SUMMARY.md": {
+      "bytes": 1280,
+      "newest": "2026-06-07T13:10:14.013000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-07T13:10:14.013000+00:00"
+    },
+    "kg/v2/metadata/clinical_trials_canonical_features_resolution_t_957a3640.json": {
+      "bytes": 10677,
+      "newest": "2026-06-25T09:41:38.352000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-25T09:41:38.352000+00:00"
+    },
+    "kg/v2/metadata/clinical_trials_gov_api_v2_raw_manifest_t_c4f67957.json": {
+      "bytes": 304661,
+      "newest": "2026-06-24T20:44:47.030000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T20:44:47.030000+00:00"
+    },
+    "kg/v2/metadata/clinical_trials_gov_canonical_promotion_t_f8841ff7.json": {
+      "bytes": 7217,
+      "newest": "2026-06-24T20:45:26.237000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T20:45:26.237000+00:00"
+    },
+    "kg/v2/metadata/clinical_trials_gov_trial_index.parquet": {
+      "bytes": 21169466,
+      "newest": "2026-06-24T20:44:44.885000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T20:44:44.885000+00:00"
+    },
+    "kg/v2/metadata/dataset_paper_graph_policy_t_d97c4547.json": {
+      "bytes": 6670,
+      "newest": "2026-06-24T18:27:11.990000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T18:27:11.990000+00:00"
+    },
+    "kg/v2/metadata/dataset_paper_graph_policy_t_d97c4547.md": {
+      "bytes": 1784,
+      "newest": "2026-06-24T18:27:12.211000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T18:27:12.211000+00:00"
+    },
+    "kg/v2/metadata/disease_causal_operands_canonical_release_t_aa5cd96e.json": {
+      "bytes": 2228,
+      "newest": "2026-07-22T13:24:26.725000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T13:24:26.725000+00:00"
+    },
+    "kg/v2/metadata/disease_causal_operands_promotion_t_aa5cd96e_preflight.json": {
+      "bytes": 3272,
+      "newest": "2026-07-22T13:24:12.543000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T13:24:12.543000+00:00"
+    },
+    "kg/v2/metadata/molecule_treats_disease_clinical_trials_gov_trial_links.parquet": {
+      "bytes": 398019,
+      "newest": "2026-06-24T20:44:45.164000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T20:44:45.164000+00:00"
+    },
+    "kg/v2/metadata/mutation_overlaps_enhancer_canonical_promotion_t_00551bc3.json": {
+      "bytes": 13825,
+      "newest": "2026-06-24T23:23:21.025000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T23:23:21.025000+00:00"
+    },
+    "kg/v2/metadata/mutation_overlaps_enhancer_stage_manifest_t_73c67c1b.json": {
+      "bytes": 2761,
+      "newest": "2026-06-24T23:10:26.116000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T23:10:26.116000+00:00"
+    },
+    "kg/v2/metadata/mutation_overlaps_enhancer_stage_validation_summary_t_73c67c1b.json": {
+      "bytes": 988,
+      "newest": "2026-06-24T23:10:26.246000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T23:10:26.246000+00:00"
+    },
+    "kg/v2/metadata/mutation_overlaps_enhancer_support_gated_examples_by_class_t_73c67c1b.jsonl": {
+      "bytes": 16975,
+      "newest": "2026-06-24T23:10:25.981000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T23:10:25.981000+00:00"
+    },
+    "kg/v2/metadata/mutation_overlaps_enhancer_support_rows_t_73c67c1b.parquet": {
+      "bytes": 400857,
+      "newest": "2026-06-24T23:10:25.373000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T23:10:25.373000+00:00"
+    },
+    "kg/v2/metadata/mutation_overlaps_enhancer_support_summary_full_t_73c67c1b.parquet": {
+      "bytes": 1734840,
+      "newest": "2026-06-24T23:10:25.596000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T23:10:25.596000+00:00"
+    },
+    "kg/v2/metadata/mutation_overlaps_enhancer_support_summary_non_context_gated_t_73c67c1b.parquet": {
+      "bytes": 1731925,
+      "newest": "2026-06-24T23:10:25.803000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T23:10:25.803000+00:00"
+    },
+    "kg/v2/metadata/promotions/": {
+      "bytes": 21416,
+      "newest": "2026-07-22T15:43:47.435000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T15:43:47.435000+00:00"
+    },
+    "kg/v2/metadata/promotions/cell_line_gene_essentiality/": {
+      "bytes": 21416,
+      "newest": "2026-07-22T15:43:47.435000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T15:43:47.435000+00:00"
+    },
+    "kg/v2/metadata/provenance.json": {
+      "bytes": 7122,
+      "newest": "2026-06-07T13:10:13.568000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-07T13:10:13.568000+00:00"
+    },
+    "kg/v2/ml/": {
+      "bytes": 15301503,
+      "newest": "2026-06-23T13:31:56.688000+00:00",
+      "objects": 82,
+      "oldest": "2026-06-23T13:31:12.887000+00:00"
+    },
+    "kg/v2/ml/pyg/": {
+      "bytes": 15301503,
+      "newest": "2026-06-23T13:31:56.688000+00:00",
+      "objects": 82,
+      "oldest": "2026-06-23T13:31:12.887000+00:00"
+    },
+    "kg/v2/ml/pyg/pilot_t_a28b941e/": {
+      "bytes": 642305,
+      "newest": "2026-06-23T13:31:21.874000+00:00",
+      "objects": 41,
+      "oldest": "2026-06-23T13:31:12.887000+00:00"
+    },
+    "kg/v2/ml/pyg/pilot_t_a28b941e_strict/": {
+      "bytes": 14659198,
+      "newest": "2026-06-23T13:31:56.688000+00:00",
+      "objects": 41,
+      "oldest": "2026-06-23T13:31:46.636000+00:00"
+    },
+    "kg/v2/nodes/": {
+      "bytes": 3548111746,
+      "newest": "2026-06-16T13:37:13.184000+00:00",
+      "objects": 15,
+      "oldest": "2026-06-08T12:56:32.843000+00:00"
+    },
+    "kg/v2/nodes/cell_line.parquet": {
+      "bytes": 31819,
+      "newest": "2026-06-14T23:59:01.256000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-14T23:59:01.256000+00:00"
+    },
+    "kg/v2/nodes/cell_type.parquet": {
+      "bytes": 82710,
+      "newest": "2026-06-11T11:34:19.573000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:34:19.573000+00:00"
+    },
+    "kg/v2/nodes/dataset.parquet": {
+      "bytes": 2579,
+      "newest": "2026-06-14T23:59:01.526000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-14T23:59:01.526000+00:00"
+    },
+    "kg/v2/nodes/disease.parquet": {
+      "bytes": 3569466,
+      "newest": "2026-06-11T11:34:20.294000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:34:20.294000+00:00"
+    },
+    "kg/v2/nodes/enhancer.parquet": {
+      "bytes": 3404993079,
+      "newest": "2026-06-15T00:00:03.790000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-15T00:00:03.790000+00:00"
+    },
+    "kg/v2/nodes/gene.parquet": {
+      "bytes": 6644666,
+      "newest": "2026-06-16T13:37:13.184000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-16T13:37:13.184000+00:00"
+    },
+    "kg/v2/nodes/molecule.parquet": {
+      "bytes": 1842052,
+      "newest": "2026-06-09T13:35:12.304000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-09T13:35:12.304000+00:00"
+    },
+    "kg/v2/nodes/mutation.parquet": {
+      "bytes": 89685283,
+      "newest": "2026-06-10T18:14:01.872000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-10T18:14:01.872000+00:00"
+    },
+    "kg/v2/nodes/organism.parquet": {
+      "bytes": 3797,
+      "newest": "2026-06-11T11:44:34.781000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-11T11:44:34.781000+00:00"
+    },
+    "kg/v2/nodes/paper.parquet": {
+      "bytes": 26231759,
+      "newest": "2026-06-08T12:56:32.843000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-08T12:56:32.843000+00:00"
+    },
+    "kg/v2/nodes/pathway.parquet": {
+      "bytes": 1467941,
+      "newest": "2026-06-09T14:25:12.621000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-09T14:25:12.621000+00:00"
+    },
+    "kg/v2/nodes/phenotype.parquet": {
+      "bytes": 410078,
+      "newest": "2026-06-09T12:54:15.711000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-09T12:54:15.711000+00:00"
+    },
+    "kg/v2/nodes/protein.parquet": {
+      "bytes": 4121076,
+      "newest": "2026-06-09T15:02:29.901000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-09T15:02:29.901000+00:00"
+    },
+    "kg/v2/nodes/tissue.parquet": {
+      "bytes": 379580,
+      "newest": "2026-06-09T12:14:32.039000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-09T12:14:32.039000+00:00"
+    },
+    "kg/v2/nodes/transcript.parquet": {
+      "bytes": 8645861,
+      "newest": "2026-06-09T15:40:22.732000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-09T15:40:22.732000+00:00"
+    },
+    "kg/v2/proof/": {
+      "bytes": 55232567,
+      "newest": "2026-06-24T17:36:33.829000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T17:36:33.829000+00:00"
+    },
+    "kg/v2/proof/mutation_in_gene_containment_proof.parquet": {
+      "bytes": 55232567,
+      "newest": "2026-06-24T17:36:33.829000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T17:36:33.829000+00:00"
+    },
+    "kg/v2/raw/": {
+      "bytes": 66433427,
+      "newest": "2026-06-24T17:28:45.074000+00:00",
+      "objects": 4,
+      "oldest": "2026-06-24T17:28:39.787000+00:00"
+    },
+    "kg/v2/raw/hpa-pathology/": {
+      "bytes": 7460135,
+      "newest": "2026-06-24T17:28:39.787000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T17:28:39.787000+00:00"
+    },
+    "kg/v2/raw/hpa-pathology/proteinatlas.tsv.zip": {
+      "bytes": 7460135,
+      "newest": "2026-06-24T17:28:39.787000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T17:28:39.787000+00:00"
+    },
+    "kg/v2/raw/hpo/": {
+      "bytes": 46894644,
+      "newest": "2026-06-24T17:28:43.390000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-24T17:28:41.481000+00:00"
+    },
+    "kg/v2/raw/hpo/hp.obo": {
+      "bytes": 11222341,
+      "newest": "2026-06-24T17:28:41.481000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T17:28:41.481000+00:00"
+    },
+    "kg/v2/raw/hpo/phenotype.hpoa": {
+      "bytes": 35672303,
+      "newest": "2026-06-24T17:28:43.390000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T17:28:43.390000+00:00"
+    },
+    "kg/v2/raw/uberon/": {
+      "bytes": 12078648,
+      "newest": "2026-06-24T17:28:45.074000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T17:28:45.074000+00:00"
+    },
+    "kg/v2/raw/uberon/uberon-basic.obo": {
+      "bytes": 12078648,
+      "newest": "2026-06-24T17:28:45.074000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T17:28:45.074000+00:00"
+    },
+    "kg/v2/staged/": {
+      "bytes": 67453,
+      "newest": "2026-06-22T14:42:12.348000+00:00",
+      "objects": 8,
+      "oldest": "2026-06-22T14:42:12.205000+00:00"
+    },
+    "kg/v2/staged/cell_type_responds_to_molecule_sciplex2_20260622/": {
+      "bytes": 67453,
+      "newest": "2026-06-22T14:42:12.348000+00:00",
+      "objects": 8,
+      "oldest": "2026-06-22T14:42:12.205000+00:00"
+    },
+    "kg/v2/staged/cell_type_responds_to_molecule_sciplex2_20260622/candidates/": {
+      "bytes": 37764,
+      "newest": "2026-06-22T14:42:12.221000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T14:42:12.205000+00:00"
+    },
+    "kg/v2/staged/cell_type_responds_to_molecule_sciplex2_20260622/edges/": {
+      "bytes": 5070,
+      "newest": "2026-06-22T14:42:12.343000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:42:12.343000+00:00"
+    },
+    "kg/v2/staged/cell_type_responds_to_molecule_sciplex2_20260622/evidence/": {
+      "bytes": 16443,
+      "newest": "2026-06-22T14:42:12.229000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:42:12.229000+00:00"
+    },
+    "kg/v2/staged/cell_type_responds_to_molecule_sciplex2_20260622/nodes/": {
+      "bytes": 3406,
+      "newest": "2026-06-22T14:42:12.325000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T14:42:12.218000+00:00"
+    },
+    "kg/v2/staged/cell_type_responds_to_molecule_sciplex2_20260622/reports/": {
+      "bytes": 4770,
+      "newest": "2026-06-22T14:42:12.348000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T14:42:12.331000+00:00"
+    },
+    "kg/v2/staging/": {
+      "bytes": 54136984181,
+      "newest": "2026-07-22T18:43:20.887000+00:00",
+      "objects": 10867,
+      "oldest": "2026-06-22T13:50:46.518000+00:00"
+    },
+    "kg/v2/staging/canonical-repair-t_44b0a7bb-v3/": {
+      "bytes": 2073113,
+      "newest": "2026-07-22T18:43:20.887000+00:00",
+      "objects": 8,
+      "oldest": "2026-07-22T18:43:18.093000+00:00"
+    },
+    "kg/v2/staging/canonical-repair-t_44b0a7bb-v3/_SUCCESS.json": {
+      "bytes": 426,
+      "newest": "2026-07-22T18:43:20.887000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T18:43:20.887000+00:00"
+    },
+    "kg/v2/staging/canonical-repair-t_44b0a7bb-v3/candidate/": {
+      "bytes": 891126,
+      "newest": "2026-07-22T18:43:18.233000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T18:43:18.233000+00:00"
+    },
+    "kg/v2/staging/canonical-repair-t_44b0a7bb-v3/canonical_inventory_after.json.gz": {
+      "bytes": 11998,
+      "newest": "2026-07-22T18:43:20.781000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T18:43:20.781000+00:00"
+    },
+    "kg/v2/staging/canonical-repair-t_44b0a7bb-v3/canonical_inventory_before.json.gz": {
+      "bytes": 11999,
+      "newest": "2026-07-22T18:43:20.687000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T18:43:20.687000+00:00"
+    },
+    "kg/v2/staging/canonical-repair-t_44b0a7bb-v3/prewrite_manifest.json": {
+      "bytes": 2250,
+      "newest": "2026-07-22T18:43:18.446000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T18:43:18.446000+00:00"
+    },
+    "kg/v2/staging/canonical-repair-t_44b0a7bb-v3/promotion_report.json": {
+      "bytes": 7631,
+      "newest": "2026-07-22T18:43:20.431000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T18:43:20.431000+00:00"
+    },
+    "kg/v2/staging/canonical-repair-t_44b0a7bb-v3/rollback/": {
+      "bytes": 1146401,
+      "newest": "2026-07-22T18:43:18.093000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T18:43:18.093000+00:00"
+    },
+    "kg/v2/staging/canonical-repair-t_44b0a7bb-v3/rollback_receipt.json": {
+      "bytes": 1282,
+      "newest": "2026-07-22T18:43:20.561000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T18:43:20.561000+00:00"
+    },
+    "kg/v2/staging/canonical-repair-t_44b0a7bb/": {
+      "bytes": 2039444,
+      "newest": "2026-07-22T18:40:07.255000+00:00",
+      "objects": 3,
+      "oldest": "2026-07-22T18:40:06.933000+00:00"
+    },
+    "kg/v2/staging/canonical-repair-t_44b0a7bb/candidate/": {
+      "bytes": 891126,
+      "newest": "2026-07-22T18:40:07.079000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T18:40:07.079000+00:00"
+    },
+    "kg/v2/staging/canonical-repair-t_44b0a7bb/prewrite_manifest.json": {
+      "bytes": 1917,
+      "newest": "2026-07-22T18:40:07.255000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T18:40:07.255000+00:00"
+    },
+    "kg/v2/staging/canonical-repair-t_44b0a7bb/rollback/": {
+      "bytes": 1146401,
+      "newest": "2026-07-22T18:40:06.933000+00:00",
+      "objects": 1,
+      "oldest": "2026-07-22T18:40:06.933000+00:00"
+    },
+    "kg/v2/staging/cell-line-assays-2026-06-22-t_c2b0803c/": {
+      "bytes": 102758229,
+      "newest": "2026-06-22T14:44:23.299000+00:00",
+      "objects": 9,
+      "oldest": "2026-06-22T14:44:21.997000+00:00"
+    },
+    "kg/v2/staging/cell-line-assays-2026-06-22-t_c2b0803c/edges/": {
+      "bytes": 1218393,
+      "newest": "2026-06-22T14:44:22.137000+00:00",
+      "objects": 3,
+      "oldest": "2026-06-22T14:44:22.097000+00:00"
+    },
+    "kg/v2/staging/cell-line-assays-2026-06-22-t_c2b0803c/evidence/": {
+      "bytes": 101528371,
+      "newest": "2026-06-22T14:44:23.299000+00:00",
+      "objects": 3,
+      "oldest": "2026-06-22T14:44:22.152000+00:00"
+    },
+    "kg/v2/staging/cell-line-assays-2026-06-22-t_c2b0803c/manifest.json": {
+      "bytes": 2842,
+      "newest": "2026-06-22T14:44:22.042000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:44:22.042000+00:00"
+    },
+    "kg/v2/staging/cell-line-assays-2026-06-22-t_c2b0803c/source_audit.json": {
+      "bytes": 7529,
+      "newest": "2026-06-22T14:44:21.997000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:44:21.997000+00:00"
+    },
+    "kg/v2/staging/cell-line-assays-2026-06-22-t_c2b0803c/validation.json": {
+      "bytes": 1094,
+      "newest": "2026-06-22T14:44:22.179000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:44:22.179000+00:00"
+    },
+    "kg/v2/staging/cell-type-context-relations-t_d468e2dc/": {
+      "bytes": 573100,
+      "newest": "2026-06-22T14:37:39.264000+00:00",
+      "objects": 6,
+      "oldest": "2026-06-22T14:37:21.144000+00:00"
+    },
+    "kg/v2/staging/cell-type-context-relations-t_d468e2dc/edges/": {
+      "bytes": 55219,
+      "newest": "2026-06-22T14:37:21.166000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T14:37:21.144000+00:00"
+    },
+    "kg/v2/staging/cell-type-context-relations-t_d468e2dc/evidence/": {
+      "bytes": 512775,
+      "newest": "2026-06-22T14:37:21.195000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T14:37:21.166000+00:00"
+    },
+    "kg/v2/staging/cell-type-context-relations-t_d468e2dc/reports/": {
+      "bytes": 5106,
+      "newest": "2026-06-22T14:37:39.264000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T14:37:21.157000+00:00"
+    },
+    "kg/v2/staging/cellosaurus-cell-line-metadata-20260622-t_bb0fb082/": {
+      "bytes": 139185,
+      "newest": "2026-06-22T14:41:11.664000+00:00",
+      "objects": 11,
+      "oldest": "2026-06-22T14:40:12.597000+00:00"
+    },
+    "kg/v2/staging/cellosaurus-cell-line-metadata-20260622-t_bb0fb082/edges/": {
+      "bytes": 18693,
+      "newest": "2026-06-22T14:40:12.616000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T14:40:12.597000+00:00"
+    },
+    "kg/v2/staging/cellosaurus-cell-line-metadata-20260622-t_bb0fb082/evidence/": {
+      "bytes": 112736,
+      "newest": "2026-06-22T14:40:12.640000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T14:40:12.616000+00:00"
+    },
+    "kg/v2/staging/cellosaurus-cell-line-metadata-20260622-t_bb0fb082/remote-ls.txt": {
+      "bytes": 1364,
+      "newest": "2026-06-22T14:40:25.063000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:40:25.063000+00:00"
+    },
+    "kg/v2/staging/cellosaurus-cell-line-metadata-20260622-t_bb0fb082/reports/": {
+      "bytes": 4604,
+      "newest": "2026-06-22T14:41:11.664000+00:00",
+      "objects": 5,
+      "oldest": "2026-06-22T14:40:12.636000+00:00"
+    },
+    "kg/v2/staging/cellosaurus-cell-line-metadata-20260622-t_bb0fb082/run.log": {
+      "bytes": 1788,
+      "newest": "2026-06-22T14:40:12.644000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:40:12.644000+00:00"
+    },
+    "kg/v2/staging/disease-associated-protein-20260622-t_7f0cccde/": {
+      "bytes": 2858240,
+      "newest": "2026-06-22T14:44:34.615000+00:00",
+      "objects": 8,
+      "oldest": "2026-06-22T14:42:25.631000+00:00"
+    },
+    "kg/v2/staging/disease-associated-protein-20260622-t_7f0cccde/MANIFEST.json": {
+      "bytes": 3526,
+      "newest": "2026-06-22T14:42:25.835000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:42:25.835000+00:00"
+    },
+    "kg/v2/staging/disease-associated-protein-20260622-t_7f0cccde/diagnostics/": {
+      "bytes": 625609,
+      "newest": "2026-06-22T14:42:25.774000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:42:25.774000+00:00"
+    },
+    "kg/v2/staging/disease-associated-protein-20260622-t_7f0cccde/edges/": {
+      "bytes": 47554,
+      "newest": "2026-06-22T14:42:25.684000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:42:25.684000+00:00"
+    },
+    "kg/v2/staging/disease-associated-protein-20260622-t_7f0cccde/evidence/": {
+      "bytes": 2141438,
+      "newest": "2026-06-22T14:42:25.714000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:42:25.714000+00:00"
+    },
+    "kg/v2/staging/disease-associated-protein-20260622-t_7f0cccde/reports/": {
+      "bytes": 40113,
+      "newest": "2026-06-22T14:44:34.615000+00:00",
+      "objects": 4,
+      "oldest": "2026-06-22T14:42:25.631000+00:00"
+    },
+    "kg/v2/staging/enhancer-regulates-transcript-audit-20260622-t_8ed77c71/": {
+      "bytes": 1206116,
+      "newest": "2026-06-22T14:37:56.354000+00:00",
+      "objects": 16,
+      "oldest": "2026-06-22T14:37:56.245000+00:00"
+    },
+    "kg/v2/staging/enhancer-regulates-transcript-audit-20260622-t_8ed77c71/README.md": {
+      "bytes": 717,
+      "newest": "2026-06-22T14:37:56.314000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:37:56.314000+00:00"
+    },
+    "kg/v2/staging/enhancer-regulates-transcript-audit-20260622-t_8ed77c71/encode_abc_files.json": {
+      "bytes": 230733,
+      "newest": "2026-06-22T14:37:56.307000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:37:56.307000+00:00"
+    },
+    "kg/v2/staging/enhancer-regulates-transcript-audit-20260622-t_8ed77c71/encode_abc_files.terms.txt": {
+      "bytes": 100,
+      "newest": "2026-06-22T14:37:56.307000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:37:56.307000+00:00"
+    },
+    "kg/v2/staging/enhancer-regulates-transcript-audit-20260622-t_8ed77c71/encode_re2g_files.json": {
+      "bytes": 160238,
+      "newest": "2026-06-22T14:37:56.281000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:37:56.281000+00:00"
+    },
+    "kg/v2/staging/enhancer-regulates-transcript-audit-20260622-t_8ed77c71/encode_re2g_files.terms.txt": {
+      "bytes": 65,
+      "newest": "2026-06-22T14:37:56.269000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:37:56.269000+00:00"
+    },
+    "kg/v2/staging/enhancer-regulates-transcript-audit-20260622-t_8ed77c71/fantom_cage_ann.gz": {
+      "bytes": 400000,
+      "newest": "2026-06-22T14:37:56.264000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:37:56.264000+00:00"
+    },
+    "kg/v2/staging/enhancer-regulates-transcript-audit-20260622-t_8ed77c71/fantom_cage_ann.head.txt": {
+      "bytes": 20,
+      "newest": "2026-06-22T14:37:56.297000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:37:56.297000+00:00"
+    },
+    "kg/v2/staging/enhancer-regulates-transcript-audit-20260622-t_8ed77c71/fantom_cage_readme.head.txt": {
+      "bytes": 644,
+      "newest": "2026-06-22T14:37:56.299000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:37:56.299000+00:00"
+    },
+    "kg/v2/staging/enhancer-regulates-transcript-audit-20260622-t_8ed77c71/fantom_cage_readme.txt": {
+      "bytes": 644,
+      "newest": "2026-06-22T14:37:56.264000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:37:56.264000+00:00"
+    },
+    "kg/v2/staging/enhancer-regulates-transcript-audit-20260622-t_8ed77c71/fantom_enhancers_bed.gz": {
+      "bytes": 400000,
+      "newest": "2026-06-22T14:37:56.297000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:37:56.297000+00:00"
+    },
+    "kg/v2/staging/enhancer-regulates-transcript-audit-20260622-t_8ed77c71/fantom_enhancers_bed.head.txt": {
+      "bytes": 20,
+      "newest": "2026-06-22T14:37:56.279000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:37:56.279000+00:00"
+    },
+    "kg/v2/staging/enhancer-regulates-transcript-audit-20260622-t_8ed77c71/fantom_enhancers_readme.head.txt": {
+      "bytes": 1463,
+      "newest": "2026-06-22T14:37:56.282000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:37:56.282000+00:00"
+    },
+    "kg/v2/staging/enhancer-regulates-transcript-audit-20260622-t_8ed77c71/fantom_enhancers_readme.txt": {
+      "bytes": 1463,
+      "newest": "2026-06-22T14:37:56.354000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:37:56.354000+00:00"
+    },
+    "kg/v2/staging/enhancer-regulates-transcript-audit-20260622-t_8ed77c71/gcs_upload.log": {
+      "bytes": 3677,
+      "newest": "2026-06-22T14:37:56.280000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:37:56.280000+00:00"
+    },
+    "kg/v2/staging/enhancer-regulates-transcript-audit-20260622-t_8ed77c71/screen_downloads.error.txt": {
+      "bytes": 58,
+      "newest": "2026-06-22T14:37:56.245000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:37:56.245000+00:00"
+    },
+    "kg/v2/staging/enhancer-regulates-transcript-audit-20260622-t_8ed77c71/source_audit.json": {
+      "bytes": 6274,
+      "newest": "2026-06-22T14:37:56.265000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:37:56.265000+00:00"
+    },
+    "kg/v2/staging/molecule-synergizes-evidence-20260622-t_4e12f7c7/": {
+      "bytes": 43057104,
+      "newest": "2026-06-22T14:40:04.410000+00:00",
+      "objects": 3,
+      "oldest": "2026-06-22T14:40:02.669000+00:00"
+    },
+    "kg/v2/staging/molecule-synergizes-evidence-20260622-t_4e12f7c7/evidence/": {
+      "bytes": 43052136,
+      "newest": "2026-06-22T14:40:02.669000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:40:02.669000+00:00"
+    },
+    "kg/v2/staging/molecule-synergizes-evidence-20260622-t_4e12f7c7/reports/": {
+      "bytes": 4968,
+      "newest": "2026-06-22T14:40:04.410000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T14:40:03.512000+00:00"
+    },
+    "kg/v2/staging/molecule-targets-protein-chembl-20260622-t_84bf3876/": {
+      "bytes": 354216,
+      "newest": "2026-06-22T14:46:46.063000+00:00",
+      "objects": 9,
+      "oldest": "2026-06-22T14:45:43.825000+00:00"
+    },
+    "kg/v2/staging/molecule-targets-protein-chembl-20260622-t_84bf3876/MANIFEST.json": {
+      "bytes": 1997,
+      "newest": "2026-06-22T14:45:43.844000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:45:43.844000+00:00"
+    },
+    "kg/v2/staging/molecule-targets-protein-chembl-20260622-t_84bf3876/edges/": {
+      "bytes": 23943,
+      "newest": "2026-06-22T14:45:43.840000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:45:43.840000+00:00"
+    },
+    "kg/v2/staging/molecule-targets-protein-chembl-20260622-t_84bf3876/evidence/": {
+      "bytes": 199606,
+      "newest": "2026-06-22T14:45:43.938000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:45:43.938000+00:00"
+    },
+    "kg/v2/staging/molecule-targets-protein-chembl-20260622-t_84bf3876/reports/": {
+      "bytes": 5565,
+      "newest": "2026-06-22T14:46:46.063000+00:00",
+      "objects": 5,
+      "oldest": "2026-06-22T14:45:43.825000+00:00"
+    },
+    "kg/v2/staging/molecule-targets-protein-chembl-20260622-t_84bf3876/source_rows/": {
+      "bytes": 123105,
+      "newest": "2026-06-22T14:45:43.855000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:45:43.855000+00:00"
+    },
+    "kg/v2/staging/opentargets-clinical-drug-evidence-20260622-t_ceee5d53/": {
+      "bytes": 294920,
+      "newest": "2026-06-22T14:38:35.419000+00:00",
+      "objects": 8,
+      "oldest": "2026-06-22T14:37:45.201000+00:00"
+    },
+    "kg/v2/staging/opentargets-clinical-drug-evidence-20260622-t_ceee5d53/build_stdout.json": {
+      "bytes": 2594,
+      "newest": "2026-06-22T14:37:45.201000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:37:45.201000+00:00"
+    },
+    "kg/v2/staging/opentargets-clinical-drug-evidence-20260622-t_ceee5d53/evidence/": {
+      "bytes": 259422,
+      "newest": "2026-06-22T14:37:45.230000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:37:45.230000+00:00"
+    },
+    "kg/v2/staging/opentargets-clinical-drug-evidence-20260622-t_ceee5d53/reports/": {
+      "bytes": 3278,
+      "newest": "2026-06-22T14:37:45.233000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T14:37:45.216000+00:00"
+    },
+    "kg/v2/staging/opentargets-clinical-drug-evidence-20260622-t_ceee5d53/review_files/": {
+      "bytes": 28603,
+      "newest": "2026-06-22T14:38:35.419000+00:00",
+      "objects": 3,
+      "oldest": "2026-06-22T14:38:35.397000+00:00"
+    },
+    "kg/v2/staging/opentargets-clinical-drug-evidence-20260622-t_ceee5d53/review_files_manifest.json": {
+      "bytes": 1023,
+      "newest": "2026-06-22T14:38:35.399000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:38:35.399000+00:00"
+    },
+    "kg/v2/staging/paper-dataset-provenance-20260622-t_649cee71/": {
+      "bytes": 744235,
+      "newest": "2026-06-22T14:45:31.336000+00:00",
+      "objects": 18,
+      "oldest": "2026-06-22T14:45:31.219000+00:00"
+    },
+    "kg/v2/staging/paper-dataset-provenance-20260622-t_649cee71/edges/": {
+      "bytes": 57123,
+      "newest": "2026-06-22T14:45:31.336000+00:00",
+      "objects": 7,
+      "oldest": "2026-06-22T14:45:31.219000+00:00"
+    },
+    "kg/v2/staging/paper-dataset-provenance-20260622-t_649cee71/evidence/": {
+      "bytes": 667377,
+      "newest": "2026-06-22T14:45:31.311000+00:00",
+      "objects": 7,
+      "oldest": "2026-06-22T14:45:31.252000+00:00"
+    },
+    "kg/v2/staging/paper-dataset-provenance-20260622-t_649cee71/nodes/": {
+      "bytes": 15960,
+      "newest": "2026-06-22T14:45:31.250000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T14:45:31.244000+00:00"
+    },
+    "kg/v2/staging/paper-dataset-provenance-20260622-t_649cee71/validation/": {
+      "bytes": 3775,
+      "newest": "2026-06-22T14:45:31.280000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T14:45:31.277000+00:00"
+    },
+    "kg/v2/staging/rbp-rna-clip-encori-pilot-20260622T135045Z/": {
+      "bytes": 91006,
+      "newest": "2026-06-22T13:50:46.597000+00:00",
+      "objects": 7,
+      "oldest": "2026-06-22T13:50:46.518000+00:00"
+    },
+    "kg/v2/staging/rbp-rna-clip-encori-pilot-20260622T135045Z/MANIFEST.json": {
+      "bytes": 1818,
+      "newest": "2026-06-22T13:50:46.518000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:50:46.518000+00:00"
+    },
+    "kg/v2/staging/rbp-rna-clip-encori-pilot-20260622T135045Z/edges/": {
+      "bytes": 3956,
+      "newest": "2026-06-22T13:50:46.573000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:50:46.573000+00:00"
+    },
+    "kg/v2/staging/rbp-rna-clip-encori-pilot-20260622T135045Z/evidence/": {
+      "bytes": 11363,
+      "newest": "2026-06-22T13:50:46.597000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T13:50:46.597000+00:00"
+    },
+    "kg/v2/staging/rbp-rna-clip-encori-pilot-20260622T135045Z/reports/": {
+      "bytes": 73869,
+      "newest": "2026-06-22T13:50:46.592000+00:00",
+      "objects": 4,
+      "oldest": "2026-06-22T13:50:46.564000+00:00"
+    },
+    "kg/v2/staging/reactome-pathway-contains-protein-20260622-t_9d36e82e/": {
+      "bytes": 4880024,
+      "newest": "2026-06-22T14:43:03.294000+00:00",
+      "objects": 7,
+      "oldest": "2026-06-22T14:42:19.030000+00:00"
+    },
+    "kg/v2/staging/reactome-pathway-contains-protein-20260622-t_9d36e82e/audit_edge_evidence.json": {
+      "bytes": 404,
+      "newest": "2026-06-22T14:42:19.030000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:42:19.030000+00:00"
+    },
+    "kg/v2/staging/reactome-pathway-contains-protein-20260622-t_9d36e82e/edges/": {
+      "bytes": 53419,
+      "newest": "2026-06-22T14:42:19.055000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:42:19.055000+00:00"
+    },
+    "kg/v2/staging/reactome-pathway-contains-protein-20260622-t_9d36e82e/evidence/": {
+      "bytes": 1625614,
+      "newest": "2026-06-22T14:42:19.136000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:42:19.136000+00:00"
+    },
+    "kg/v2/staging/reactome-pathway-contains-protein-20260622-t_9d36e82e/evidence_canonical/": {
+      "bytes": 1490876,
+      "newest": "2026-06-22T14:42:19.151000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:42:19.151000+00:00"
+    },
+    "kg/v2/staging/reactome-pathway-contains-protein-20260622-t_9d36e82e/mappings/": {
+      "bytes": 1705143,
+      "newest": "2026-06-22T14:42:19.162000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-22T14:42:19.162000+00:00"
+    },
+    "kg/v2/staging/reactome-pathway-contains-protein-20260622-t_9d36e82e/validation/": {
+      "bytes": 4568,
+      "newest": "2026-06-22T14:43:03.294000+00:00",
+      "objects": 2,
+      "oldest": "2026-06-22T14:42:19.043000+00:00"
+    },
+    "kg/v2/staging/remap-tf-binds-enhancer-remote-pruned-chr1-20260623-t_3479936e-v7-100kb-b50k-tempfix/": {
+      "bytes": 53329118697,
+      "newest": "2026-06-23T12:01:19.211000+00:00",
+      "objects": 10732,
+      "oldest": "2026-06-22T23:27:23.098000+00:00"
+    },
+    "kg/v2/staging/remap-tf-binds-enhancer-remote-pruned-chr1-20260623-t_3479936e-v7-100kb-b50k-tempfix/buckets/": {
+      "bytes": 43603711576,
+      "newest": "2026-06-23T12:01:19.211000+00:00",
+      "objects": 120,
+      "oldest": "2026-06-23T05:52:06.432000+00:00"
+    },
+    "kg/v2/staging/remap-tf-binds-enhancer-remote-pruned-chr1-20260623-t_3479936e-v7-100kb-b50k-tempfix/support_delta_partitions/": {
+      "bytes": 9725407121,
+      "newest": "2026-06-23T05:03:27.022000+00:00",
+      "objects": 10612,
+      "oldest": "2026-06-22T23:27:23.098000+00:00"
+    },
+    "kg/v2/staging/source-native-expansion/": {
+      "bytes": 646796552,
+      "newest": "2026-06-23T14:19:22.517000+00:00",
+      "objects": 22,
+      "oldest": "2026-06-22T14:47:08.001000+00:00"
+    },
+    "kg/v2/staging/source-native-expansion/mutation-genomic-direct-20260622-t_3255672c/": {
+      "bytes": 398386897,
+      "newest": "2026-06-22T14:47:55.555000+00:00",
+      "objects": 11,
+      "oldest": "2026-06-22T14:47:08.001000+00:00"
+    },
+    "kg/v2/staging/source-native-expansion/mutation-genomic-direct-bounded-20260623-t_79f8684d/": {
+      "bytes": 248409655,
+      "newest": "2026-06-23T14:19:22.517000+00:00",
+      "objects": 11,
+      "oldest": "2026-06-23T14:19:16.629000+00:00"
+    },
+    "lamin/": {
+      "bytes": 14328966609,
+      "newest": "2026-06-24T10:54:25.526000+00:00",
+      "objects": 65,
+      "oldest": "2026-06-04T13:51:38.388000+00:00"
+    },
+    "lamin/.lamindb/": {
+      "bytes": 14328966609,
+      "newest": "2026-06-24T10:54:25.526000+00:00",
+      "objects": 65,
+      "oldest": "2026-06-04T13:51:38.388000+00:00"
+    },
+    "lamin/.lamindb/0SYttRbLaTBDcrta0000.parquet": {
+      "bytes": 483161330,
+      "newest": "2026-06-23T13:36:41.230000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:36:41.230000+00:00"
+    },
+    "lamin/.lamindb/2IBLaHutEe3SNZwx0000.parquet": {
+      "bytes": 4788517448,
+      "newest": "2026-06-23T13:35:01.541000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:35:01.541000+00:00"
+    },
+    "lamin/.lamindb/4uW05xPl7OYe16Wp0000.parquet": {
+      "bytes": 3404993079,
+      "newest": "2026-06-23T13:29:54.772000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:29:54.772000+00:00"
+    },
+    "lamin/.lamindb/5HwR9mI3GuYHdEVa0000.parquet": {
+      "bytes": 12794,
+      "newest": "2026-06-23T13:32:10.130000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:10.130000+00:00"
+    },
+    "lamin/.lamindb/5YemhA4btb1ewrLL0000.parquet": {
+      "bytes": 1997157871,
+      "newest": "2026-06-23T13:32:05.305000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:05.305000+00:00"
+    },
+    "lamin/.lamindb/7a2pIWfUZMf5IeYW0000.parquet": {
+      "bytes": 5533441,
+      "newest": "2026-06-23T13:36:42.269000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:36:42.269000+00:00"
+    },
+    "lamin/.lamindb/7kBpL8U6yhoSNCfn0000.parquet": {
+      "bytes": 648897,
+      "newest": "2026-06-23T13:31:17.028000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:31:17.028000+00:00"
+    },
+    "lamin/.lamindb/APtiTTXauAF3OwxY0000.parquet": {
+      "bytes": 26231759,
+      "newest": "2026-06-23T13:31:03.150000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:31:03.150000+00:00"
+    },
+    "lamin/.lamindb/AW4rtMu89zjqN74F0000.parquet": {
+      "bytes": 12929,
+      "newest": "2026-06-23T13:31:14.221000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:31:14.221000+00:00"
+    },
+    "lamin/.lamindb/DPGsWkgVneaHILWi0000.parquet": {
+      "bytes": 5447,
+      "newest": "2026-06-23T13:31:15.461000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:31:15.461000+00:00"
+    },
+    "lamin/.lamindb/EnOMynCCx1zsTKQR0000.parquet": {
+      "bytes": 6644666,
+      "newest": "2026-06-23T13:30:58.323000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:30:58.323000+00:00"
+    },
+    "lamin/.lamindb/G0bKoE21M3W8U3zU0000.parquet": {
+      "bytes": 90231,
+      "newest": "2026-06-23T13:32:25.521000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:25.521000+00:00"
+    },
+    "lamin/.lamindb/IAMtlotCfuK5ZTj60000.parquet": {
+      "bytes": 6532333,
+      "newest": "2026-06-23T13:31:14.812000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:31:14.812000+00:00"
+    },
+    "lamin/.lamindb/JdFBSvCS47tVVHdC0000.parquet": {
+      "bytes": 41362747,
+      "newest": "2026-06-23T13:32:23.242000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:23.242000+00:00"
+    },
+    "lamin/.lamindb/LD5cACs1SJnmSlsX0000.parquet": {
+      "bytes": 4121076,
+      "newest": "2026-06-23T13:31:04.614000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:31:04.614000+00:00"
+    },
+    "lamin/.lamindb/LcNQVsCSdpIDiHwT0000.parquet": {
+      "bytes": 666676,
+      "newest": "2026-06-23T13:31:16.233000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:31:16.233000+00:00"
+    },
+    "lamin/.lamindb/M3RKhn3AbmkvGf350000.parquet": {
+      "bytes": 653414,
+      "newest": "2026-06-23T13:32:18.917000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:18.917000+00:00"
+    },
+    "lamin/.lamindb/MawrvmnSPtit7asc0000.parquet": {
+      "bytes": 379580,
+      "newest": "2026-06-23T13:31:04.942000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:31:04.942000+00:00"
+    },
+    "lamin/.lamindb/Md2LCYBSLrm9dwjb0000.parquet": {
+      "bytes": 89685283,
+      "newest": "2026-06-23T13:31:01.632000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:31:01.632000+00:00"
+    },
+    "lamin/.lamindb/MsricAmjzpfIxI400000.parquet": {
+      "bytes": 76231,
+      "newest": "2026-06-23T13:32:25.972000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:25.972000+00:00"
+    },
+    "lamin/.lamindb/PXsn3zC9bDs3PM8l0000.parquet": {
+      "bytes": 864665,
+      "newest": "2026-06-23T13:36:43.011000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:36:43.011000+00:00"
+    },
+    "lamin/.lamindb/PvSqn1J38vdlTAOQ0000.parquet": {
+      "bytes": 2581718,
+      "newest": "2026-06-23T13:32:24.683000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:24.683000+00:00"
+    },
+    "lamin/.lamindb/RwUfZVhTCSFrMNYp0000.parquet": {
+      "bytes": 3889581,
+      "newest": "2026-06-23T13:32:07.178000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:07.178000+00:00"
+    },
+    "lamin/.lamindb/S6MImYQbWt8CizdB0000.parquet": {
+      "bytes": 3569466,
+      "newest": "2026-06-23T13:26:52.686000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:26:52.686000+00:00"
+    },
+    "lamin/.lamindb/SPYAFtNPpRr9HMrl0000.parquet": {
+      "bytes": 41376,
+      "newest": "2026-06-23T13:32:25.102000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:25.102000+00:00"
+    },
+    "lamin/.lamindb/ShU38kqbPOi3p1Tb0000.parquet": {
+      "bytes": 1467941,
+      "newest": "2026-06-23T13:31:03.673000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:31:03.673000+00:00"
+    },
+    "lamin/.lamindb/SxkhjnUIUqEQvLow0000.parquet": {
+      "bytes": 31819,
+      "newest": "2026-06-23T13:26:51.248000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:26:51.248000+00:00"
+    },
+    "lamin/.lamindb/UjNa1Mq4mBC6dus70000.parquet": {
+      "bytes": 410078,
+      "newest": "2026-06-23T13:31:04.028000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:31:04.028000+00:00"
+    },
+    "lamin/.lamindb/WgA4BMSUblq7FK7I0000.parquet": {
+      "bytes": 1028430,
+      "newest": "2026-06-23T13:36:42.670000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:36:42.670000+00:00"
+    },
+    "lamin/.lamindb/Wn4dIIOGGyrighbZ0000.parquet": {
+      "bytes": 3797,
+      "newest": "2026-06-23T13:31:01.893000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:31:01.893000+00:00"
+    },
+    "lamin/.lamindb/XatBSSIqn5KPLkud0000.parquet": {
+      "bytes": 2640740,
+      "newest": "2026-06-23T13:32:18.565000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:18.565000+00:00"
+    },
+    "lamin/.lamindb/Z40Hcn6xCXe8uPtG0000.parquet": {
+      "bytes": 13007,
+      "newest": "2026-06-23T13:31:15.114000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:31:15.114000+00:00"
+    },
+    "lamin/.lamindb/_exclusion/": {
+      "bytes": 10,
+      "newest": "2026-06-04T13:52:35.131000+00:00",
+      "objects": 3,
+      "oldest": "2026-06-04T13:52:34.306000+00:00"
+    },
+    "lamin/.lamindb/_exclusion/9f042ad826235b11a89a5b2267e53928/": {
+      "bytes": 10,
+      "newest": "2026-06-04T13:52:35.131000+00:00",
+      "objects": 3,
+      "oldest": "2026-06-04T13:52:34.306000+00:00"
+    },
+    "lamin/.lamindb/_exclusion/9f042ad826235b11a89a5b2267e53928/entering/": {
+      "bytes": 1,
+      "newest": "2026-06-04T13:52:35.131000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-04T13:52:35.131000+00:00"
+    },
+    "lamin/.lamindb/_exclusion/9f042ad826235b11a89a5b2267e53928/numbers/": {
+      "bytes": 1,
+      "newest": "2026-06-04T13:52:35.035000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-04T13:52:35.035000+00:00"
+    },
+    "lamin/.lamindb/_exclusion/9f042ad826235b11a89a5b2267e53928/priorities": {
+      "bytes": 8,
+      "newest": "2026-06-04T13:52:34.306000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-04T13:52:34.306000+00:00"
+    },
+    "lamin/.lamindb/b7q7aj0uhKVFyuhC0000.parquet": {
+      "bytes": 19797,
+      "newest": "2026-06-23T13:32:10.470000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:10.470000+00:00"
+    },
+    "lamin/.lamindb/bR5Xu792ANybpcow0000.parquet": {
+      "bytes": 22829668,
+      "newest": "2026-06-23T13:32:16.776000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:16.776000+00:00"
+    },
+    "lamin/.lamindb/cep5pOAX7uCVkMHU0000.parquet": {
+      "bytes": 57319,
+      "newest": "2026-06-23T13:32:11.901000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:11.901000+00:00"
+    },
+    "lamin/.lamindb/cmMZtkjZhdduO20A0000.parquet": {
+      "bytes": 271722507,
+      "newest": "2026-06-23T13:31:13.627000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:31:13.627000+00:00"
+    },
+    "lamin/.lamindb/dPkYEPy5dwB3LS8q0000.parquet": {
+      "bytes": 2579,
+      "newest": "2026-06-23T13:26:52.062000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:26:52.062000+00:00"
+    },
+    "lamin/.lamindb/djOaaq3zjlmXvp2J0000.parquet": {
+      "bytes": 13643,
+      "newest": "2026-06-23T13:31:05.944000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:31:05.944000+00:00"
+    },
+    "lamin/.lamindb/fBzks1ys3m1gP9ih0000.parquet": {
+      "bytes": 466218,
+      "newest": "2026-06-23T13:32:23.713000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:23.713000+00:00"
+    },
+    "lamin/.lamindb/ftIswjLWr9jnRxXI0000.parquet": {
+      "bytes": 3076768,
+      "newest": "2026-06-23T13:32:09.168000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:09.168000+00:00"
+    },
+    "lamin/.lamindb/gqj954ML356yVQxo0000.parquet": {
+      "bytes": 111760,
+      "newest": "2026-06-23T13:32:19.264000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:19.264000+00:00"
+    },
+    "lamin/.lamindb/hCJfirTl1SykHoiY0000.parquet": {
+      "bytes": 36907950,
+      "newest": "2026-06-23T13:32:08.570000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:08.570000+00:00"
+    },
+    "lamin/.lamindb/j3DhBhFGodfM0CDl0000.parquet": {
+      "bytes": 238792,
+      "newest": "2026-06-23T13:32:11.579000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:11.579000+00:00"
+    },
+    "lamin/.lamindb/k1pLutbRJu82DQSW0000.parquet": {
+      "bytes": 314067,
+      "newest": "2026-06-23T13:31:15.820000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:31:15.820000+00:00"
+    },
+    "lamin/.lamindb/k45dvXYjoUEq106w0000.parquet": {
+      "bytes": 89034605,
+      "newest": "2026-06-23T13:32:15.139000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:15.139000+00:00"
+    },
+    "lamin/.lamindb/lamin.db": {
+      "bytes": 3007340544,
+      "newest": "2026-06-24T10:54:25.526000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-24T10:54:25.526000+00:00"
+    },
+    "lamin/.lamindb/mszt80MncmU7U7wK0000.parquet": {
+      "bytes": 941024,
+      "newest": "2026-06-23T13:32:19.691000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:19.691000+00:00"
+    },
+    "lamin/.lamindb/n37O7XgpvjCHMyY30000.parquet": {
+      "bytes": 8645861,
+      "newest": "2026-06-23T13:31:05.650000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:31:05.650000+00:00"
+    },
+    "lamin/.lamindb/nJQFawYID0NAeiX30000.parquet": {
+      "bytes": 67065,
+      "newest": "2026-06-23T13:32:09.825000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:09.825000+00:00"
+    },
+    "lamin/.lamindb/oRAYomIrRwv6FchH0000.parquet": {
+      "bytes": 1262716,
+      "newest": "2026-06-23T13:32:17.850000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:17.850000+00:00"
+    },
+    "lamin/.lamindb/osFghkURIkKWUyoU0000.parquet": {
+      "bytes": 238663,
+      "newest": "2026-06-23T13:32:24.050000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:24.050000+00:00"
+    },
+    "lamin/.lamindb/p9tYRbnf8ZYBep2p0000.parquet": {
+      "bytes": 5891672,
+      "newest": "2026-06-23T13:32:20.671000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:20.671000+00:00"
+    },
+    "lamin/.lamindb/pcMg41LfNJFY5NwM0000.parquet": {
+      "bytes": 1842052,
+      "newest": "2026-06-23T13:30:58.774000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:30:58.774000+00:00"
+    },
+    "lamin/.lamindb/qhlFLx55ObMIdlXZ0000.parquet": {
+      "bytes": 111612,
+      "newest": "2026-06-23T13:32:09.495000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:09.495000+00:00"
+    },
+    "lamin/.lamindb/sLNKBYTjVJhQKTJ30000.parquet": {
+      "bytes": 30420,
+      "newest": "2026-06-23T13:32:21.462000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:21.462000+00:00"
+    },
+    "lamin/.lamindb/sRnsWpE6YaFsEf310000.parquet": {
+      "bytes": 45989,
+      "newest": "2026-06-23T13:32:12.275000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:12.275000+00:00"
+    },
+    "lamin/.lamindb/storage_uid.txt": {
+      "bytes": 132,
+      "newest": "2026-06-04T13:51:38.388000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-04T13:51:38.388000+00:00"
+    },
+    "lamin/.lamindb/twj8tW9SiNjO7kbW0000.parquet": {
+      "bytes": 266843,
+      "newest": "2026-06-23T13:32:21.083000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:21.083000+00:00"
+    },
+    "lamin/.lamindb/u1T8fb52w4OH9CWa0000.parquet": {
+      "bytes": 19819,
+      "newest": "2026-06-23T13:32:06.513000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:06.513000+00:00"
+    },
+    "lamin/.lamindb/usHfZ0zPJG3ZGas50000.parquet": {
+      "bytes": 82710,
+      "newest": "2026-06-23T13:26:51.679000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:26:51.679000+00:00"
+    },
+    "lamin/.lamindb/wKQ9pXSIs8xkjwFb0000.parquet": {
+      "bytes": 69329,
+      "newest": "2026-06-23T13:31:16.550000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:31:16.550000+00:00"
+    },
+    "lamin/.lamindb/ym3BCGyl15NJjxL00000.parquet": {
+      "bytes": 4284625,
+      "newest": "2026-06-23T13:32:11.201000+00:00",
+      "objects": 1,
+      "oldest": "2026-06-23T13:32:11.201000+00:00"
+    }
+  },
+  "bucket": "jouvencekb",
+  "generated_at": "2026-07-27T11:55:41.526652+00:00"
+}

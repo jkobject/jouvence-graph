@@ -17,7 +17,7 @@ import duckdb
 import pandas as pd
 
 DEFAULT_KG_ROOT = Path(
-    os.environ.get("JOUVENCE_KG_ROOT", "/Users/jkobject/mnt/gcs/jouvencekb-kg/v2")
+    os.environ.get("JOUVENCE_KG_ROOT", "/Users/jkobject/mnt/gcs/jouvencekb/main")
 )
 DISEASE_ASSOCIATED_GENE = "disease_associated_gene"
 

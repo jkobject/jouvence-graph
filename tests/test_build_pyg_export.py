@@ -474,7 +474,7 @@ def test_build_pyg_export_plan_only_writes_metadata_manifest(tmp_path: Path, cap
             "cli-plan-test",
             "--plan-only",
             "--remote-output-root",
-            "gs://jouvencekb/kg/staging/ml/pyg/cli-plan-test",
+            "gs://jouvencekb/staging/ml/pyg/cli-plan-test",
         ]
     )
 
@@ -486,7 +486,7 @@ def test_build_pyg_export_plan_only_writes_metadata_manifest(tmp_path: Path, cap
     assert manifest["artifact_format"] == "jouvencekb-kg-pyg-production-plan-v1"
     assert manifest["metadata_source"].startswith("Parquet footer metadata only")
     assert manifest["total_edge_rows"] == 2
-    assert "--output-root gs://jouvencekb/kg/staging/ml/pyg/cli-plan-test" in manifest["remote_command"]
+    assert "--output-root gs://jouvencekb/staging/ml/pyg/cli-plan-test" in manifest["remote_command"]
     assert "--artifact-mode sidecar" in manifest["remote_command"]
     assert manifest["artifact_mode"] == "sidecar"
     policy = manifest["training_graph_exclusion_policy"]

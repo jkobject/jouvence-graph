@@ -20,7 +20,7 @@ from fsspec.core import url_to_fs
 
 from . import kg_evidence, kg_storage
 
-PUBLIC_KG_ROOT = "gs://jouvencekb/kg/v2"
+PUBLIC_KG_ROOT = "gs://jouvencekb/main"
 LAMIN_INSTANCE = "jkobject/jouvencekb"
 DEFAULT_SAMPLE_ROWS = 100
 MAX_SAMPLE_ROWS = 10_000

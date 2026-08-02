@@ -45,8 +45,8 @@ PTM_FEATURE_TYPES = {
     "Disulfide bond",
 }
 CANONICAL_ROOTS = {
-    "/mnt/gcs/jouvencekb/kg/v2",
-    "gs://jouvencekb/kg/v2",
+    "/mnt/gcs/jouvencekb/main",
+    "gs://jouvencekb/main",
 }
 PTM_SITE_COLUMNS = [
     "id",
@@ -606,7 +606,7 @@ def main(argv: Iterable[str] | None = None) -> int:
     parser.add_argument("--output-root", required=True, help="Local or gs:// staging root")
     parser.add_argument(
         "--protein-nodes",
-        default="gs://jouvencekb/kg/v2/nodes/protein.parquet",
+        default="gs://jouvencekb/main/nodes/protein.parquet",
         help="Read-only protein node parquet with id and uniprot_id columns",
     )
     parser.add_argument("--max-pages", type=int, default=None, help="Debug limit for UniProt pagination")

@@ -23,8 +23,8 @@ import fsspec
 import pandas as pd
 import pyarrow.parquet as pq
 
-DEFAULT_KG_ROOT = os.environ.get("JOUVENCE_KG_ROOT", "/Users/jkobject/mnt/gcs/jouvencekb-kg/v2")
-DEFAULT_GCS_PREFIX = "gs://jouvencekb/kg/v2/features/remap_crm_tf_enhancer_support_full"
+DEFAULT_KG_ROOT = os.environ.get("JOUVENCE_KG_ROOT", "/Users/jkobject/mnt/gcs/jouvencekb/main")
+DEFAULT_GCS_PREFIX = "gs://jouvencekb/main/features/remap_crm_tf_enhancer_support_full"
 DEFAULT_FUSE_PREFIX = str(Path(DEFAULT_KG_ROOT) / "features" / "remap_crm_tf_enhancer_support_full")
 CHROMOSOME_ORDER = [str(i) for i in range(1, 23)] + ["X", "Y"]
 SUMMARY_COLUMNS = [

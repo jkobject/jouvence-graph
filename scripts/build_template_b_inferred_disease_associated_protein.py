@@ -20,7 +20,7 @@ from typing import Any
 
 import duckdb
 
-DEFAULT_KG_ROOT = Path("/Users/jkobject/mnt/gcs/jouvencekb-kg/v2")
+DEFAULT_KG_ROOT = Path("/Users/jkobject/mnt/gcs/jouvencekb/main")
 DEFAULT_OUTPUT_ROOT = Path("artifacts/staged/t_38eef2b7")
 RELATION = "disease_associated_protein"
 DISPLAY_RELATION = "associated with"

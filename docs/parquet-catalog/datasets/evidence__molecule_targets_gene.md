@@ -3,8 +3,8 @@
 
 - Layer: `evidence`
 - Status: **canonical present**
-- As of: `2026-06-21`
-- Canonical URI/pattern: `gs://jouvencekb/kg/v2/evidence/molecule_targets_gene.parquet`
+- As of: `2026-07-27`
+- Canonical URI/pattern: `gs://jouvencekb/main/evidence/molecule_targets_gene.parquet`
 - Logical rows: **41,239**
 - Physical objects: **1**
 - Bytes: **1,028,430**
@@ -70,7 +70,7 @@ The logical dataset is represented by `1` physical Parquet object(s). Physical s
 
 | Object | Rows | Bytes | Generation | CRC32C | MD5 |
 |---|---:|---:|---|---|---|
-| `gs://jouvencekb/kg/v2/evidence/molecule_targets_gene.parquet` | 41,239 | 1,028,430 | `1782079495600450` | `AR1yjQ==` | `4uQXe3q9QOQT7PCZ0sOyjQ==` |
+| `gs://jouvencekb/main/evidence/molecule_targets_gene.parquet` | 41,239 | 1,028,430 | `1785155492590166` | `AR1yjQ==` | `4uQXe3q9QOQT7PCZ0sOyjQ==` |
 - catalog_manifest: [../inventory.json](../inventory.json)
 - evidence_doc: [../../evidence_and_edge_schema_plan.md](../../evidence_and_edge_schema_plan.md)
 - schema_doc: [../../kg_schema_overview.md](../../kg_schema_overview.md)
@@ -84,7 +84,7 @@ export BILLING_PROJECT='<your-gcp-billing-project>'
 LOCAL_DIR='./parquet-catalog-data/evidence__molecule_targets_gene'
 rm -rf -- "$LOCAL_DIR"
 mkdir -p "$LOCAL_DIR"
-gcloud storage cp --billing-project="$BILLING_PROJECT" 'gs://jouvencekb/kg/v2/evidence/molecule_targets_gene.parquet' "$LOCAL_DIR/"
+gcloud storage cp --billing-project="$BILLING_PROJECT" 'gs://jouvencekb/main/evidence/molecule_targets_gene.parquet' "$LOCAL_DIR/"
 ```
 
 PyArrow (GCS credentials/application-default credentials must carry the billing project):
@@ -95,7 +95,7 @@ import gcsfs
 import pyarrow.dataset as ds
 billing_project = os.environ['BILLING_PROJECT']
 fs = gcsfs.GCSFileSystem(project=billing_project, requester_pays=billing_project)
-paths = sorted(fs.glob('jouvencekb/kg/v2/evidence/molecule_targets_gene.parquet'))
+paths = sorted(fs.glob('jouvencekb/main/evidence/molecule_targets_gene.parquet'))
 dataset = ds.dataset(paths, filesystem=fs, format='parquet')
 print(dataset.head(5, columns=['edge_key']))
 ```

@@ -11,11 +11,11 @@
 
 Default KG access:
 
-- Canonical KG bucket root: `gs://jouvencekb/kg/v2`
-- Verified macOS FUSE root: `/Users/jkobject/mnt/gcs/jouvencekb-kg/v2` for small bounded/local inspection only.
-- Heavy Jouvence jobs are VM-only: LaminDB full/bulk syncs, production/full PyG/GNN exports or training, ReMap scaling, embeddings/full-KG scans, all-relation reads, and bulk canonical KG reads/writes must run on `txgnn-worker` (retained VM name) or another explicitly approved in-region worker using `gs://jouvencekb/kg/v2`; do not run them through `/Users/jkobject/mnt/gcs/...` / macOS GCS-FUSE.
+- Canonical KG bucket root: `gs://jouvencekb/main`
+- Verified macOS FUSE root: `/Users/jkobject/mnt/gcs/jouvencekb/main` for small bounded/local inspection only.
+- Heavy Jouvence jobs are VM-only: LaminDB full/bulk syncs, production/full PyG/GNN exports or training, ReMap scaling, embeddings/full-KG scans, all-relation reads, and bulk canonical KG reads/writes must run on `txgnn-worker` (retained VM name) or another explicitly approved in-region worker using `gs://jouvencekb/main`; do not run them through `/Users/jkobject/mnt/gcs/...` / macOS GCS-FUSE.
 - Heavy-card preflight must include `must_run_on=txgnn-worker`, `hostname`, `gcloud compute ssh txgnn-worker`, an existing-process check, and a hard failure if any heavy input/output path starts with `/Users/jkobject/mnt/gcs`.
-- New outputs: `artifacts/staged/<task-id>/`, `artifacts/cache/<task-id>/`, `docs/`, or `gs://jouvencekb/kg/staging/...`
+- New outputs: `artifacts/staged/<task-id>/`, `artifacts/cache/<task-id>/`, `docs/`, or `gs://jouvencekb/staging/...`
 - `.omoc/` is legacy-only.
 - Jouvence automation is strictly project-scoped. Never stop, pause, resize, or otherwise manage `pert-gym` resources from a Jouvence task; another session may legitimately be using them.
 
@@ -106,5 +106,5 @@ Useful checks:
 ```bash
 uv run python -m py_compile manage_db/kg_schema.py manage_db/kg_evidence.py manage_db/backfill_edge_evidence.py manage_db/ingest_opentargets.py
 uv run --group dev pytest tests/test_kg_schema_cleanup.py tests/test_kg_evidence.py tests/test_backfill_edge_evidence.py -q
-uv run python -m manage_db.audit_kg_coverage /Users/jkobject/mnt/gcs/jouvencekb-kg/v2 --json > artifacts/reports/<task-id>-coverage.json
+uv run python -m manage_db.audit_kg_coverage /Users/jkobject/mnt/gcs/jouvencekb/main --json > artifacts/reports/<task-id>-coverage.json
 ```

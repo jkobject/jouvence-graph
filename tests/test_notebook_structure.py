@@ -208,10 +208,10 @@ def test_n4d_source_native_l2_index_separates_edge_promotion_from_feature_layer(
     _, text = _notebook_text_for(N4D_NOTEBOOK)
 
     assert "Promoted only BioGRID physical PPI to canonical edge/evidence" in text
-    assert "gs://jouvencekb/kg/v2/edges/protein_interacts_protein.parquet" in text
-    assert "gs://jouvencekb/kg/v2/evidence/protein_interacts_protein.parquet" in text
+    assert "gs://jouvencekb/main/edges/protein_interacts_protein.parquet" in text
+    assert "gs://jouvencekb/main/evidence/protein_interacts_protein.parquet" in text
     assert "Feature-layer promotion, not biological edge/evidence promotion" in text
-    assert "gs://jouvencekb/kg/v2/features/" in text
+    assert "gs://jouvencekb/main/features/" in text
     assert "molecule_fingerprint.parquet" in text
     assert "protein_textual_summary.parquet" in text
     assert "gene_sequence.parquet" in text

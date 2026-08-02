@@ -42,7 +42,8 @@ def test_data_explorer_is_deterministic_and_bounded(tmp_path: Path) -> None:
     assert "kg-fixture" not in text
     assert "fixture_rule_engine" not in text
     assert "JOUVENCE_DATA_MODE" not in text
-    assert "SELECTED_URI" in text
+    assert "SELECTED_LAYER" in text
+    assert "SELECTED_NAME" in text
     assert "/Users/jkobject/mnt/gcs" not in text
     assert "jkobject-1549353370965" not in text
     assert all(not cell.get("outputs") for cell in notebook.cells if cell.cell_type == "code")
@@ -80,11 +81,62 @@ def test_live_only_roots_all_use_requester_pays_project() -> None:
     text = "\n".join(str(cell.source) for cell in notebook.cells)
 
     assert "canonical_root = PUBLIC_KG_ROOT" in text
-    assert 'staging_root = "gs://jouvencekb/kg/staging"' in text
+    assert 'staging_root = "gs://jouvencekb/staging"' in text
     assert "JOUVENCE_CANONICAL_ROOT" not in text
     assert "JOUVENCE_STAGING_ROOT" not in text
     assert "billing_project=BILLING_PROJECT" in text
     assert "_storage_options(uri, BILLING_PROJECT)" in text
+
+
+def test_notebook_teaches_named_loading_graph_links_umap_gaps_and_pyg() -> None:
+    notebook = nbformat.read(NOTEBOOK, as_version=4)
+    text = "\n".join(str(cell.source) for cell in notebook.cells)
+
+    # One exact layer/name selection surface rather than forcing users to copy URIs.
+    assert "def uri_for(layer: str, name: str)" in text
+    assert "def load_table(layer: str, name: str" in text
+    assert "files_by_type" in text
+    assert "full_table_statistics" in text
+
+    # Executable relational walkthroughs across the graph and provenance layers.
+    assert "node → edge → node" in text
+    assert "edge_with_endpoints" in text
+    assert "edge_with_evidence" in text
+    assert 'on=["relation", "x_id", "x_type", "y_id", "y_type"]' in text
+
+    # Embeddings and backlog/gap views are explicit and bounded.
+    assert "UMAP" in text
+    assert "PCA fallback" in text
+    assert "embedding_projection" in text
+    assert "schema_relations_absent_from_kg" in text
+    assert "staging_objects" in text
+    assert 'columns=["node_type", "primary_ontology"]' in text
+
+    # Stream canonical Parquets; never build or load a whole-graph pickle.
+    assert "iter_relation_minibatches" in text
+    assert "EmbeddingSpec(" in text
+    assert "edge minibatching" in text
+    assert "neighbor sampling" in text
+    assert "evidence_records" in text
+    assert "evidence_to_edge" in text
+    assert "BuildConfig(" not in text
+    assert "build_pyg_export" not in text
+    assert "full_graph.pt" not in text
+    assert "pickle.load" not in text
+    assert "torch.load(handle" not in text
+    assert "HeteroData" in text
+    assert "umap-learn" in (ROOT / "pyproject.toml").read_text()
+
+    # The production path is implemented, not left as hypothetical prose.
+    assert "resolve_pyg_build" in text
+    assert "materialize_pyg_build" in text
+    assert "open_pyg_stores" in text
+    assert "make_neighbor_loader" in text
+    assert "make_link_neighbor_loader" in text
+    assert 'PYG_ROOT = "gs://jouvencekb/pyg"' in text
+    assert "gcloud storage cp" in text
+    assert "gcsfuse" not in text.lower()
+    assert "graph-build-id" not in text
 
 
 def test_local_listing_is_early_bounded(
@@ -126,22 +178,22 @@ def test_gcs_listing_uses_server_side_cap_and_propagates_errors(
 
         def list_blobs(self, _bucket, **kwargs):
             calls["list"] = kwargs
-            return [Blob("kg/v2/edges/a.parquet"), Blob("kg/v2/edges/b.parquet"), Blob("kg/v2/edges/c.parquet")]
+            return [Blob("main/edges/a.parquet"), Blob("main/edges/b.parquet"), Blob("main/edges/c.parquet")]
 
     monkeypatch.setattr(data_explorer, "Client", FakeClient)
     listing = data_explorer.list_parquet_uris(
-        "gs://jouvencekb/kg/v2/edges", limit=2, billing_project="caller-project"
+        "gs://jouvencekb/main/edges", limit=2, billing_project="caller-project"
     )
 
     assert listing.uris == (
-        "gs://jouvencekb/kg/v2/edges/a.parquet",
-        "gs://jouvencekb/kg/v2/edges/b.parquet",
+        "gs://jouvencekb/main/edges/a.parquet",
+        "gs://jouvencekb/main/edges/b.parquet",
     )
     assert listing.truncated is True
     assert calls["bucket"] == ("jouvencekb", "caller-project")
     assert calls["list"] == {
-        "prefix": "kg/v2/edges/",
-        "match_glob": "kg/v2/edges/**/*.parquet",
+        "prefix": "main/edges/",
+        "match_glob": "main/edges/**/*.parquet",
         "max_results": 3,
         "page_size": 3,
     }
@@ -153,5 +205,5 @@ def test_gcs_listing_uses_server_side_cap_and_propagates_errors(
     monkeypatch.setattr(data_explorer, "Client", FailingClient)
     with pytest.raises(PermissionError, match="denied"):
         data_explorer.list_parquet_uris(
-            "gs://jouvencekb/kg/v2/edges", limit=2, billing_project="caller-project"
+            "gs://jouvencekb/main/edges", limit=2, billing_project="caller-project"
         )

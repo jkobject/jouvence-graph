@@ -19,7 +19,7 @@ from typing import Iterable, Sequence
 
 import pandas as pd
 
-DEFAULT_KG_ROOT = Path("/Users/jkobject/mnt/gcs/jouvencekb-kg/v2")
+DEFAULT_KG_ROOT = Path("/Users/jkobject/mnt/gcs/jouvencekb/main")
 DEFAULT_RELATIONS = ("disease_associated_gene", "dataset_contains_tissue")
 
 EDGE_BASE_COLUMNS = [

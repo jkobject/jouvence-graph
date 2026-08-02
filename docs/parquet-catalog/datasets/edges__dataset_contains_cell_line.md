@@ -3,8 +3,8 @@
 
 - Layer: `edges`
 - Status: **canonical present**
-- As of: `2026-06-15`
-- Canonical URI/pattern: `gs://jouvencekb/kg/v2/edges/dataset_contains_cell_line.parquet`
+- As of: `2026-07-27`
+- Canonical URI/pattern: `gs://jouvencekb/main/edges/dataset_contains_cell_line.parquet`
 - Logical rows: **1,183**
 - Physical objects: **1**
 - Bytes: **13,007**
@@ -53,7 +53,7 @@ The logical dataset is represented by `1` physical Parquet object(s). Physical s
 
 | Object | Rows | Bytes | Generation | CRC32C | MD5 |
 |---|---:|---:|---|---|---|
-| `gs://jouvencekb/kg/v2/edges/dataset_contains_cell_line.parquet` | 1,183 | 13,007 | `1781481609681223` | `Rtt2Uw==` | `dExG+XyQvNNuts9CZmlfJA==` |
+| `gs://jouvencekb/main/edges/dataset_contains_cell_line.parquet` | 1,183 | 13,007 | `1785155481623928` | `Rtt2Uw==` | `dExG+XyQvNNuts9CZmlfJA==` |
 - catalog_manifest: [../inventory.json](../inventory.json)
 - schema_doc: [../../kg_schema_overview.md](../../kg_schema_overview.md)
 
@@ -66,7 +66,7 @@ export BILLING_PROJECT='<your-gcp-billing-project>'
 LOCAL_DIR='./parquet-catalog-data/edges__dataset_contains_cell_line'
 rm -rf -- "$LOCAL_DIR"
 mkdir -p "$LOCAL_DIR"
-gcloud storage cp --billing-project="$BILLING_PROJECT" 'gs://jouvencekb/kg/v2/edges/dataset_contains_cell_line.parquet' "$LOCAL_DIR/"
+gcloud storage cp --billing-project="$BILLING_PROJECT" 'gs://jouvencekb/main/edges/dataset_contains_cell_line.parquet' "$LOCAL_DIR/"
 ```
 
 PyArrow (GCS credentials/application-default credentials must carry the billing project):
@@ -77,7 +77,7 @@ import gcsfs
 import pyarrow.dataset as ds
 billing_project = os.environ['BILLING_PROJECT']
 fs = gcsfs.GCSFileSystem(project=billing_project, requester_pays=billing_project)
-paths = sorted(fs.glob('jouvencekb/kg/v2/edges/dataset_contains_cell_line.parquet'))
+paths = sorted(fs.glob('jouvencekb/main/edges/dataset_contains_cell_line.parquet'))
 dataset = ds.dataset(paths, filesystem=fs, format='parquet')
 print(dataset.head(5, columns=['x_id']))
 ```

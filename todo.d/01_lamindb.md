@@ -4,7 +4,7 @@ _Status snapshot: 2026-07-19 CEST._
 
 Kanban board `txgnn` remains the live source of truth. Counter evidence below is explicitly dated; this mirror does not imply a fresh database read.
 
-Heavy-job guardrail: full/bulk LaminDB syncs or registry scans must run on `txgnn-worker` or another explicitly approved in-region worker with source `gs://jouvencekb/kg/v2`. Do not run heavy LaminDB reads/writes from the Mac through `/Users/jkobject/mnt/gcs/...` / macOS GCS-FUSE.
+Heavy-job guardrail: full/bulk LaminDB syncs or registry scans must run on `txgnn-worker` or another explicitly approved in-region worker with source `gs://jouvencekb/main`. Do not run heavy LaminDB reads/writes from the Mac through `/Users/jkobject/mnt/gcs/...` / macOS GCS-FUSE.
 
 ## Canonical source denominator
 

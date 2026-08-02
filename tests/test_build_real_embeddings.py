@@ -161,7 +161,7 @@ def test_gcs_local_cache_smoke_avoids_fuse_path(tmp_path: Path, monkeypatch) -> 
     def fake_subprocess_run(args, check=False, stdout=None, stderr=None):
         assert args[:2] == ["gcloud", "storage"]
         uri = args[-1] if args[2] == "ls" else args[-2]
-        rel = uri.removeprefix("gs://jouvencekb/kg/v2/")
+        rel = uri.removeprefix("gs://jouvencekb/main/")
         source = source_root / rel
         if args[2] == "ls":
             return subprocess.CompletedProcess(args, 0 if source.exists() else 1)
@@ -182,13 +182,13 @@ def test_gcs_local_cache_smoke_avoids_fuse_path(tmp_path: Path, monkeypatch) -> 
         edge_limit_per_relation=1,
         clean=True,
         test_deterministic_encoder=True,
-        gcs_kg_root="gs://jouvencekb/kg/v2",
+        gcs_kg_root="gs://jouvencekb/main",
         local_cache_dir=cache_root,
     )
 
     assert manifest["kg_root"] == str(cache_root)
-    assert manifest["input_cache"]["source_gcs_root"] == "gs://jouvencekb/kg/v2"
-    assert "--gcs-kg-root gs://jouvencekb/kg/v2" in manifest["recompute_command"]
+    assert manifest["input_cache"]["source_gcs_root"] == "gs://jouvencekb/main"
+    assert "--gcs-kg-root gs://jouvencekb/main" in manifest["recompute_command"]
     assert "--local-cache-dir" in manifest["recompute_command"]
     assert "stale-fuse-not-used" not in manifest["recompute_command"]
     assert any(uri.endswith("features/protein_textual_summary.parquet") for uri, _ in copied)
@@ -225,7 +225,7 @@ def test_optional_gcs_miss_removes_stale_cached_file(tmp_path: Path, monkeypatch
     monkeypatch.setattr(builder, "gcloud_object_exists", lambda _uri: False)
 
     copied = builder.copy_gcs_object_if_exists(
-        "gs://jouvencekb/kg/v2/features/stale.parquet",
+        "gs://jouvencekb/main/features/stale.parquet",
         destination,
         required=False,
     )

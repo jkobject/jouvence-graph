@@ -53,11 +53,11 @@ TEXT_EMBEDDING_MODEL = "sklearn.feature_extraction.text.HashingVectorizer"
 TEXT_EMBEDDING_VERSION = "scikit-learn-hashing-vectorizer@1.8.0+clinical_trials_gov_trial_text_production_candidate_v1"
 TEXT_EMBEDDING_DIM = 384
 DEFAULT_OT_EVIDENCE = Path(
-    "/Users/jkobject/mnt/gcs/jouvencekb-kg/v2/staging/"
+    "/Users/jkobject/mnt/gcs/jouvencekb/staging/"
     "opentargets-clinical-drug-evidence-20260622-t_ceee5d53/"
     "evidence/molecule_treats_disease.parquet"
 )
-DEFAULT_KG_ROOT = Path("/Users/jkobject/mnt/gcs/jouvencekb-kg/v2")
+DEFAULT_KG_ROOT = Path("/Users/jkobject/mnt/gcs/jouvencekb/main")
 DEFAULT_OUT_ROOT = Path(f"artifacts/staged/{TASK_ID}_clinical_trials_gov_production_candidate")
 DEFAULT_USER_AGENT = "Jouvence-KG-clinical-trials-production-candidate/0.2"
 LICENSE_TEXT = "ClinicalTrials.gov/NLM public API; staging-only, verify redistribution/attribution terms before canonical promotion"

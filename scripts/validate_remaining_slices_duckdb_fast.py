@@ -14,7 +14,7 @@ from manage_db.kg_schema import RELATION_BY_NAME
 def main() -> None:
     scratch = Path(os.environ["SCRATCH"])
     report = Path(os.environ["REPORT"])
-    canon = Path("/mnt/gcs/jouvencekb/kg/v2")
+    canon = Path("/mnt/gcs/jouvencekb/main")
     new_root = kg_storage.open_kg_root(str(scratch / "kg"))
     canon_root = kg_storage.open_kg_root(str(canon))
 

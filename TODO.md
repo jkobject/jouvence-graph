@@ -11,17 +11,19 @@ Do **not** use `.omoc` for new work. It is a legacy scratch/cache location from 
 - `artifacts/staged/<task-id>/` for local staged artifacts;
 - `artifacts/cache/<task-id>/` for bounded local cache if unavoidable;
 - `docs/` for human-readable reports;
-- `gs://jouvencekb/kg/staging/...` for remote staged artifacts;
-- canonical writes only under `gs://jouvencekb/kg/v2/...` after validation + review.
+- `gs://jouvencekb/staging/...` for remote staged artifacts;
+- canonical writes only under `gs://jouvencekb/main/...` after validation + review.
+- the single current neighbor-sampling build under `gs://jouvencekb/pyg/` only
+  after staged build, review, direct-copy verification, and manifest-last publication.
 
-Heavy Jouvence jobs are VM-only. Any card that may run LaminDB full/bulk syncs, production/full PyG/GNN exports or training, embeddings/full-KG scans, all-relation reads, or bulk canonical KG reads/writes must state `must_run_on=txgnn-worker` (the retained VM name) or another explicitly approved in-region worker, use `gs://jouvencekb/kg/v2` as source, and forbid `/Users/jkobject/mnt/gcs/...` / macOS GCS-FUSE for heavy work. Required preflight: verify `hostname`, launch/inspect with `gcloud compute ssh txgnn-worker`, check for an existing related writer/process, and fail if any heavy input/output path starts with `/Users/jkobject/mnt/gcs`. Copyable card template: `artifacts/reports/t_d682b7ad/heavy_job_vm_only_card_template.md`. ReMap route C is complete and unsupervised; these generic VM rules do not authorize or resume ReMap work.
+Heavy Jouvence jobs are VM-only. Any card that may run LaminDB full/bulk syncs, production/full PyG/GNN exports or training, embeddings/full-KG scans, all-relation reads, or bulk canonical KG reads/writes must state `must_run_on=txgnn-worker` (the retained VM name) or another explicitly approved in-region worker, use `gs://jouvencekb/main` as source, and forbid `/Users/jkobject/mnt/gcs/...` / macOS GCS-FUSE for heavy work. Required preflight: verify `hostname`, launch/inspect with `gcloud compute ssh txgnn-worker`, check for an existing related writer/process, and fail if any heavy input/output path starts with `/Users/jkobject/mnt/gcs`. Copyable card template: `artifacts/reports/t_d682b7ad/heavy_job_vm_only_card_template.md`. ReMap route C is complete and unsupervised; these generic VM rules do not authorize or resume ReMap work.
 
 ReMap route C is complete and has no active watchdog, resume loop, SSH-liveness gate, or recovery lane. Prior fresh-UDC continuation rules and supervisor templates are preserved as historical reproducibility evidence only; they are not current operating instructions and must not be auto-resumed.
 
 Verified KG access:
 
-- GCS canonical root: `gs://jouvencekb/kg/v2`
-- macOS FUSE root: `/Users/jkobject/mnt/gcs/jouvencekb-kg/v2` for small bounded/local inspection only; forbidden for heavy LaminDB/PyG/ReMap/embedding/full-KG work.
+- GCS canonical root: `gs://jouvencekb/main`
+- macOS FUSE root: `/Users/jkobject/mnt/gcs/jouvencekb/main` for small bounded/local inspection only; forbidden for heavy LaminDB/PyG/ReMap/embedding/full-KG work.
 
 ## Status vocabulary
 
@@ -44,9 +46,9 @@ This snapshot supersedes the older June/July execution notes below. Detailed den
 1. **The human Gene identity migration is staged-only and review-required.** `t_8b9cdabc` produced a validated staged candidate targeting 81,715 human ENSG nodes at commit `8714378`; its PR and independent review remain outstanding. The 27,610 NCBI IDs are aliases/endpoints that require authoritative remap or explicit quarantine; 158,505 non-human homologue nodes and `gene_ortholog_gene` are excluded from the human canonical candidate. No canonical promotion is claimed.
 2. **LaminDB ingestion is partial, and accepted counters differ from physical counters.** The latest durable accepted ledger (2026-07-18 evidence) is 11,671,485 / 230,874,162 rows. The latest sealed physical readback from the same date is 12,011,512 rows, with +170,027 edges and +170,000 evidence still uncredited. No newer mismatch-0 readback is claimed; the denominator also awaits reviewed ENSG-only rebasing.
 3. **The corrected immutable public embeddings v2 candidate is validated.** Producer `t_2d54477b` published 808,269 rows across 12 logical leaves; independent reviewer `t_2e6b355f` passed the exact 51-object candidate at generation `1784460889447648`. This is a validated immutable candidate, not a mutable latest-pointer or blanket source-backed vector for every node. Rejected v1 remains historical and unaccepted.
-4. **Gene Nucleotide Transformer is stopped-by-user.** `t_d3b876b3` stopped at 6,912 / 78,164 scratch rows. Those rows are non-canonical; do not auto-resume, publish, or count them as accepted coverage.
+4. **The old Gene Nucleotide Transformer scratch run is superseded.** `t_d3b876b3` remains historical/non-canonical, but the later exact-ENSG lineage produced and independently accepted 78,644 / 81,715 genomic embeddings with 3,071 explicit missing. Do not resume the old scratch or superseded continuation `t_41b61edd`.
 5. **DepMap revision 2 is code/test ready but not fully rebuilt.** PR #11 is pushed at `e40e2508b8f061f70fc7a4fcbf05b0f4a1accfaf`; `t_3c7766fa` waits behind the ENSG heavy-worker lane before the required dual full build and fresh immutable staged artifact. The prior candidate remains rejected.
-6. **PyG/GNN has a real reviewed runtime smoke, not full-KG training.** The sidecar/mmap architecture remains the bounded path; full multi-relation model-quality training has not run.
+6. **PyG/GNN has a real reviewed runtime smoke, not full-KG training.** Sequential edge streaming is retained for audit/build work, but the accepted training target is `LinkNeighborLoader`/`NeighborLoader` over a versioned disk-backed CSC `GraphStore` + `FeatureStore` snapshot under `gs://jouvencekb/pyg/`. Full multi-relation model-quality training has not run.
 
 ## Current phase mirrors
 
@@ -96,7 +98,11 @@ Production/full done requires reviewed ENSG-only denominators, exact-ID row pari
 
 ### 2. PyG / GNN
 
-Existing PyG work is a bounded export pilot, not completion.
+Existing PyG work is a bounded export/streaming pilot, not completion. The
+2026-07-27 target is a versioned neighbor-index snapshot, worker-local verified
+cache, memory-mapped `GraphStore`/`FeatureStore`, and split-safe
+`LinkNeighborLoader` training. See `todo.d/02_pyg_gnn.md` and
+`docs/guides/pyg-and-embedding-contracts.md`.
 
 - `t_015bd9a4` — full KG / representative KG PyG export plus runnable GNN smoke/training.
 - `t_1d1eb3a1` — validate actual HeteroData/GNN runtime.
@@ -111,8 +117,11 @@ Four source-backed embedding families now have one independently validated immut
 - `t_2d54477b` — published immutable v2 candidate: 808,269 rows, 12 logical leaves, 51 objects; producer card is historical/triage after handoff.
 - `t_2e6b355f` — independent v2 reviewer: `validated` PASS on 2026-07-19. No latest-pointer mutation or universal-coverage claim.
 - Rejected v1 remains historical and unaccepted.
-- `t_d3b876b3` — gene NT: `stopped-by-user` at 6,912 / 78,164 scratch rows; non-canonical and no auto-resume.
+- `t_d3b876b3` — historical stopped scratch only; superseded by the accepted exact-ENSG lineage with 78,644 / 81,715 embeddings and 3,071 explicit missing. Do not auto-resume it or `t_41b61edd`.
 - Learned fallback is still required where reviewed source vectors are absent; it is not biological evidence.
+- Before more embedding compute, distinguish no-source-payload nodes from
+  source-eligible rows whose embedding computation is genuinely missing. See the
+  human registry `docs/guides/pyg-feature-registry.md`.
 
 ### 4. ReMap
 
@@ -121,9 +130,9 @@ ReMap route C is complete and unsupervised. The accepted support-only artifacts 
 Accepted staged-only support artifacts:
 
 - `t_3b8a2c4d` — CRM support/QA first10k chr1 pilot.
-- Prefix: `gs://jouvencekb/kg/staging/source-native-expansion/remap-crm-tf-binds-enhancer-support-chr1-first10k-20260623-t_3b8a2c4d/`
+- Prefix: `gs://jouvencekb/staging/source-native-expansion/remap-crm-tf-binds-enhancer-support-chr1-first10k-20260623-t_3b8a2c4d/`
 - `t_b599d3bb` — CRM support/QA all-chromosome bounded 5k-per-chrom artifact; staged-only/support-only.
-- Prefix: `gs://jouvencekb/kg/staging/source-native-expansion/remap-crm-tf-binds-enhancer-support-allchrom-5kperchrom-20260623-t_b599d3bb/all_chrom_5k_per_chrom/`
+- Prefix: `gs://jouvencekb/staging/source-native-expansion/remap-crm-tf-binds-enhancer-support-allchrom-5kperchrom-20260623-t_b599d3bb/all_chrom_5k_per_chrom/`
 
 Canonical-readiness decision:
 
@@ -150,9 +159,9 @@ Cards:
 - `t_8de911c0` — remaining-relation next-state decision: `mutation_in_gene` bounded containment candidate only; `mutation_overlaps_enhancer` coordinate-only context/support feature; no broad or relation-specific promotion card created.
 - `t_0aa76f3b` — support-gated `mutation_overlaps_enhancer` policy/pilot: evidence-backed staged edge candidate with external support context, no canonical write.
 - `t_73c67c1b` — full non-context-support-gated `mutation_overlaps_enhancer` staged candidate: 1,664,278 edges/evidence rows with live endpoint anti-joins and edge/evidence validation passing. Report: `docs/mutation_overlaps_enhancer_support_gated_full_t_73c67c1b.md`.
-- `t_00551bc3` — relation-specific canonical promotion of reviewed `t_73c67c1b` support-gated `mutation_overlaps_enhancer` to `gs://jouvencekb/kg/v2/{edges,evidence}/`; status `canonical promoted`/`review-accepted` by `t_d11a3bb7`, reconfirmed by `t_2d1f767d`. Report: `docs/mutation_overlaps_enhancer_canonical_promotion_t_00551bc3.md`.
+- `t_00551bc3` — relation-specific canonical promotion of reviewed `t_73c67c1b` support-gated `mutation_overlaps_enhancer` to `gs://jouvencekb/main/{edges,evidence}/`; status `canonical promoted`/`review-accepted` by `t_d11a3bb7`, reconfirmed by `t_2d1f767d`. Report: `docs/mutation_overlaps_enhancer_canonical_promotion_t_00551bc3.md`.
 - `t_2bb8e7de` — full all-25-part `mutation_in_gene` containment-gated staged candidate built/validated under `artifacts/staged/t_2bb8e7de/`; producer handoff was `review-required`, with no canonical write.
-- `t_1cfcd48f` — `mutation_in_gene` live endpoint revalidation and relation-specific canonical write to `gs://jouvencekb/kg/v2/{edges,evidence,proof}/`; status `canonical promoted`/`review-accepted` by `t_18a346a4`, reconfirmed by `t_2d1f767d`. Report: `docs/mutation_in_gene_canonical_promotion_t_1cfcd48f.md`.
+- `t_1cfcd48f` — `mutation_in_gene` live endpoint revalidation and relation-specific canonical write to `gs://jouvencekb/main/{edges,evidence}/`; status `canonical promoted`/`review-accepted` by `t_18a346a4`, reconfirmed by `t_2d1f767d`. Report: `docs/mutation_in_gene_canonical_promotion_t_1cfcd48f.md`.
 - `t_4b1227b3` — do not use as blanket promotion; only relation-specific promotion after explicit acceptance.
 
 ### 6. Relation waves

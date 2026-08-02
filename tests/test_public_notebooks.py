@@ -24,7 +24,7 @@ def test_read_bounded_parquet_seeks_row_groups(tmp_path: Path) -> None:
 def test_requester_pays_requires_caller_project(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.delenv("JOUVENCE_BILLING_PROJECT", raising=False)
     with pytest.raises(ValueError, match="JOUVENCE_BILLING_PROJECT"):
-        public._storage_options("gs://jouvencekb/kg/v2/nodes/gene.parquet", None)
+        public._storage_options("gs://jouvencekb/main/nodes/gene.parquet", None)
     assert public._storage_options("gs://bucket/object", "consumer-project") == {
         "requester_pays": "consumer-project",
         "token": "google_default",

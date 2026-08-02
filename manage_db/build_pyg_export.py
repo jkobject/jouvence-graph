@@ -48,7 +48,7 @@ except Exception:  # pragma: no cover - exercised when torch_geometric is unavai
     HeteroData = None  # type: ignore
 
 
-DEFAULT_KG_ROOT = "/mnt/gcs/jouvencekb/kg/v2"
+DEFAULT_KG_ROOT = "/mnt/gcs/jouvencekb/main"
 DEFAULT_PILOT_NODE_TYPES = ("gene", "disease", "molecule")
 DEFAULT_PILOT_RELATIONS = ("disease_associated_gene", "molecule_targets_gene")
 ARTIFACT_MODES = ("auto", "sidecar", "heterodata", "both")
@@ -539,7 +539,7 @@ def _write_production_plan_manifest(
 ) -> dict[str, Any]:
     node_rows = {node_type: _parquet_num_rows(kg._node_internal(node_type), kg.fs) for node_type in node_types}
     edge_rows = {relation: _parquet_num_rows(kg._edge_internal(relation), kg.fs) for relation in relations}
-    remote_output_root = config.remote_output_root or posixpath.join("gs://jouvencekb/kg/staging/ml/pyg", config.build_name)
+    remote_output_root = config.remote_output_root or posixpath.join("gs://jouvencekb/staging/ml/pyg", config.build_name)
     remote_command = _remote_build_command(config, node_types, relations, remote_output_root)
     edge_index_bytes = {relation: int(rows) * 2 * 8 for relation, rows in edge_rows.items()}
     edge_row_map_bytes_estimate = {relation: int(rows) * 128 for relation, rows in edge_rows.items()}
@@ -820,9 +820,13 @@ def _collect_node_embedding_metadata(features_root: str | None) -> dict[str, lis
     if not features_root:
         return {}
     fs, root_path = url_to_fs(features_root.rstrip("/"))
-    pattern = posixpath.join(root_path.rstrip("/"), "embeddings", "**", "*.parquet")
+    patterns = (
+        posixpath.join(root_path.rstrip("/"), "embeddings", "*.parquet"),
+        posixpath.join(root_path.rstrip("/"), "embeddings", "**", "*.parquet"),
+    )
     metadata: dict[str, list[dict[str, Any]]] = {}
-    for path in sorted(fs.glob(pattern)):
+    paths = sorted({path for pattern in patterns for path in fs.glob(pattern)})
+    for path in paths:
         if "/reports/" in path:
             continue
         parquet = pq.ParquetFile(path, filesystem=fs)
@@ -831,17 +835,23 @@ def _collect_node_embedding_metadata(features_root: str | None) -> dict[str, lis
             continue
         embedding_dim = _first_parquet_scalar(parquet, "embedding_dim")
         embedding_dtype = _first_parquet_scalar(parquet, "embedding_dtype")
-        parts = path.split("/")
-        try:
-            text_index = parts.index("text")
-            node_type = parts[text_index + 1]
-            model = parts[text_index + 2]
-            version = parts[text_index + 3]
-        except (ValueError, IndexError):
-            node_type, model, version = "unknown", "unknown", "unknown"
+        node_type = str(_first_parquet_scalar(parquet, "node_type") or "unknown")
+        modality = str(_first_parquet_scalar(parquet, "modality") or "unknown")
+        model = str(_first_parquet_scalar(parquet, "embedding_model") or "unknown")
+        version = str(_first_parquet_scalar(parquet, "embedding_version") or "unknown")
+        if model == "unknown" or version == "unknown" or modality == "unknown":
+            parts = path.split("/")
+            try:
+                text_index = parts.index("text")
+                modality = modality if modality != "unknown" else "text"
+                node_type = node_type if node_type != "unknown" else parts[text_index + 1]
+                model = model if model != "unknown" else parts[text_index + 2]
+                version = version if version != "unknown" else parts[text_index + 3]
+            except (ValueError, IndexError):
+                pass
         metadata.setdefault(node_type, []).append({
             "status": "available",
-            "modality": "text",
+            "modality": modality,
             "embedding_model": model,
             "embedding_version": version,
             "path": _display_path(path, features_root, fs),
@@ -1024,10 +1034,17 @@ def _load_node_embedding_tables(features_root: str | None) -> dict[str, dict[str
     if not features_root:
         return {}
     fs, root_path = url_to_fs(features_root.rstrip("/"))
-    pattern = posixpath.join(root_path.rstrip("/"), "embeddings", "**", "*.parquet")
+    patterns = (
+        posixpath.join(root_path.rstrip("/"), "embeddings", "*.parquet"),
+        posixpath.join(root_path.rstrip("/"), "embeddings", "**", "*.parquet"),
+    )
     tables: dict[str, dict[str, np.ndarray]] = {}
-    for path in sorted(fs.glob(pattern)):
+    paths = sorted({path for pattern in patterns for path in fs.glob(pattern)})
+    for path in paths:
         if "/reports/" in path:
+            continue
+        parquet = pq.ParquetFile(path, filesystem=fs)
+        if not {"node_id", "node_type", "embedding"}.issubset(parquet.schema_arrow.names):
             continue
         table = pq.read_table(path, columns=["node_id", "node_type", "embedding"], filesystem=fs)
         df = table.to_pandas()
@@ -1317,7 +1334,7 @@ def parse_args(argv: list[str] | None = None) -> BuildConfig:
     parser.add_argument("--no-reverse-edges", action="store_true")
     parser.add_argument("--no-strict", action="store_true")
     parser.add_argument("--sort-node-ids", action="store_true")
-    parser.add_argument("--embedding-features-root", default=None, help="Root containing features/embeddings and features/edge_embeddings Parquets")
+    parser.add_argument("--embedding-features-root", default=None, help="KG root containing embeddings/*.parquet (legacy nested embedding layouts are also readable)")
     parser.add_argument("--learned-fallback-config-path", default=None, help="JSON policy declaring torch.nn.Embedding fallback dimensions")
     parser.add_argument("--fallback-seed", type=int, default=20260623)
     parser.add_argument(

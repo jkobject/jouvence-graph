@@ -8,7 +8,7 @@ import json
 
 def main() -> None:
     scratch = Path(os.environ["SCRATCH"]) / "kg"
-    canon = Path("/mnt/gcs/jouvencekb/kg/v2")
+    canon = Path("/mnt/gcs/jouvencekb/main")
     promoted = []
     for kind in ["nodes", "edges"]:
         (canon / kind).mkdir(parents=True, exist_ok=True)

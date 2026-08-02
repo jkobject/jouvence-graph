@@ -264,8 +264,8 @@ def build_local_mutation_associated_phenotype(
     """Build local edge/evidence parquets for ``mutation_associated_phenotype``."""
 
     output_text = str(output_kg_root)
-    canonical = "/mnt/gcs/jouvencekb/kg/v2"
-    if Path(output_text).resolve() == Path(canonical).resolve() or output_text.rstrip("/") == "gs://jouvencekb/kg/v2":
+    canonical = "/mnt/gcs/jouvencekb/main"
+    if Path(output_text).resolve() == Path(canonical).resolve() or output_text.rstrip("/") == "gs://jouvencekb/main":
         raise ValueError("refusing to write canonical KG root")
 
     source_rows = 0

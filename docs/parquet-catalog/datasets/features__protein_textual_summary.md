@@ -3,8 +3,8 @@
 
 - Layer: `features`
 - Status: **canonical present**
-- As of: `2026-06-23`
-- Canonical URI/pattern: `gs://jouvencekb/kg/v2/features/protein_textual_summary.parquet`
+- As of: `2026-07-27`
+- Canonical URI/pattern: `gs://jouvencekb/main/features/protein_textual_summary.parquet`
 - Logical rows: **162,163**
 - Physical objects: **1**
 - Bytes: **18,040,728**
@@ -56,7 +56,7 @@ The logical dataset is represented by `1` physical Parquet object(s). Physical s
 
 | Object | Rows | Bytes | Generation | CRC32C | MD5 |
 |---|---:|---:|---|---|---|
-| `gs://jouvencekb/kg/v2/features/protein_textual_summary.parquet` | 162,163 | 18,040,728 | `1782205935050909` | `U+NYGg==` | `kvIdtD+Xo9cy+lx8Ahw7DQ==` |
+| `gs://jouvencekb/main/features/protein_textual_summary.parquet` | 162,163 | 18,040,728 | `1785155496500257` | `U+NYGg==` | `kvIdtD+Xo9cy+lx8Ahw7DQ==` |
 - catalog_manifest: [../inventory.json](../inventory.json)
 - schema_doc: [../../kg_schema_overview.md](../../kg_schema_overview.md)
 
@@ -69,7 +69,7 @@ export BILLING_PROJECT='<your-gcp-billing-project>'
 LOCAL_DIR='./parquet-catalog-data/features__protein_textual_summary'
 rm -rf -- "$LOCAL_DIR"
 mkdir -p "$LOCAL_DIR"
-gcloud storage cp --billing-project="$BILLING_PROJECT" 'gs://jouvencekb/kg/v2/features/protein_textual_summary.parquet' "$LOCAL_DIR/"
+gcloud storage cp --billing-project="$BILLING_PROJECT" 'gs://jouvencekb/main/features/protein_textual_summary.parquet' "$LOCAL_DIR/"
 ```
 
 PyArrow (GCS credentials/application-default credentials must carry the billing project):
@@ -80,7 +80,7 @@ import gcsfs
 import pyarrow.dataset as ds
 billing_project = os.environ['BILLING_PROJECT']
 fs = gcsfs.GCSFileSystem(project=billing_project, requester_pays=billing_project)
-paths = sorted(fs.glob('jouvencekb/kg/v2/features/protein_textual_summary.parquet'))
+paths = sorted(fs.glob('jouvencekb/main/features/protein_textual_summary.parquet'))
 dataset = ds.dataset(paths, filesystem=fs, format='parquet')
 print(dataset.head(5, columns=['feature_key']))
 ```

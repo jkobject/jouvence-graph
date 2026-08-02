@@ -28,7 +28,15 @@ except Exception:  # pragma: no cover
     RELATIONS = []  # type: ignore[assignment]
 
 
-LAYER_DIRS = ("nodes", "edges", "evidence", "features")
+LAYER_DIRS = (
+    "nodes",
+    "edges",
+    "edges_inferred",
+    "evidence",
+    "evidence_inferred",
+    "features",
+    "embeddings",
+)
 DEFAULT_MANIFEST_NAME = "lamindb_manifest.json"
 
 
@@ -157,7 +165,7 @@ def _relation_metadata(name: str) -> dict[str, Any]:
 
 
 def _labels_for(layer: str, name: str, metadata: dict[str, Any]) -> list[str]:
-    labels = ["kg", "kg-v2", "canonical", f"kg-layer:{layer}"]
+    labels = ["kg", "kg-main", "canonical", f"kg-layer:{layer}"]
     if layer == "nodes":
         labels.append(f"node_type:{name}")
     elif layer in {"edges", "evidence"}:
@@ -199,7 +207,7 @@ def _parquet_entry(
     content_hash = _hash_content(root, internal) if hash_content else None
     metadata = _relation_metadata(name) if layer in {"edges", "evidence"} else {}
     metadata.update({"parquet_format": "parquet"})
-    key = f"kg/v2/{layer}/{name}.parquet"
+    key = f"main/{layer}/{name}.parquet"
     return KGLayerManifestEntry(
         layer=layer,
         name=name,
@@ -281,8 +289,8 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("kg_path", help="Local, FUSE, or gs:// KG root")
     parser.add_argument("--kg-version", default="v2")
-    parser.add_argument("--public-root", default=None, help="Canonical URI root to record in the manifest, e.g. gs://jouvencekb/kg/v2 when scanning via a local FUSE mount")
-    parser.add_argument("--output", default=None, help="JSON output path; default: <kg_path>/metadata/lamindb_manifest.json for local roots")
+    parser.add_argument("--public-root", default=None, help="Canonical URI root to record in the manifest, e.g. gs://jouvencekb/main when scanning via a local FUSE mount")
+    parser.add_argument("--output", default=None, help="JSON output path; default: <kg_path>/reports/lamindb_manifest.json for local roots")
     parser.add_argument("--hash-content", action="store_true", help="Compute sha256 of each Parquet file; can be slow for full KG")
     parser.add_argument("--json", action="store_true", help="Print manifest JSON to stdout")
     args = parser.parse_args(argv)
@@ -294,7 +302,7 @@ def main(argv: list[str] | None = None) -> int:
         if args.output:
             output = Path(args.output)
         elif "://" not in str(args.kg_path):
-            output = Path(args.kg_path) / "metadata" / DEFAULT_MANIFEST_NAME
+            output = Path(args.kg_path) / "reports" / DEFAULT_MANIFEST_NAME
         else:
             output = Path(".") / DEFAULT_MANIFEST_NAME
         write_manifest(manifest, output)

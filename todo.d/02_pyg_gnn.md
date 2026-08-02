@@ -2,11 +2,31 @@
 
 _Last verified: 2026-07-15. Kanban board `txgnn` remains the live source of truth._
 
-Heavy-job guardrail: production/full PyG exports and training must run on `txgnn-worker` or another approved in-region worker with `gs://jouvencekb/kg/v2`. Do not run full-KG work through macOS GCS-FUSE.
+Heavy-job guardrail: production/full PyG exports and training must run on `txgnn-worker` or another approved in-region worker with `gs://jouvencekb/main`. Do not run full-KG work through macOS GCS-FUSE.
 
 ## Current verdict
 
 **PyG is training-ready in architecture, but full-KG model training is not done.**
+
+### 2026-07-27 neighbor-loading correction
+
+Sequential Parquet edge minibatching is retained for exhaustive audits, derived
+artifact builds, and simple edge scorers. It is **not** the final multi-hop GNN
+training loader. The accepted production direction is:
+
+- one current derived build under `gs://jouvencekb/pyg/`;
+- destination-sorted CSC adjacency plus technical reverse relations;
+- user-selected local cache (default: `REPO/data/pyg/`) and memory-mapped
+  `GraphStore`/`FeatureStore`;
+- `NeighborLoader` for node-seed tasks and `LinkNeighborLoader` for Jouvence link
+  prediction;
+- split-aware adjacency that excludes validation/test labels and their reverse
+  edges;
+- small public helpers for resolve/cache/open/loader construction/batch
+  inspection, demonstrated in notebook 07.
+
+Detailed contract: `docs/guides/pyg-and-embedding-contracts.md`. Human feature
+policy: `docs/guides/pyg-feature-registry.md`.
 
 Validated runtime evidence:
 
@@ -51,10 +71,18 @@ So the correct answer is: **yes for the sidecar/memmap sampled architecture and 
 
 ## Remaining work
 
-1. Run a larger bucket-local sidecar export on `txgnn-worker` with full node maps and selected full relations.
-2. Train/evaluate using bounded neighbor/relation sampling and record peak RSS under the real 16 GB limit.
-3. Run production model-quality and biological validation; current smoke accuracy is not such evidence.
-4. Keep `paper` and `dataset` outside default message-passing topology.
+1. Build and independently review the CSC neighbor index on an approved in-region
+   worker; publish its payload under `pyg/` and `manifest.json` last.
+2. The store, direct-copy verification, and ergonomic loader helpers are now
+   implemented and shown in notebook 07; exercise them against the first build.
+3. Add exact train/validation/test and reverse-edge anti-leakage validation.
+4. Demonstrate a real heterogeneous two-hop sampled batch in notebook 07 without
+   downloading or rebuilding the full artifact on the Mac.
+5. Train/evaluate using bounded neighbor sampling and record peak RSS under the
+   real 16 GB limit.
+6. Run production model-quality and biological validation; current smoke accuracy
+   is not such evidence.
+7. Keep `paper` and `dataset` outside default message-passing topology.
 
 ## Definition of done
 

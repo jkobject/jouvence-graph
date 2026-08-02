@@ -13,7 +13,8 @@ This directory is the single home for durable project knowledge. Start at the re
 | KG topology, evidence, metadata, features, and proof | [`guides/kg-architecture-and-evidence.md`](guides/kg-architecture-and-evidence.md) |
 | Source-native relation and endpoint policy | [`guides/source-native-modeling.md`](guides/source-native-modeling.md) |
 | Agent role routing and validation recipes | [`guides/agent-context.md`](guides/agent-context.md) |
-| PyG export and embedding contracts | [`guides/pyg-and-embedding-contracts.md`](guides/pyg-and-embedding-contracts.md) |
+| PyG neighbor-loading and embedding contracts | [`guides/pyg-and-embedding-contracts.md`](guides/pyg-and-embedding-contracts.md) |
+| Human-readable PyG feature, coverage, and leakage registry | [`guides/pyg-feature-registry.md`](guides/pyg-feature-registry.md) |
 | Review, promotion, rollback, and Git reviewability | [`guides/review-promotion-and-reviewability.md`](guides/review-promotion-and-reviewability.md) |
 | LaminDB, VM, GCS, checkpoints, and recovery | [`guides/lamindb-porting-operations.md`](guides/lamindb-porting-operations.md) |
 | Cross-cutting lessons | [`guides/lessons-learned.md`](guides/lessons-learned.md) |
@@ -36,6 +37,7 @@ This directory is the single home for durable project knowledge. Start at the re
 - [`pyg_export_runbook.md`](pyg_export_runbook.md) — bounded and production export operations.
 - [`pyg_mapping_design.md`](pyg_mapping_design.md) and [`pyg_manifest_metadata_contract_t_a3b15bc8.md`](pyg_manifest_metadata_contract_t_a3b15bc8.md) — mapping and manifest contracts.
 - [`foundation_embedding_policy.md`](foundation_embedding_policy.md) and [`edge_evidence_embedding_policy.md`](edge_evidence_embedding_policy.md) — feature and embedding policy.
+- [`guides/pyg-feature-registry.md`](guides/pyg-feature-registry.md) — current human-readable ownership, join, tensorization, coverage, and leakage decisions.
 
 ### LaminDB, VM, and storage
 

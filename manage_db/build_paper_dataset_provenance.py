@@ -666,7 +666,7 @@ def write_outputs(result: BuildResult, output_dir: Path) -> dict[str, Any]:
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--raw-root", type=Path, default=Path("artifacts/cache/raw"))
-    parser.add_argument("--kg-root", type=Path, default=Path("/Users/jkobject/mnt/gcs/jouvencekb-kg/v2"))
+    parser.add_argument("--kg-root", type=Path, default=Path("/Users/jkobject/mnt/gcs/jouvencekb/main"))
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--max-rows", type=int, default=1000)
     parser.add_argument("--max-refs-per-paper", type=int, default=8)

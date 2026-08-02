@@ -765,8 +765,8 @@ def run(
 
 def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description="Build staged transcript cDNA nucleotide embeddings with pinned Nucleotide Transformer and explicit length/window audit.")
-    parser.add_argument("--kg-root", type=Path, default=Path("/Users/jkobject/mnt/gcs/jouvencekb-kg/v2"))
-    parser.add_argument("--gcs-kg-root", default=None, help="Canonical GCS KG root, e.g. gs://jouvencekb/kg/v2. When set, copy transcript_sequence.parquet to --local-cache-dir first and read locally.")
+    parser.add_argument("--kg-root", type=Path, default=Path("/Users/jkobject/mnt/gcs/jouvencekb/main"))
+    parser.add_argument("--gcs-kg-root", default=None, help="Canonical GCS KG root, e.g. gs://jouvencekb/main. When set, copy transcript_sequence.parquet to --local-cache-dir first and read locally.")
     parser.add_argument("--local-cache-dir", type=Path, default=None)
     parser.add_argument("--output-dir", type=Path, default=Path(f"artifacts/staged/{TASK_ID}/transcript_nucleotide_smoke"))
     parser.add_argument("--limit", type=int, default=1, help="Number of source rows to embed for bounded smoke; ignored with --no-limit.")

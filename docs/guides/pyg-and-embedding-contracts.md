@@ -1,21 +1,123 @@
 # PyG and embedding contracts
 
-[← Documentation index](../README.md) · [KG architecture](kg-architecture-and-evidence.md) · [Lessons learned](lessons-learned.md)
+[← Documentation index](../README.md) · [KG architecture](kg-architecture-and-evidence.md) · [Feature registry](pyg-feature-registry.md) · [Lessons learned](lessons-learned.md)
 
-The production representation is sidecar-first. A monolithic `HeteroData` pickle is useful only for bounded pilots or explicitly materialized subsets; it is not the full-scale storage contract.
+The production representation is store-backed and neighbor-sampled. A monolithic
+`HeteroData` pickle is useful only for bounded pilots or explicitly materialized
+subsets; it is not the full-scale storage contract. Sequential edge minibatching
+is useful for audits, builds, and non-message-passing models, but it is not the
+final GNN training loader.
+
+## Durable derived namespace
+
+Canonical biological tables remain under `gs://jouvencekb/main`. The single current PyG
+training build lives directly under:
+
+```text
+gs://jouvencekb/pyg/
+```
+
+This prefix is durable, derived, and replaceable. It is not subject to the
+`staging/` lifecycle and is not a canonical biological layer. Every snapshot must
+identify the exact canonical object generations/hashes from which it was built.
+LaminDB may catalog these artifacts and their lineage, but LaminDB registration is
+secondary to the simple GCS artifact contract.
+
+Build candidates first under `gs://jouvencekb/staging/<build-id>/pyg/`, validate
+them, replace the current payload under `pyg/`, then upload `manifest.json` last.
+
+Canonical build layout:
+
+```text
+gs://jouvencekb/pyg/
+├── manifest.json
+├── node_maps/
+├── adjacency/
+├── feature_indices/
+└── validation/
+```
+
+`feature_indices/` may contain node-aligned matrices, edge-aligned matrices,
+masks, vocabularies and split indices. Raw text, sequences and one-to-many
+evidence remain in canonical Parquet unless an explicit encoder/aggregation in
+the feature registry materializes a fixed-shape training representation.
+
+## Training loader decision
+
+Use the loader that matches the learning task:
+
+| Task | Runtime loader |
+|---|---|
+| Node classification or node-seed representation learning | `NeighborLoader` |
+| Link prediction/classification, including Jouvence/TxGNN drug repurposing | `LinkNeighborLoader` |
+| Exhaustive relation audit, feature build, or simple edge scorer | sequential edge minibatching |
+
+For GNN training, the loader consumes a tuple of PyG stores:
+
+```python
+data = (feature_store, graph_store)
+```
+
+The `GraphStore` exposes relation-specific CSC adjacency arrays and stable edge
+IDs. The `FeatureStore` gathers only the sampled node/edge rows and modalities.
+Both stores open worker-local memory-mapped files from a cached immutable GCS
+snapshot; random neighbor lookups must not issue repeated scans of canonical
+Parquet or many tiny GCS reads.
+
+### Disk-backed adjacency
+
+For each heterogeneous edge type `(source_type, relation, target_type)`, publish:
+
+- deterministic `node_id ↔ int64 index` maps;
+- destination-sorted CSC `colptr` and `row` arrays;
+- stable edge IDs/permutation maps aligning edge features and provenance;
+- a technical reverse edge type for opposite-direction message passing;
+- exact source generations, counts, hashes, split policy, and validation results.
+
+The arrays are contiguous and memory-mappable. Looking up one destination's
+neighbors becomes a slice `row[colptr[i]:colptr[i + 1]]`, rather than a scan of a
+100M-edge Parquet corpus. The operating system pages in only the requested
+regions. PyG's neighbor sampler still receives the full CSC index interface, so
+the store must return pre-sorted memory-mapped tensors and must not rematerialize
+or re-sort the graph at every job start.
+
+### Job startup
+
+1. Resolve `pyg/manifest.json` and verify that it matches
+   the requested canonical snapshot.
+2. Copy/cache the artifact once from GCS to a user-selected local directory
+   (default: `REPO/data/pyg/`) and verify hashes.
+3. Open `JouvenceGraphStore` and `JouvenceFeatureStore` over memory-mapped arrays.
+4. Construct `LinkNeighborLoader` or `NeighborLoader` with a reviewed,
+   relation-specific fanout policy.
+5. Move only each sampled minibatch to the accelerator.
+
+Do not neighbor-sample through random GCS or FUSE reads. Copy the complete build
+with `gcloud storage cp --recursive`, then train from that local directory.
+
+### Split and leakage gate
+
+The message-passing adjacency for a training run may contain only training-visible
+edges. Validation/test labels and their technical reverse edges must be absent.
+For link prediction, `edge_label_index` is supervision; it is not permission to
+leave the same held-out assertion in the sampling graph. Every snapshot/split must
+ship an exact anti-leakage report.
 
 ## PyG representation
 
 Store each relation independently with:
 
-- relation-wise `edge_index` arrays;
+- relation-wise CSC adjacency arrays (`colptr`, `row`, edge ID/permutation);
 - node maps `node_id ↔ node_index`;
 - edge row maps `edge_key ↔ edge_pos`;
 - reverse-edge mappings via `forward_edge_pos`;
 - feature/evidence descriptors in the manifest;
 - source identities, hashes, counts, and leakage policy.
 
-Memory-map selected arrays and bound the runtime relation/sample scope. Stage remote sidecars to worker-local storage before using local-path mmap loaders. Do not require a no-cap `heterodata/full_graph.pt` to claim architecture readiness.
+Memory-map selected arrays and bound the runtime relation/sample scope. Stage
+remote sidecars to worker-local storage before using local-path mmap loaders. Do
+not require or publish a no-cap `heterodata/full_graph.pt` to claim architecture
+readiness.
 
 A bounded smoke proves executability only. It does not prove full-scale materialization, training stability, biological utility, or model quality.
 
@@ -31,6 +133,11 @@ Every selected node type and relation must distinguish:
 | `fallback` | Deterministic scaffold or learned representation supports execution | Must not be described as source-derived biological signal |
 
 `available` never means complete coverage unless row-level parity proves it. Do not hide absence with zero vectors or pseudo-source embeddings.
+
+The human-readable owner/join/tensor/leakage registry is
+[`pyg-feature-registry.md`](pyg-feature-registry.md). Generated manifests may
+mirror that policy for runtime validation, but do not replace it with an opaque
+JSON-only registry.
 
 ## Node embeddings
 
@@ -84,11 +191,14 @@ Therefore, do not copy older commands containing `clinical_trial` into new guide
 
 Use precise boundaries:
 
-- sidecar contract implemented;
-- bounded exporter smoke passed;
-- selected relation mmap loading validated;
+- sequential edge-stream contract implemented;
+- bounded exporter/smoke passed;
+- versioned neighbor-index snapshot built and independently validated;
+- worker-local cache + mmap `GraphStore`/`FeatureStore` loading validated;
+- `NeighborLoader`/`LinkNeighborLoader` multi-hop minibatch validated;
+- split/reverse-edge anti-leakage gate passed;
 - bounded training smoke passed;
-- full production export complete;
+- full intended neighbor-index snapshot complete;
 - full training/evaluation complete.
 
 Architecture readiness is not the same as full production training.
@@ -101,5 +211,4 @@ Architecture readiness is not the same as full production training.
 - [`../edge_evidence_embedding_policy.md`](../edge_evidence_embedding_policy.md)
 - [`../foundation_embedding_policy.md`](../foundation_embedding_policy.md)
 - [`../clinical_trials_canonical_features_resolution_t_957a3640.md`](../clinical_trials_canonical_features_resolution_t_957a3640.md)
-- [`../../artifacts/reports/t_e4f08d5a/kg_embedding_sidecar_audit.md`](../../artifacts/reports/t_e4f08d5a/kg_embedding_sidecar_audit.md)
-- [`../../artifacts/reports/t_3df2bfc3_pyg_manifest_qa.md`](../../artifacts/reports/t_3df2bfc3_pyg_manifest_qa.md)
+- PyG manifest QA proof is tracked by Kanban task `t_3df2bfc3`.

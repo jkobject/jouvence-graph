@@ -341,7 +341,7 @@ def write_outputs(candidate_df: pd.DataFrame, rejected_df: pd.DataFrame, audit: 
         "endpoint_anti_joins": {
             "node_root": node_root,
             "checked": False,
-            "blocked_reason": "canonical node root is unavailable or insufficient; /mnt/gcs/jouvencekb/kg/v2 was not mounted in this run, lncrna node type is absent from schema, and source rows lack source-native transcript/protein IDs",
+            "blocked_reason": "canonical node root is unavailable or insufficient; /mnt/gcs/jouvencekb/main was not mounted in this run, lncrna node type is absent from schema, and source rows lack source-native transcript/protein IDs",
         },
         "policy_checks": {
             "direct_clip_evidence_only": True,
@@ -398,7 +398,7 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--request", action="append", default=[], help="Comma-separated ENCORI request, e.g. geneType=lncRNA,target=MALAT1,clipExpNum=1")
     parser.add_argument("--max-rows-per-request", type=int, default=50)
-    parser.add_argument("--node-root", default="/mnt/gcs/jouvencekb/kg/v2")
+    parser.add_argument("--node-root", default="/mnt/gcs/jouvencekb/main")
     parser.add_argument("--output-dir", default="artifacts/staged/rbp-rna-clip-encori-pilot")
     return parser.parse_args(argv)
 

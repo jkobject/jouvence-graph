@@ -489,9 +489,9 @@ def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--cl-obo-path", default="artifacts/cache/raw/cell_ontology/cl.obo")
     parser.add_argument("--download", action="store_true", help="Download cl.obo if missing")
-    parser.add_argument("--canonical-cell-type-path", default="/Users/jkobject/mnt/gcs/jouvencekb-kg/v2/nodes/cell_type.parquet")
-    parser.add_argument("--canonical-tissue-path", default="/Users/jkobject/mnt/gcs/jouvencekb-kg/v2/nodes/tissue.parquet")
-    parser.add_argument("--canonical-disease-path", default="/Users/jkobject/mnt/gcs/jouvencekb-kg/v2/nodes/disease.parquet")
+    parser.add_argument("--canonical-cell-type-path", default="/Users/jkobject/mnt/gcs/jouvencekb/main/nodes/cell_type.parquet")
+    parser.add_argument("--canonical-tissue-path", default="/Users/jkobject/mnt/gcs/jouvencekb/main/nodes/tissue.parquet")
+    parser.add_argument("--canonical-disease-path", default="/Users/jkobject/mnt/gcs/jouvencekb/main/nodes/disease.parquet")
     parser.add_argument("--output-dir", default="artifacts/staged/cell-type-context-relations")
     args = parser.parse_args(argv)
 

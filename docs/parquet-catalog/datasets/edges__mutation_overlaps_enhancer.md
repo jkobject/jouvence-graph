@@ -3,8 +3,8 @@
 
 - Layer: `edges`
 - Status: **canonical present**
-- As of: `2026-06-24`
-- Canonical URI/pattern: `gs://jouvencekb/kg/v2/edges/mutation_overlaps_enhancer.parquet`
+- As of: `2026-07-27`
+- Canonical URI/pattern: `gs://jouvencekb/main/edges/mutation_overlaps_enhancer.parquet`
 - Logical rows: **1,664,278**
 - Physical objects: **1**
 - Bytes: **3,122,917**
@@ -12,7 +12,7 @@
 
 ## Meaning
 
-Variant-enhancer interval overlap retained only for variants that also have disease, phenotype, drug-response, or other downstream association evidence; overlap itself is contextual evidence, not a standalone causal edge.
+Variant-enhancer interval overlap: coordinate overlap alone remains context/support-only, while the reviewed non-context-support-gated candidate from t_73c67c1b was canonical promoted/review-required by t_00551bc3 with evidence support and leakage policy. This remains associative/indirect; stronger allele-specific regulatory or enhancer-activity evidence is preferred, and downstream disease/gene support is not by itself proof of enhancer perturbation.
 
 **Does not mean:** It is not evidence multiplicity: source-specific support belongs in the matching evidence table.
 
@@ -53,7 +53,7 @@ The logical dataset is represented by `1` physical Parquet object(s). Physical s
 
 | Object | Rows | Bytes | Generation | CRC32C | MD5 |
 |---|---:|---:|---|---|---|
-| `gs://jouvencekb/kg/v2/edges/mutation_overlaps_enhancer.parquet` | 1,664,278 | 3,122,917 | `1782342624393775` | `H0Gguw==` | `Oj09RGOE0vq49clIviaNVw==` |
+| `gs://jouvencekb/main/edges/mutation_overlaps_enhancer.parquet` | 1,664,278 | 3,122,917 | `1785155488400365` | `H0Gguw==` | `Oj09RGOE0vq49clIviaNVw==` |
 - catalog_manifest: [../inventory.json](../inventory.json)
 - schema_doc: [../../kg_schema_overview.md](../../kg_schema_overview.md)
 
@@ -66,7 +66,7 @@ export BILLING_PROJECT='<your-gcp-billing-project>'
 LOCAL_DIR='./parquet-catalog-data/edges__mutation_overlaps_enhancer'
 rm -rf -- "$LOCAL_DIR"
 mkdir -p "$LOCAL_DIR"
-gcloud storage cp --billing-project="$BILLING_PROJECT" 'gs://jouvencekb/kg/v2/edges/mutation_overlaps_enhancer.parquet' "$LOCAL_DIR/"
+gcloud storage cp --billing-project="$BILLING_PROJECT" 'gs://jouvencekb/main/edges/mutation_overlaps_enhancer.parquet' "$LOCAL_DIR/"
 ```
 
 PyArrow (GCS credentials/application-default credentials must carry the billing project):
@@ -77,7 +77,7 @@ import gcsfs
 import pyarrow.dataset as ds
 billing_project = os.environ['BILLING_PROJECT']
 fs = gcsfs.GCSFileSystem(project=billing_project, requester_pays=billing_project)
-paths = sorted(fs.glob('jouvencekb/kg/v2/edges/mutation_overlaps_enhancer.parquet'))
+paths = sorted(fs.glob('jouvencekb/main/edges/mutation_overlaps_enhancer.parquet'))
 dataset = ds.dataset(paths, filesystem=fs, format='parquet')
 print(dataset.head(5, columns=['x_id']))
 ```

@@ -430,7 +430,7 @@ def _write_summary(output_dir: Path, manifest: dict[str, Any]) -> Path:
         "",
         "## Residual risks",
         "",
-        "- No canonical `/mnt/gcs/jouvencekb/kg/v2` mount was available, so this pilot used only the local staged SciPlex2 artifact.",
+        "- No canonical `/mnt/gcs/jouvencekb/main` mount was available, so this pilot used only the local staged SciPlex2 artifact.",
         "- The local staged molecule nodes lacked SMILES, so no RDKit molecule fingerprint rows were emitted; skipped rows are recorded.",
         "- Protein sequence embeddings were not attempted because no protein sequence feature table or ESM/torch stack was locally available.",
         "- Replace the hashing surrogate with pinned S-BioBERT/ChemBERTa/ESM jobs before any canonical-quality embedding promotion.",
